@@ -2,7 +2,7 @@
 
 # udonsari0101
 
-I'm an undergraduate student studying Electrical and Electronic Engineering at UNIST. My work so far includes full-stack web applications, Windows desktop software, native Android applications, automation tools, infrastructure, and independent security analysis.
+I'm an undergraduate student in the Department of Electrical Engineering at UNIST. My work so far includes full-stack web applications, Windows desktop software, native Android applications, automation tools, infrastructure, and independent security analysis.
 
 **Interests**&ensp;Cybersecurity · Software Engineering · Autonomous Systems · Computer Systems · Artificial Intelligence
 
@@ -174,5 +174,5 @@ HACKSIUM 2025</td>
 ## Education
 
 <table>
-<tr><td valign="top">UNIST</td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Electrical and Electronic Engineering</td></tr>
+<tr><td valign="top">UNIST</td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Department of Electrical Engineering</td></tr>
 </table>
