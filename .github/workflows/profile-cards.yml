@@ -24,10 +24,13 @@ jobs:
 
       - name: Render cards and sync the README blocks
         env:
-          # The owner's token counts private repositories; without the secret the
-          # default token is used and the cards show public numbers only.
-          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
-          OWNER_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN != '' }}
+          # The default token reads the calendar, so its days match GitHub's own graph. The
+          # owner's token (the PROFILE_STATS_TOKEN secret, when set) only adds repository
+          # counts that include private ones; without it the tiles show public numbers.
+          # The token needs read access to all of the owner's repositories (a classic token
+          # with the repo scope, or a fine-grained one with all repositories + Metadata: read).
+          GH_TOKEN: ${{ github.token }}
+          OWNER_GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: python3 .github/scripts/profile_cards.py out --sync-readme
 
       - name: Publish cards to the profile-cards branch

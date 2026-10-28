@@ -5,7 +5,7 @@
      <source srcset> URL에는 쉼표와 공백을 쓰지 마세요. 접이식 항목을 추가하면 건수도 고치세요. -->
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-ko-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-ko-light.svg" alt="udonsari0101 · 관심 분야: 사이버보안, 소프트웨어 공학, 자율 시스템, 컴퓨터 시스템, 인공지능"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-ko-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-ko-light.svg" alt="udonsari0101 · 관심 분야: 정보보안, 소프트웨어 공학, 자동화, 컴퓨터 시스템, 인공지능"></picture>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 
 <!-- contact:start -->
 <p align="center">
-<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="이메일: yeappidw@unist.ac.kr" width="225"></a>
+<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="이메일: yeappidw@unist.ac.kr" width="233"></a><a href="https://www.instagram.com/d0ng.k20/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/instagram.svg" alt="Instagram: @d0ng.k20" width="159"></a>
 </p>
 <!-- contact:end -->
 
@@ -89,7 +89,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 
 <!-- activity:start -->
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-0.svg" alt="누적 기여; 현재 연속 기여; 최장 연속 기여 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-1.svg" alt="공개 저장소; 하루 최다 기여; 최근 1년 활동일 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-light.svg" alt="최근 1년 기여 달력 (매일 갱신)"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-0.svg" alt="누적 기여; 최장 연속 기여; 하루 최다 기여 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-1.svg" alt="공개 저장소; 비공개 저장소 기여; 최근 1년 활동일 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-light.svg" alt="최근 1년 기여 달력 (매일 갱신)"></picture>
 </p>
 <!-- activity:end -->
 
@@ -113,7 +113,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 ·&nbsp;Gazebo와 RViz를 활용한 시뮬레이션 환경 구축<br>
 ·&nbsp;AI 기반 자율주행 및 차량 제어 소프트웨어 개발</td>
 </tr>
-<tr><td colspan="2"><b>사이버보안</b></td></tr>
+<tr><td colspan="2"><b>정보보안</b></td></tr>
 <tr>
 <td valign="top" nowrap><samp>2026</samp></td>
 <td valign="top" width="1012"><b>해킹팀 팀장</b><br>
@@ -211,7 +211,7 @@ HACKSIUM 2025</td>
 
 <p></p>
 
-**관심 분야**&ensp;사이버보안 · 소프트웨어 공학 · 자율 시스템 · 컴퓨터 시스템 · 인공지능
+**관심 분야**&ensp;정보보안 · 소프트웨어 공학 · 자동화 · 컴퓨터 시스템 · 인공지능
 
 #### 소프트웨어 개발
 
@@ -226,7 +226,7 @@ HACKSIUM 2025</td>
 - 테스트 자동화, 디버깅, 품질 보증
 - 애플리케이션 패키징, 배포, 유지보수
 
-#### 사이버보안
+#### 정보보안
 
 - 웹 애플리케이션 보안 및 취약점 분석
 - 리버스 엔지니어링 및 바이너리 분석

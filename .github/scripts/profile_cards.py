@@ -7,10 +7,11 @@ contribution calendar, eight stack cards drawn in pairs (416px images, 2 per row
 desktop and 1 on phones, where the pair scales down and its type steps up), and six
 stat tiles drawn in threes (416px images, the same way). Images carry a 4px transparent margin,
 so placed side by side with no whitespace they get an exact 8px gutter. Also writes
-one capsule badge per linked technology (official-links drawer) and the contact pill.
-With the owner's token (OWNER_TOKEN=true) repository counts include private
-repositories; otherwise the tiles show public numbers. --sync-readme rewrites the
-stack, activity, and contact blocks in both READMEs.
+one capsule badge per linked technology (official-links drawer) and the contact pills
+(email and Instagram, from the public profile). GH_TOKEN (the default Actions token)
+reads the calendar and public numbers; OWNER_GH_TOKEN, the owner's token when the
+PROFILE_STATS_TOKEN secret exists, adds repository counts that include private ones.
+--sync-readme rewrites the stack, activity, and contact blocks in both READMEs.
 """
 import datetime as dt
 import html
@@ -19,6 +20,7 @@ import math
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -49,22 +51,25 @@ THEMES = {
                  hero="#090C13", glow=(("#4F46E5", .42), ("#0891B2", .30), ("#7C3AED", .30)), grid=("#FFFFFF", .045)),
 }
 TEXT = {
-    "en": dict(focus="Interested in", interests=["Cybersecurity", "Software Engineering", "Autonomous Systems",
+    "en": dict(focus="Interested in", interests=["Information Security", "Software Engineering", "Automation",
                                                   "Computer Systems", "Artificial Intelligence"],
-               tiles=dict(total="All-time total", current="Current streak", longest="Longest streak",
-                          repos="Repositories", public_repos="Public repos", contributed="Contributed to",
-                          best="Most in one day", active="Active days · 1y"),
-               # Fuller wording for alt text, which the tile's width doesn't limit.
+               tiles=dict(total="All-time total", longest="Longest streak", best="Most in one day",
+                          repos="Repos · {p} private", public_repos="Public repos", contributed="Contributed to",
+                          private="Private contributions", active="Active days · 1y"),
+               # Fuller wording for alt text, which the tile's width doesn't limit; never a daily number.
                tile_alts=dict(total="All-time contributions", best="Most contributions in one day",
-                              active="Active days in the last year", contributed="Repositories contributed to"),
+                              repos="Repositories, private ones included",
+                              contributed="Repositories contributed to, private ones included",
+                              private="Contributions to private repositories", active="Active days in the last year"),
                day="day", days="days", repos="", contribs="",
                heat="{n} contributions in the last year", less="Less", more="More",
                months=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                weekdays={1: "Mon", 3: "Wed", 5: "Fri"}, email="Email",
                links="Official links", links_note="{n}&nbsp;links"),
-    "ko": dict(focus="관심 분야", interests=["사이버보안", "소프트웨어 공학", "자율 시스템", "컴퓨터 시스템", "인공지능"],
-               tiles=dict(total="누적 기여", current="현재 연속 기여", longest="최장 연속 기여", repos="저장소",
-                          public_repos="공개 저장소", contributed="기여한 저장소", best="하루 최다 기여", active="최근 1년 활동일"),
+    "ko": dict(focus="관심 분야", interests=["정보보안", "소프트웨어 공학", "자동화", "컴퓨터 시스템", "인공지능"],
+               tiles=dict(total="누적 기여", longest="최장 연속 기여", best="하루 최다 기여", repos="저장소 · 비공개 {p}",
+                          public_repos="공개 저장소", contributed="기여한 저장소", private="비공개 기여", active="최근 1년 활동일"),
+               tile_alts=dict(repos="저장소(비공개 포함)", contributed="기여한 저장소(비공개 포함)", private="비공개 저장소 기여"),
                day="일", days="일", repos="개", contribs="회",
                heat="최근 1년간 {n}회 기여", less="적음", more="많음", months=[f"{m}월" for m in range(1, 13)],
                weekdays={1: "월", 3: "수", 5: "금"}, email="이메일",
@@ -125,132 +130,168 @@ STACK = [
         ("Figma", "figma", "F24E1E", "https://www.figma.com")]),
 ]
 ICON_CROP = {"mysql": (13.8, 2.3, 10.4)}  # show only the dolphin of the MySQL wordmark
-# Logos the owner picked for tools that simple-icons doesn't carry: 64px PNG, trimmed to a square
-# (mitmproxy's square avatar gets rounded corners), embedded so every SVG stays self-contained.
+# Logos simple-icons doesn't carry, traced to one colour from the images the owner picked
+# (IDA Pro's portrait, Ghidra's dragon, JADX's lettered disc, mitmproxy's circuit mark): 24-unit paths, even-odd fill.
 LOGOS = {
     "ida": (
-        "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"),
+        "M4.20 23.77C4.56 23.45 5.77 22.66 6.37 22.36C7.10 22 7.42 21.52 7.21 21.12C7.15 21.03 7.09 20.79 7.05 20"
+        ".60C7.02 20.38 6.86 20.10 6.62 19.85C6.23 19.45 6.23 19.45 6.42 19.14C6.58 18.87 6.60 18.71 6.54 18.16C6"
+        ".46 17.41 6.43 17.38 5.75 17.15C5.14 16.94 4.85 16.68 4.60 16.13C4.50 15.89 4.31 15.60 4.18 15.48C3.54 1"
+        "4.87 2.85 13.47 2.66 12.40C2.55 11.82 2.37 11.51 2.04 11.35C1.55 11.12 1.29 10.61 1.52 10.33C1.60 10.23 "
+        "1.60 10.13 1.53 9.97C1.47 9.85 1.45 9.61 1.47 9.43C1.51 9.18 1.46 9.05 1.22 8.80C0.87 8.43 0.76 7.94 0.8"
+        "5 7.17C0.91 6.74 0.89 6.60 0.75 6.46C0.21 5.93 0.31 4.53 0.94 3.85C1.08 3.70 1.20 3.50 1.20 3.41C1.20 2."
+        "92 1.85 1.80 2.14 1.80C2.19 1.80 2.31 1.74 2.39 1.66C2.48 1.58 2.80 1.42 3.10 1.30C3.40 1.18 3.74 1 3.85"
+        " 0.90C4.45 0.35 6.48 -0.01 7.51 0.25C8.02 0.38 8.12 0.38 8.51 0.24C9.19 -0.01 11.10 0.17 12.60 0.62C12.7"
+        "9 0.67 13.36 0.95 13.85 1.22C14.34 1.50 14.93 1.74 15.15 1.77C16.15 1.91 17.67 2.89 17.85 3.53C17.88 3.6"
+        "5 17.95 3.84 18 3.95C18.05 4.06 18.14 4.28 18.20 4.44C18.30 4.70 18.32 4.71 18.48 4.58C18.57 4.49 18.83 "
+        "4.35 19.05 4.25C19.27 4.16 19.55 4.03 19.68 3.97C19.84 3.89 19.94 3.90 20.02 3.98C20.09 4.05 20.22 4.10 "
+        "20.32 4.10C20.42 4.10 20.70 4.29 20.93 4.53C21.17 4.77 21.53 5.02 21.77 5.09C22.10 5.20 22.28 5.35 22.55"
+        " 5.74C22.93 6.30 22.97 6.54 22.75 7.15C22.66 7.40 22.64 7.58 22.70 7.64C22.76 7.70 22.80 7.83 22.80 7.94"
+        "C22.80 8.05 22.95 8.29 23.12 8.48C23.41 8.77 23.45 8.87 23.43 9.33C23.42 9.62 23.41 10.19 23.41 10.60C23"
+        ".41 11.47 23.14 12.15 22.76 12.30C22.63 12.35 22.45 12.49 22.36 12.61C22.21 12.83 21.62 13.10 21.28 13.1"
+        "0C21.13 13.10 21.10 13.19 21.10 13.55C21.10 14.38 20.49 15.07 19.55 15.29C19.28 15.36 18.95 15.44 18.82 "
+        "15.47C18.61 15.52 18.31 15.43 17.90 15.19C17.56 14.99 17.48 14.98 17.30 15.15C17.03 15.39 17.05 15.49 17"
+        ".38 15.56C17.99 15.69 18.50 16.27 18.50 16.84C18.50 16.92 18.54 17.02 18.60 17.05C18.89 17.23 18.71 17.9"
+        "9 18.28 18.39C17.83 18.83 17.83 19 18.28 18.81C18.65 18.65 19.03 18.75 19.40 19.10C19.68 19.36 19.70 19."
+        "43 19.70 20.13C19.70 20.67 19.74 20.91 19.85 21C19.93 21.07 20 21.21 20 21.31C20 21.41 20.05 21.52 20.10"
+        " 21.55C20.16 21.58 20.20 21.83 20.20 22.10C20.20 22.37 20.25 22.62 20.30 22.65C20.36 22.68 20.40 22.91 2"
+        "0.40 23.15C20.40 23.59 20.40 23.59 20.82 23.44C21.22 23.30 21.25 23.31 21.62 23.56C21.83 23.71 22 23.87 "
+        "22 23.91C22 23.96 21.23 24 20.30 23.99C19 23.99 18.61 23.96 18.67 23.87C18.86 23.56 18.80 23.01 18.57 22"
+        ".98C18.43 22.96 18.34 22.87 18.32 22.73C18.30 22.60 18.22 22.50 18.14 22.50C17.94 22.50 17.85 22.23 18 2"
+        "2.05C18.13 21.89 18.09 21.87 17.73 21.90C17.56 21.91 17.50 21.86 17.50 21.71C17.50 21.59 17.44 21.50 17."
+        "37 21.50C17.30 21.50 17.18 21.40 17.10 21.28C17.02 21.16 16.84 20.95 16.70 20.81C16.57 20.67 16.47 20.48"
+        " 16.48 20.38C16.50 20.29 16.46 20.19 16.40 20.15C16.34 20.11 16.30 20.19 16.30 20.34C16.30 20.48 16.26 2"
+        "0.60 16.20 20.60C16.14 20.60 16.10 20.51 16.10 20.41C16.10 20.31 16.03 20.20 15.95 20.16C15.87 20.13 15."
+        "80 20.04 15.80 19.97C15.80 19.89 15.71 19.75 15.60 19.65C15.49 19.55 15.40 19.41 15.40 19.35C15.40 19.28"
+        " 15.33 19.20 15.25 19.16C15.17 19.13 15.10 19.04 15.10 18.95C15.10 18.87 15.02 18.80 14.92 18.80C14.82 1"
+        "8.80 14.70 18.68 14.63 18.50C14.57 18.34 14.43 18.17 14.33 18.14C14.23 18.11 14.07 18.04 13.98 17.99C13."
+        "88 17.94 13.74 17.93 13.65 17.96C13.41 18.06 13.47 17.84 13.75 17.62C13.92 17.48 13.98 17.37 13.93 17.24"
+        "C13.88 17.11 13.90 17.08 14.03 17.13C14.23 17.20 14.26 17 14.08 16.82C13.92 16.66 13.70 16.67 13.70 16.8"
+        "4C13.70 16.97 13.42 17.15 13.34 17.07C13.32 17.05 13.35 16.89 13.41 16.71C13.59 16.19 13.30 15.68 12.90 "
+        "15.83C12.59 15.95 12.20 15.73 12.20 15.43C12.20 15.28 12.36 15.25 12.44 15.39C12.52 15.51 13.01 15.40 13"
+        ".06 15.25C13.09 15.18 13.04 14.96 12.96 14.75C12.87 14.54 12.80 14.27 12.80 14.14C12.80 14.01 12.76 13.9"
+        "0 12.70 13.90C12.64 13.90 12.60 14.17 12.60 14.50C12.60 14.83 12.56 15.10 12.50 15.10C12.33 15.10 12.27 "
+        "14.40 12.40 14C12.51 13.65 12.51 13.58 12.31 13.25C12.20 13.05 12.10 12.80 12.10 12.70C12.10 12.60 12.06"
+        " 12.49 12 12.45C11.95 12.42 11.93 12.33 11.96 12.26C11.99 12.18 11.91 12 11.79 11.86C11.52 11.54 11.51 1"
+        "1.49 11.48 9.70C11.47 9.03 11.45 8.56 11.41 8.32C11.39 8.15 10.43 7.51 10.02 7.39C9.34 7.19 7.70 7.52 7."
+        "70 7.87C7.70 7.94 7.75 8 7.80 8C7.86 8 7.90 7.96 7.90 7.90C7.90 7.85 8.08 7.80 8.31 7.80C8.55 7.80 8.69 "
+        "7.84 8.65 7.90C8.62 7.96 8.46 8 8.30 8C8.01 8 7.40 8.29 7.40 8.43C7.40 8.47 7.31 8.50 7.20 8.50C6.97 8.5"
+        "0 6.93 8.32 7.14 8.24C7.41 8.14 7.41 7.90 7.15 7.80C6.94 7.72 6.91 7.66 6.96 7.43C7.11 6.78 7.72 6.55 8."
+        "97 6.67C10.83 6.84 11.65 6.71 10.93 6.35C10.67 6.22 9.90 5.31 9.90 5.13C9.90 4.99 9.29 4.30 9.17 4.30C9."
+        "09 4.30 8.55 3.94 8.32 3.73C8.25 3.66 8.14 3.57 8.07 3.53C7.91 3.42 7.10 2.24 7.10 2.11C7.10 1.94 6.88 1"
+        ".98 6.55 2.20C6.35 2.34 6.16 2.38 5.97 2.34C5.78 2.30 5.68 2.33 5.64 2.44C5.60 2.54 5.46 2.60 5.26 2.60C"
+        "4.97 2.60 4.40 3.04 4.40 3.26C4.40 3.30 4.33 3.41 4.24 3.51C4.15 3.61 4.08 3.89 4.07 4.18C4.06 4.46 4.01"
+        " 4.72 3.97 4.76C3.83 4.90 3.90 5.19 4.10 5.30C4.21 5.36 4.28 5.45 4.25 5.50C4.22 5.55 4.48 5.89 4.84 6.2"
+        "5C5.83 7.27 5.87 7.86 5.10 9.45C4.83 10 4.58 10.57 4.55 10.72C4.51 10.87 4.42 11.04 4.34 11.11C3.90 11.4"
+        "7 4.25 11.65 5.40 11.65C6.45 11.65 6.70 11.83 5.97 12.07C5.02 12.39 4.60 13.20 5.40 13.20C5.60 13.20 5.8"
+        "2 13.26 5.88 13.32C5.95 13.39 6.24 13.47 6.52 13.50C7.09 13.56 7.25 13.75 6.86 13.90C6.22 14.14 6 14.40 "
+        "6.16 14.72C6.34 15.07 6.26 15.24 5.95 15.16C5.66 15.09 5.10 15.37 5.10 15.59C5.10 15.79 5.52 16.22 5.78 "
+        "16.28C6.16 16.37 7.01 16.31 7.16 16.19C7.30 16.08 7.36 16.10 7.55 16.32C7.80 16.62 8.37 16.62 8.61 16.34"
+        "C8.67 16.26 8.89 16.20 9.10 16.20C9.30 16.20 9.61 16.15 9.79 16.09C10.24 15.93 10.31 16.07 9.94 16.38C8."
+        "97 17.22 8.47 18.75 9.11 18.90C9.24 18.93 9.37 19.05 9.39 19.15C9.41 19.26 9.47 19.38 9.53 19.41C9.68 19"
+        ".51 9.53 19.81 9.31 19.87C8.92 19.97 8.93 21.40 9.32 21.40C9.58 21.40 9.52 21.73 9.25 21.79C9.14 21.81 8"
+        ".84 21.97 8.59 22.16C8.34 22.34 8.02 22.54 7.88 22.59C7.74 22.64 7.36 22.90 7.04 23.17C6.04 23.99 6.02 2"
+        "4 4.93 24C3.95 24 3.95 24 4.20 23.77ZM15.97 23.93C15.93 23.90 15.90 23.78 15.90 23.68C15.90 23.58 15.79 "
+        "23.44 15.65 23.38C15.44 23.29 15.40 23.22 15.45 23C15.49 22.83 15.46 22.69 15.37 22.62C15.11 22.40 15.22"
+        " 21.95 15.53 21.92C15.98 21.87 16.15 21.96 15.99 22.17C15.87 22.32 15.87 22.33 16.02 22.27C16.14 22.23 1"
+        "6.21 22.27 16.25 22.41C16.29 22.51 16.40 22.65 16.50 22.70C16.64 22.78 16.68 22.88 16.64 23.08C16.60 23."
+        "29 16.66 23.43 16.89 23.68L17.19 24L16.61 24C16.29 24 16 23.97 15.97 23.93ZM12.80 18.11C12.80 17.96 13.0"
+        "8 17.78 13.20 17.85C13.28 17.90 13.28 17.96 13.19 18.06C13.06 18.21 12.80 18.25 12.80 18.11ZM3.84 10.74C"
+        "3.79 10.39 3.81 10.29 3.94 10.24C4.03 10.21 4.10 10.10 4.10 10C4.10 9.89 4.15 9.78 4.20 9.75C4.42 9.61 4"
+        ".28 9.51 3.88 9.53C3.34 9.55 3.09 9.81 3.34 10.09C3.43 10.19 3.48 10.34 3.44 10.43C3.37 10.62 3.69 11.32"
+        " 3.82 11.24C3.87 11.21 3.88 10.99 3.84 10.74ZM8.56 9.05C8.47 8.96 8.40 8.82 8.40 8.75C8.40 8.56 8.27 8.5"
+        "0 8.10 8.60C7.99 8.67 7.99 8.71 8.09 8.84C8.21 8.98 8.17 9 7.76 9C7.20 9 7.14 8.79 7.62 8.50C7.98 8.28 8"
+        ".87 8.23 9.18 8.40C9.27 8.45 9.48 8.55 9.63 8.60C9.98 8.72 9.96 9.03 9.60 9.05C9.46 9.06 9.21 9.10 9.04 "
+        "9.14C8.81 9.19 8.68 9.17 8.56 9.05ZM9.82 8.38C9.52 8.08 9.74 8.02 10.10 8.30C10.33 8.48 10.34 8.50 10.15"
+        " 8.50C10.03 8.50 9.89 8.45 9.82 8.38Z"),
     "ghidra": (
-        "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"
-        "TkSuQmCC"),
+        "M9.97 23.14C7.99 22.78 6.09 21.85 4.45 20.44C3.79 19.86 3.08 19.03 3.35 19.14C3.46 19.18 3.63 19.23 3.72"
+        " 19.25C3.81 19.27 4.92 19.62 6.17 20.03C9.05 20.98 9.80 21.14 11.40 21.13C13.41 21.13 14.80 20.71 16.49 "
+        "19.60C18.36 18.37 19.24 16.59 19.25 14C19.25 11.48 18.54 10.44 16.53 10.09C15.63 9.93 15.23 10.10 14.98 "
+        "10.76C14.62 11.74 13.63 12.60 12.87 12.60C12.54 12.60 12.54 12.60 11.94 14.16C10.80 17.16 10.10 18.63 9."
+        "70 18.82C8.91 19.21 7.36 18.42 6.20 17.05C5.57 16.31 5.57 16.32 6.38 16.41C8.47 16.65 8.51 16.62 8.64 14"
+        ".92C8.73 13.62 8.73 13.62 8.36 12.84C8.15 12.40 7.95 11.83 7.91 11.55L7.85 11.05L7.60 11.54C7.20 12.34 6"
+        ".56 12.63 5.83 12.37C5.44 12.23 5.56 12.56 6 12.87C6.22 13.02 6.40 13.18 6.40 13.21C6.40 13.41 5.06 13.4"
+        "7 4.65 13.28C4.17 13.06 4.23 13.46 4.77 14.04C5.12 14.42 5.01 14.46 4.12 14.25C3.52 14.11 3.28 14 3.02 1"
+        "3.74C2.56 13.28 2.55 13.29 2.24 14.78C2.17 15.11 2.08 15.06 1.68 14.45C0.87 13.21 0.97 11.64 1.94 10.62C"
+        "2.34 10.19 2.62 10.05 3.68 9.74C5.54 9.20 6.32 8.54 6.75 7.15C7.16 5.79 7.81 5.36 9.03 5.60C9.57 5.70 9."
+        "63 5.70 9.75 5.53C11.78 2.63 15.94 1.23 18.24 2.67C18.95 3.11 18.94 3.16 18.12 3.23C17.49 3.27 16.82 3.4"
+        "5 16.91 3.55C16.94 3.57 17.13 3.55 17.35 3.50C18.82 3.19 19.12 3.24 19.87 3.95C20.83 4.83 21.82 6.25 22."
+        "38 7.53C25.93 15.74 18.78 24.73 9.97 23.14ZM11.78 21.53C11.57 21.51 11.23 21.51 11.03 21.53C10.82 21.55 "
+        "10.99 21.57 11.40 21.57C11.81 21.57 11.98 21.55 11.78 21.53ZM2.79 18.56C2.64 18.25 2.82 17.97 3.14 18.02"
+        "C3.46 18.07 3.44 18.74 3.13 18.78C2.97 18.80 2.87 18.74 2.79 18.56ZM3.24 18.27C3.16 18.06 3.01 18.05 2.9"
+        "4 18.25C2.83 18.53 2.98 18.76 3.16 18.59C3.24 18.50 3.28 18.36 3.24 18.27ZM3.84 17.66C3.72 17.34 3.84 17"
+        ".05 4.10 17.05C4.46 17.05 4.48 17.73 4.12 17.78C3.99 17.80 3.88 17.75 3.84 17.66ZM4.28 17.38C4.26 17.25 "
+        "4.18 17.15 4.10 17.15C4.02 17.15 3.94 17.25 3.92 17.38C3.89 17.55 3.94 17.60 4.10 17.60C4.26 17.60 4.31 "
+        "17.55 4.28 17.38ZM2.77 16.64C2.51 16.37 2.88 15.77 3.18 15.97C3.46 16.14 3.40 16.64 3.10 16.68C2.96 16.7"
+        "0 2.81 16.68 2.77 16.64ZM3.80 16.55C3.64 16.36 3.81 15.90 4.04 15.90C4.43 15.90 4.53 16.62 4.14 16.68C4."
+        "03 16.70 3.87 16.64 3.80 16.55ZM4.80 16.51C4.65 16.22 4.84 15.88 5.13 15.92C5.31 15.94 5.35 16.02 5.35 1"
+        "6.30C5.35 16.72 4.99 16.86 4.80 16.51ZM3.20 16.35C3.20 16.19 3.14 16.10 3.05 16.10C2.96 16.10 2.90 16.19"
+        " 2.90 16.35C2.90 16.51 2.96 16.60 3.05 16.60C3.14 16.60 3.20 16.51 3.20 16.35ZM4.25 16.34C4.25 16.24 4.1"
+        "7 16.14 4.08 16.12C3.90 16.09 3.82 16.39 3.97 16.54C4.09 16.65 4.25 16.54 4.25 16.34ZM5.25 16.34C5.25 16"
+        ".24 5.17 16.14 5.08 16.12C4.90 16.09 4.82 16.39 4.97 16.54C5.09 16.65 5.25 16.54 5.25 16.34ZM3.78 15.45C"
+        "3.64 15.15 3.83 14.88 4.14 14.92C4.53 14.98 4.43 15.70 4.04 15.70C3.96 15.70 3.85 15.59 3.78 15.45ZM4.86"
+        " 15.54C4.54 15.23 4.83 14.70 5.21 14.90C5.42 15.02 5.46 15.40 5.28 15.58C5.12 15.74 5.05 15.73 4.86 15.5"
+        "4ZM4.27 15.35C4.32 15.19 4.13 14.97 4.01 15.04C3.83 15.16 3.88 15.52 4.07 15.48C4.16 15.46 4.25 15.41 4."
+        "27 15.35ZM5.25 15.25C5.25 14.97 4.96 15 4.92 15.28C4.89 15.47 4.92 15.51 5.07 15.48C5.17 15.46 5.25 15.3"
+        "6 5.25 15.25ZM5.90 15.11C5.90 14.95 5.87 14.75 5.84 14.66C5.80 14.55 5.83 14.50 5.94 14.50C6.06 14.50 6."
+        "10 14.60 6.10 14.95C6.10 15.20 6.05 15.40 6 15.40C5.95 15.40 5.90 15.27 5.90 15.11ZM19.57 13.88C19.55 13"
+        ".64 19.53 13.83 19.53 14.30C19.53 14.77 19.55 14.96 19.57 14.73C19.59 14.49 19.59 14.11 19.57 13.88ZM6.7"
+        "7 14.34C6.51 14.07 6.88 13.47 7.18 13.67C7.46 13.84 7.40 14.34 7.10 14.38C6.96 14.40 6.81 14.38 6.77 14."
+        "34ZM7.20 14.06C7.20 13.92 7.16 13.79 7.11 13.76C6.98 13.67 6.79 13.95 6.86 14.14C6.96 14.39 7.20 14.33 7"
+        ".20 14.06Z"),
     "jadx": (
-        "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAB/lBMVEVcWlrhpKDq29yeIlExH1/QTSmLb9UoKyqiRCepsrJtIVCijN1W"
-        "p6OtYosbXI8MX1ZrMyMikoc1JJ2aysbIudiVk5OipaWdo6htcnFdN8bWX1ZzV8vPyMtkW15BH5iHOyQQY15YaKaRZ37LvcTLNzfzg16W"
-        "aWk3DCLL0tJTMkn/v7+///8+DsMNRjucdYnNfqhyRDpDPj4A///9/f0AAADxWikBg3UjHiBFGronIiMYFRYBemydHmPq5+wiHBz///9H"
-        "GsPX19ieIWTJyMmYFVs+G5t/f386C7gQDQ7xURzl3O/Hxsapp6hWU1O0U4ikHmbwSxW6uLmz2dXT6eVJGzPY19eqqKmFw73yYzQZHCBv"
-        "uLEumI2/v7+sN3ZMR0nSyO5LI7tSKsL6x7fy2dA5NTaIhodrZ2r2poxSKCx3dnfa0vGqp6j2lHQkIBy6ubmkI2Y8ErebmZpsR8uXlpYZ"
-        "Jyb1eE0dIR7zjG6UkpOHhobCwsIZODS2peQXR0O3trcFanAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-        "AAAAAAAQIIdfAAAAgHRSTlMr/vb/////HP+v/////v///////v5TGP5R////vf///xX//5///xv/eRcEBP//Df//MQH+AP//////////"
-        "/P8C//j/+v//Av////7Tlv/////+/P3/2P7//////wT////////9//7////+/27//5L//4//dP//////a5j////E/1ppz8UAAAaXSURB"
-        "VHjajZf5Q9pIFMejqFiPam2tR2uv7bHde3cISQYSDEEDAhVEregWaRVPPOt9/uv73szkAMHu+6ENY95n3vGdzIwUumOTMfxX2r5Iz5kr"
-        "um6ac+ndbQnHfpm8+7ZUPxBD98GLOZ3UmD63O+j89V7AvzC0O8d9rPmzyuZm5Wze4rS5zEf2wj0A4EsX+LY+v1nSKE1Syv7RSpt5HDZ3"
-        "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"),
+        "M10.36 22.99C5.07 22.22 0.90 17.44 0.90 12.14C0.90 11.11 0.90 11.11 1.29 11.39C2.28 12.10 4.11 11.84 4.7"
+        "9 10.89C5.25 10.27 5.30 9.78 5.30 6.29L5.30 3.10L6.01 2.64C9.22 0.56 13.45 0.32 16.85 2.02C20.29 3.75 22"
+        ".58 7 23.05 10.82L23.12 11.39L22.09 11.42L21.06 11.45L20.44 12.55C20.10 13.15 19.78 13.66 19.73 13.67C19"
+        ".69 13.68 19.38 13.19 19.04 12.57L18.44 11.45L17.36 11.42C16.45 11.40 16.28 11.42 16.33 11.54C16.36 11.6"
+        "2 16.89 12.49 17.51 13.47C18.12 14.45 18.63 15.30 18.63 15.35C18.63 15.41 18.02 16.39 17.27 17.53C16.52 "
+        "18.68 15.90 19.65 15.90 19.71C15.90 19.76 16.36 19.80 16.95 19.80L17.99 19.80L18.82 18.40C19.28 17.63 19"
+        ".68 17 19.72 17C19.79 17 20.80 18.59 20.80 18.71C20.80 18.87 19.24 20.42 18.62 20.88C16.27 22.62 13.21 2"
+        "3.41 10.36 22.99ZM12.45 19.65C14.12 19.21 15.12 18.09 15.41 16.33C15.71 14.49 14.91 12.69 13.44 11.94L12"
+        ".89 11.65L12.30 12.30C11.60 13.07 11.60 13.05 12.07 13.21C13.07 13.54 13.66 14.56 13.58 15.84C13.48 17.3"
+        "3 12.76 18.04 11.19 18.17L10.50 18.23L10.50 16.36C10.50 15.18 10.46 14.50 10.40 14.52C10.35 14.54 9.94 1"
+        "4.96 9.51 15.45L8.71 16.35L8.70 18.07L8.70 19.80L10.28 19.80C11.37 19.80 12.04 19.75 12.45 19.65ZM21.30 "
+        "16.14C21.02 15.73 20.80 15.35 20.82 15.31C20.93 15.02 22.97 11.90 23.04 11.90C23.18 11.90 23.02 13.54 22"
+        ".80 14.48C22.58 15.41 22.02 16.90 21.89 16.90C21.84 16.90 21.58 16.56 21.30 16.14ZM8.60 10.80L8.92 10L10"
+        ".58 10.02L12.23 10.05L12.38 10.48C12.55 11 12.51 11.01 13.33 10.14L14 9.43L13.36 7.84C13.01 6.97 12.46 5"
+        ".56 12.14 4.72L11.55 3.20L10.62 3.22C9.69 3.25 9.69 3.25 9.50 3.70C8.27 6.64 6.40 11.19 6.33 11.43C6.28 "
+        "11.58 6.37 11.60 7.28 11.60L8.28 11.60L8.60 10.80ZM1.06 9.93C1.40 8.40 1.95 7.05 2.71 5.90C3 5.46 3.28 5"
+        ".10 3.33 5.10C3.38 5.10 3.40 6.08 3.38 7.34C3.35 9.56 3.35 9.59 3.11 9.84C2.78 10.19 2.45 10.17 2.08 9.7"
+        "8L1.78 9.46L1.48 9.83C1.13 10.27 0.97 10.30 1.06 9.93ZM9.60 8.39C9.60 8.30 10.50 5.90 10.57 5.81C10.63 5"
+        ".73 10.71 5.89 11.09 6.91C11.75 8.65 11.79 8.50 10.61 8.50C9.97 8.50 9.60 8.46 9.60 8.39Z"),
     "mitmproxy": (
-        "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"
-        "5+P7Pzz//wH65jsFjDTiggAAAABJRU5ErkJggg=="),
+        "M10.56 22.55C8.50 22.25 6.12 21.17 4.93 20.01C4.76 19.83 4.39 19.63 4.12 19.55C3.17 19.26 2.81 18.39 3.3"
+        "2 17.63C4.03 16.59 5.71 17.31 5.47 18.55C5.37 19.09 7.28 20.35 9.05 20.93C14.81 22.81 20.79 19.01 21.64 "
+        "12.93L21.70 12.50L18.65 12.50C15.88 12.50 15.60 12.52 15.60 12.67C15.60 12.99 15.07 13.91 14.64 14.34C13"
+        ".20 15.76 10.80 15.75 9.42 14.32C9.01 13.90 8.65 13.27 8.46 12.68C8.41 12.51 8.18 12.50 5.39 12.50L2.38 "
+        "12.50L2.45 13.06C2.49 13.37 2.58 13.84 2.66 14.11L2.81 14.60L4.65 14.60C6 14.60 6.52 14.63 6.60 14.73C6."
+        "65 14.79 6.90 15.12 7.14 15.46C8.90 17.91 12.55 18.63 15.17 17.03C16.09 16.47 17.03 15.53 16.93 15.26C16"
+        ".62 14.43 17.08 13.62 17.91 13.53C19.05 13.42 19.67 14.75 18.86 15.56C18.67 15.75 18.43 15.90 18.33 15.9"
+        "0C18.22 15.90 17.98 16.11 17.76 16.40C15.86 18.89 12.04 19.82 9.06 18.51C8 18.04 6 16.39 6 15.99C6 15.94"
+        " 5.18 15.90 4.17 15.90C1.71 15.90 1.88 15.98 1.50 14.57C-0.34 7.66 4.89 0.87 12.05 0.87C14.58 0.87 17 1."
+        "72 18.86 3.27C19.14 3.50 19.61 3.77 19.90 3.87C20.90 4.21 21.18 5.21 20.46 5.87C19.61 6.66 18.25 5.97 18"
+        ".43 4.84C18.55 4.13 16.22 2.78 14.04 2.30C8.57 1.09 2.95 5.12 2.43 10.62L2.37 11.30L5.37 11.30L8.38 11.3"
+        "0L8.45 10.93C8.92 8.38 12.26 7.21 14.32 8.87C14.89 9.34 15.45 10.18 15.60 10.82L15.72 11.30L18.72 11.30L"
+        "21.72 11.30L21.65 10.68C21.61 10.33 21.50 9.76 21.41 9.40L21.24 8.75L19.28 8.72C17.32 8.70 17.32 8.70 17"
+        ".21 8.42C16.96 7.83 15.73 6.71 14.85 6.28C13.42 5.56 11.55 5.41 10.16 5.89C8.63 6.41 7 7.72 7.20 8.25C7."
+        "52 9.10 6.64 10.04 5.76 9.79C4.62 9.46 4.55 7.86 5.65 7.50C5.86 7.43 6.34 7.05 6.83 6.57C7.28 6.12 7.92 "
+        "5.60 8.24 5.41C10.70 3.96 13.91 4.06 16.22 5.66C16.76 6.03 18 7.25 18 7.41C18 7.46 18.92 7.50 20.04 7.50"
+        "L22.08 7.50L22.29 8.07C22.84 9.59 23.05 11.73 22.81 13.39C21.96 19.19 16.34 23.39 10.56 22.55ZM4.80 18.8"
+        "8C5.28 18.37 5.11 17.73 4.46 17.56C3.95 17.43 3.56 17.71 3.52 18.25C3.46 18.99 4.31 19.40 4.80 18.88ZM3."
+        "87 18.72C3.65 18.48 3.66 18.07 3.88 17.87C4.46 17.34 5.25 18.15 4.70 18.70C4.45 18.95 4.08 18.96 3.87 18"
+        ".72ZM18.57 15.35C18.84 15.16 18.94 14.74 18.80 14.40C18.48 13.62 17.30 13.84 17.30 14.68C17.30 15.36 18."
+        "01 15.74 18.57 15.35ZM17.56 15.08C17.07 14.39 18.02 13.74 18.53 14.41C18.69 14.64 18.70 14.71 18.60 14.9"
+        "1C18.35 15.37 17.82 15.45 17.56 15.08ZM13.07 13.96C14.94 13 14.96 10.51 13.11 9.58C10.48 8.25 8.20 12 10"
+        ".59 13.72C11.28 14.21 12.38 14.32 13.07 13.96ZM11.50 13.91C9.77 13.35 9.25 11.41 10.50 10.19C12.43 8.30 "
+        "15.36 10.81 13.83 13.03C13.35 13.73 12.23 14.15 11.50 13.91ZM12.52 13.50C13.30 13.28 13.80 12.59 13.80 1"
+        "1.73C13.80 9.92 11.55 9.27 10.53 10.79C9.62 12.14 10.94 13.93 12.52 13.50ZM11.65 13.12C10.11 12.61 10.43"
+        " 10.37 12.04 10.37C13.53 10.37 14 12.34 12.66 12.99C12.23 13.20 12.01 13.23 11.65 13.12ZM6.51 9.29C7.12 "
+        "8.86 6.80 7.90 6.05 7.90C5.28 7.90 4.96 8.67 5.49 9.21C5.84 9.55 6.11 9.58 6.51 9.29ZM5.80 9.23C5.36 9.0"
+        "6 5.29 8.60 5.65 8.24C5.94 7.95 6.23 7.98 6.53 8.32C6.76 8.59 6.75 8.76 6.45 9.05C6.21 9.30 6.08 9.33 5."
+        "80 9.23ZM19.89 5.80C20.10 5.80 20.40 5.36 20.40 5.05C20.40 4.11 19.17 3.94 18.85 4.84C18.69 5.30 19.27 6"
+        " 19.68 5.85C19.76 5.82 19.85 5.80 19.89 5.80ZM19.42 5.59C19.09 5.46 18.93 5.06 19.10 4.75C19.48 4.05 20."
+        "50 4.60 20.14 5.31C19.99 5.61 19.74 5.71 19.42 5.59Z"),
 }
 
 
@@ -287,7 +328,10 @@ GLYPHS = {
              ["M7 8h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z", "M12 4.8V8", "M2 13v3", "M22 13v3"]),
     "#shield": ([], ["M12 2.5 20 5.5v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z", "M8.5 12l2.4 2.4 4.6-4.8"]),
     "#wrench": ([], ["M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5l3 3 5.8-5.8a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"]),
-    "#flame": ([], ["M12 21c-3.9 0-7-2.8-7-6.6 0-4.4 4.2-6.6 4.6-11.4 2.8 1.9 4.4 4.6 4.6 7.4.9-.8 1.5-2 1.6-3.4 1.4 1.5 3.2 3.9 3.2 7.4 0 3.8-3.1 6.6-7 6.6z"]),
+    "#lock": ([], ["M6.5 10.5h11a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-6.5a2 2 0 0 1 2-2z",
+                   "M8 10.5V7.5a4 4 0 0 1 8 0v3", "M12 14.5v2.5"]),
+    "#instagram": ([ring(17.3, 6.7, 1.3)], ["M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3z",
+                                            ring(12, 12, 4.2)]),
     "#trophy": ([], ["M7 4h10v5a5 5 0 0 1-10 0z", "M7 6H4v1.5A3.5 3.5 0 0 0 7.5 11", "M17 6h3v1.5a3.5 3.5 0 0 1-3.5 3.5",
                      "M12 14v3.5", "M8.5 20.5h7", "M9.5 17.5h5v3h-5z"]),
     "#pulse": ([], ["M3 12h4l2.5-6 4.5 13 2.5-7H21"]),
@@ -398,8 +442,8 @@ def gradient(gid, colors, x1="0", y1="0", x2="1", y2="0"):
 
 def glyph(icon, paths, color, x, y, size, stroke=2.0):
     if icon.startswith("@"):
-        return (f'<image x="{x:.1f}" y="{y:.1f}" width="{size}" height="{size}" '
-                f'href="data:image/png;base64,{LOGOS[icon[1:]]}"/>')
+        return (f'<g transform="translate({x:.1f},{y:.1f}) scale({size / 24:.4f})">'
+                f'<path d="{LOGOS[icon[1:]]}" fill="{color}" fill-rule="evenodd"/></g>')
     if icon.startswith("#"):
         fills, strokes = GLYPHS[icon]
         body = "".join(f'<path d="{d}" fill="{color}"/>' for d in fills)
@@ -435,8 +479,8 @@ def card(w, h, t, rx, glow, uid=""):
 
 
 # ---------------------------------------------------------------- data
-def request(url, data=None):
-    headers = {"Authorization": f"bearer {os.environ['GH_TOKEN']}", "User-Agent": "profile-cards"}
+def request(url, data=None, token=None):
+    headers = {"Authorization": f"bearer {token or os.environ['GH_TOKEN']}", "User-Agent": "profile-cards"}
     if data is not None:
         headers["Content-Type"] = "application/json"
         data = json.dumps(data).encode()
@@ -444,50 +488,70 @@ def request(url, data=None):
         return json.load(r)
 
 
-def graphql(query, variables):
-    body = request("https://api.github.com/graphql", {"query": query, "variables": variables})
+def graphql(query, variables, token=None):
+    body = request("https://api.github.com/graphql", {"query": query, "variables": variables}, token)
     if body.get("errors"):
-        raise SystemExit(f"GraphQL error: {body['errors']}")
+        raise RuntimeError(f"GraphQL error: {body['errors']}")
     return body["data"]
 
 
 def fetch():
-    head = graphql("""query($login: String!) { user(login: $login) {
-        createdAt
-        repos: repositories(ownerAffiliations: OWNER) { totalCount }
-        publicRepos: repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
-        contributedTo: repositoriesContributedTo(includeUserRepositories: false,
-            contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]) { totalCount } } }""",
+    """The calendar and public numbers, read with the default token so the days match GitHub's own graph.
+    restrictedContributionsCount is what this viewer can't open: the owner's private contributions,
+    which the profile shares as counts."""
+    head = graphql("""query($login: String!) { user(login: $login) { createdAt
+        publicRepos: repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount } } }""",
                    {"login": LOGIN})["user"]
     created = dt.datetime.fromisoformat(head["createdAt"].replace("Z", "+00:00"))
     now = dt.datetime.now(dt.timezone.utc)
-    days, start = {}, dt.datetime(created.year, 1, 1, tzinfo=dt.timezone.utc)
+    days, restricted, start = {}, 0, dt.datetime(created.year, 1, 1, tzinfo=dt.timezone.utc)
     while start <= now:
         end = min(dt.datetime(start.year, 12, 31, 23, 59, 59, tzinfo=dt.timezone.utc), now)
         data = graphql("""query($login: String!, $from: DateTime!, $to: DateTime!) { user(login: $login) {
-            contributionsCollection(from: $from, to: $to) { contributionCalendar {
+            contributionsCollection(from: $from, to: $to) { restrictedContributionsCount contributionCalendar {
                 weeks { contributionDays { date contributionCount } } } } } }""",
                        {"login": LOGIN, "from": start.isoformat(), "to": end.isoformat()})
-        for week in data["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]:
+        collection = data["user"]["contributionsCollection"]
+        restricted += collection["restrictedContributionsCount"]
+        for week in collection["contributionCalendar"]["weeks"]:
             for d in week["contributionDays"]:
                 days[d["date"]] = d["contributionCount"]
         start = dt.datetime(start.year + 1, 1, 1, tzinfo=dt.timezone.utc)
-    return head, created, days
+    return head["publicRepos"]["totalCount"], days, restricted
 
 
-def streaks(days):
-    dates = sorted(days)
+def owner_counts():
+    """Repository counts with the owner's token, which sees private repositories.
+    None without the token, or when it has expired or belongs to someone else."""
+    token = os.environ.get("OWNER_GH_TOKEN", "").strip()
+    if not token:
+        print("no owner token, showing public numbers")
+        return None
+    try:
+        v = graphql("""query { viewer { login
+            repos: repositories(ownerAffiliations: OWNER) { totalCount }
+            privateRepos: repositories(ownerAffiliations: OWNER, privacy: PRIVATE) { totalCount }
+            contributedTo: repositoriesContributedTo(includeUserRepositories: false,
+                contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]) { totalCount } } }""", {}, token)["viewer"]
+    except Exception as e:  # noqa: BLE001 — fall back to public numbers rather than fail the job
+        print(f"owner token unusable, showing public numbers: {e}")
+        return None
+    if v["login"].lower() != LOGIN:
+        print("owner token belongs to another account, showing public numbers")
+        return None
+    if not v["privateRepos"]["totalCount"]:  # a token without private access would print "0 private"
+        print("owner token sees no private repositories (check its access), showing public numbers")
+        return None
+    return dict(repos=v["repos"]["totalCount"], private=v["privateRepos"]["totalCount"],
+                contributed=v["contributedTo"]["totalCount"])
+
+
+def longest_streak(days):
     longest = run = 0
-    for d in dates:
+    for d in sorted(days):
         run = run + 1 if days[d] else 0
         longest = max(longest, run)
-    current = 0
-    for i, d in enumerate(reversed(dates)):
-        if days[d]:
-            current += 1
-        elif i:
-            break
-    return current, longest
+    return longest
 
 
 def public_email():
@@ -497,6 +561,24 @@ def public_email():
         print(f"email lookup failed: {e}")
         return None
     return email if re.fullmatch(r"[^@\s<>\"']+@[^@\s<>\"']+\.[A-Za-z]{2,}", email) else ""
+
+
+def instagram_handle():
+    """The Instagram account linked on the GitHub profile: None when the lookup fails, "" when there is none."""
+    try:
+        accounts = request(f"https://api.github.com/users/{LOGIN}/social_accounts")
+    except Exception as e:  # noqa: BLE001 — keep the README as it is when the API fails
+        print(f"social account lookup failed: {e}")
+        return None
+    for a in accounts:
+        url = a.get("url") or ""
+        parts = urllib.parse.urlsplit(url if "//" in url else "https://" + url)
+        host = (parts.hostname or "").lower()
+        if host == "instagram.com" or host.endswith(".instagram.com") or a.get("provider") == "instagram":
+            handle = parts.path.strip("/").split("/")[0]
+            # A link the job can't read keeps the README's current pill rather than dropping it.
+            return handle if re.fullmatch(r"[A-Za-z0-9._]{1,30}", handle) else None
+    return ""
 
 
 def icon_path(slug):
@@ -665,20 +747,20 @@ def tile(theme, glyph_name, value, unit, label, accent, uid, iw):
     tail = f'<tspan class="un" font-size="11.5" font-weight="600" fill="{t["muted"]}"> {esc(unit)}</tspan>' if unit else ""
     out.append(f'<text class="up d" x="13" y="64" font-size="25" font-weight="800" letter-spacing="-.5" fill="url(#num{uid})">{esc(value)}{tail}</text>')
     size = 10.5 if text_w(label, 10.5) <= iw - 26 else 10
-    out.append(f'<text class="lb" x="13" y="85" font-size="{size}" fill="{t["muted"]}">{esc(label)}</text>')
+    out.append(f'<text class="lb{uid}" x="13" y="85" font-size="{size}" fill="{t["muted"]}">{esc(label)}</text>')
     return out
 
 
-def label_small(rows):
-    """Label size on phones: up to 14px while every label still fits its narrowest tile."""
-    room = math.floor(TILE_W - GUT) - 26
-    return round(min([14] + [room / text_w(r[4], 1) for r in rows]), 1)
+def label_small(label):
+    """A label's size on phones: up to 14px while it still fits the narrowest tile."""
+    return round(min(14, (math.floor(TILE_W - GUT) - 26) / text_w(label, 1)), 1)
 
 
 def tile_trio_svg(theme, rows, k):
     """Three tiles in one image: six across with the other trio on desktop, three across on phones."""
-    trio, small = rows[3 * k:3 * k + 3], label_small(rows)
-    style = f"@media (max-width:{PAIR_SMALL}px){{.lb{{font-size:{small}px}}.un{{font-size:{min(small + 1, 14):g}px}}}}"
+    trio = rows[3 * k:3 * k + 3]
+    style = (f"@media (max-width:{PAIR_SMALL}px){{.un{{font-size:13px}}"
+             + "".join(f".lb{j}{{font-size:{label_small(r[4])}px}}" for j, r in enumerate(trio)) + "}")
     out = svg_open(TRIO_W, TILE_H, "; ".join(f"{r[4]}: {r[2]}{(' ' + r[3]) if r[3] else ''}" for r in trio), style)
     for j, (_key, g, value, unit, label, _alt, accent) in enumerate(trio):
         # Whole-unit edges (131/130/131 wide, 8px gutters) keep the hairline borders crisp on 1x screens.
@@ -694,18 +776,18 @@ def tiles(s, lang):
     x = TEXT[lang]
     m, alts = x["tiles"], x.get("tile_alts", {})
     unit = lambda n: x["day"] if n == 1 else x["days"]
-    rows = [("total", "#pulse", f"{s['total']:,}", x["contribs"], "total"),
-            ("current", "#flame", str(s["current"]), unit(s["current"]), "current"),
-            ("longest", "#trophy", str(s["longest"]), unit(s["longest"]), "longest")]
-    if s["owner"]:
-        rows += [("repos", "#repo", str(s["repos"]), x["repos"], "repos"),
-                 ("contributed", "#branch", str(s["contributed"]), x["repos"], "contributed")]
-    else:  # the default Actions token sees public data only; don't show private-dependent zeros
-        rows += [("repos", "#repo", str(s["public"]), x["repos"], "public_repos"),
-                 ("contributed", "#bolt", f"{s['best']:,}", x["contribs"], "best")]
-    rows.append(("active", "#calendar", str(s["active"]), unit(s["active"]), "active"))
-    return [(key, g, value, u, m[name], alts.get(name, m[name]), ramp(i / (len(rows) - 1)))
-            for i, (key, g, value, u, name) in enumerate(rows)]
+    rows = [("total", "#pulse", f"{s['total']:,}", x["contribs"], m["total"], "total"),
+            ("longest", "#trophy", str(s["longest"]), unit(s["longest"]), m["longest"], "longest"),
+            ("best", "#bolt", f"{s['best']:,}", x["contribs"], m["best"], "best")]
+    if s["owner"]:  # the owner's token sees private repositories
+        rows += [("repos", "#repo", str(s["repos"]), x["repos"], m["repos"].format(p=s["private"]), "repos"),
+                 ("contributed", "#branch", str(s["contributed"]), x["repos"], m["contributed"], "contributed")]
+    else:  # the default token sees public repositories only, but the profile shares private contribution counts
+        rows += [("repos", "#repo", str(s["public"]), x["repos"], m["public_repos"], "public_repos"),
+                 ("contributed", "#lock", f"{s['restricted']:,}", x["contribs"], m["private"], "private")]
+    rows.append(("active", "#calendar", str(s["active"]), unit(s["active"]), m["active"], "active"))
+    return [(key, g, value, u, label, alts.get(name, label), ramp(i / (len(rows) - 1)))
+            for i, (key, g, value, u, label, name) in enumerate(rows)]
 
 
 # ---------------------------------------------------------------- contribution calendar
@@ -732,7 +814,13 @@ def contrib_svg(lang, theme, days, today):
     h = round(top + 7 * pitch + 22)
     title = x["heat"].format(n=f"{total:,}")
     shift = (left - (right + pitch - cell)) / 2  # centres the grid once the weekday labels are hidden
-    out = svg_open(COL, h + 3, title, ".c{animation:in .5s ease-out both}"
+    band, span = 140, iw - left - right
+    out = svg_open(COL, h + 3, title,
+                   ".cells>rect{transform-box:fill-box;transform-origin:center;"
+                   "animation:pop .55s cubic-bezier(.2,.9,.3,1.25) both}"
+                   "@keyframes pop{from{opacity:0;transform:scale(.3)}}"
+                   f".sweep{{animation:sweep 6s cubic-bezier(.45,0,.25,1) 1.8s infinite}}"
+                   f"@keyframes sweep{{0%{{transform:translateX(0)}}45%,100%{{transform:translateX({span + 2 * band}px)}}}}"
                    "@media (max-width:520px){.lab{display:none}.ttl{font-size:28px;transform:translateY(6px)}"
                    f".cells{{transform:translateX({-shift:.1f}px)}}}}"
                    f"@media (max-width:416px){{.frame{{transform-origin:{COL / 2:g}px {(h + 3) / 2:g}px;transform:scale({PHONE_FRAME})}}}}")
@@ -755,14 +843,23 @@ def contrib_svg(lang, theme, days, today):
         out.append(f'<text x="{left - 8}" y="{top + row * pitch + cell / 2 + 3.5:.1f}" font-size="10" text-anchor="end" '
                    f'fill="{t["muted"]}">{esc(name)}</text>')
     out.append('</g><g class="cells">')
-    for col in range(weeks):
-        week = grid[col * 7:(col + 1) * 7]
-        rects = []
-        for day, count in week:
-            lv = level(count, cuts)
-            rects.append(f'<rect x="{left + col * pitch:.1f}" y="{top + ((day.weekday() + 1) % 7) * pitch:.1f}" '
-                         f'width="{cell:.1f}" height="{cell:.1f}" rx="2.5" fill="{t["empty"] if lv < 0 else t["levels"][lv]}"/>')
-        out.append(f'<g class="c" style="animation-delay:{col * 0.012:.3f}s">' + "".join(rects) + "</g>")
+    active = []
+    for i, (day, count) in enumerate(grid):
+        col, row = i // 7, (day.weekday() + 1) % 7
+        lv = level(count, cuts)
+        box = f'x="{left + col * pitch:.1f}" y="{top + row * pitch:.1f}" width="{cell:.1f}" height="{cell:.1f}" rx="2.5"'
+        out.append(f'<rect {box} fill="{t["empty"] if lv < 0 else t["levels"][lv]}" '
+                   f'style="animation-delay:{col * .018 + row * .035:.3f}s"/>')
+        if lv >= 0:
+            active.append(f"<rect {box}/>")
+    # A soft band of light crosses the days with contributions every few seconds; at rest it sits left
+    # of the grid, so it stays invisible where animation is off.
+    out.append(f'<defs><clipPath id="act">{"".join(active)}</clipPath>'
+               '<linearGradient id="sheen"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>'
+               f'<stop offset=".5" stop-color="#FFFFFF" stop-opacity="{.5 if theme == "light" else .45}"/>'
+               '<stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient></defs>'
+               f'<g clip-path="url(#act)"><rect class="sweep" x="{left - 2 * band}" y="{top}" width="{band}" '
+               f'height="{7 * pitch:.1f}" fill="url(#sheen)"/></g>')
     out.append("</g></g></g></svg>")
     return "\n".join(out)
 
@@ -799,11 +896,7 @@ def badge_svg(name, icon, color, paths, alt):
     out.append(f'<rect width="{w}" height="{h}" rx="{h / 2}" fill="url(#gloss)"/>')
     out.append(f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="{(h - 1) / 2}" fill="none" '
                f'stroke="#FFFFFF" stroke-opacity=".28"/>')
-    if icon.startswith("@"):  # a raster logo sits on a white disc, so it reads on any badge colour
-        out.append(f'<circle cx="{10 + ICON / 2:g}" cy="{h / 2:g}" r="{ICON / 2 + 1:g}" fill="#FFFFFF"/>')
-        out.append(glyph(icon, paths, ink, 10.5, (h - ICON + 1) / 2, ICON - 1))
-    else:
-        out.append(glyph(icon, paths, ink, 10, (h - ICON) / 2, ICON, 2.1))
+    out.append(glyph(icon, paths, ink, 10, (h - ICON) / 2, ICON, 2.1))
     ty, tx = h / 2 + BADGE_FS * 0.36, 10 + ICON + 6 + tw / 2
     if not dark_ink:
         out.append(f'<text x="{tx:.1f}" y="{ty + 1:.1f}" text-anchor="middle" font-size="{BADGE_FS}" font-weight="700" '
@@ -814,18 +907,24 @@ def badge_svg(name, icon, color, paths, alt):
     return "\n".join(out), w
 
 
-def contact_svg(email):
-    """One gradient capsule that reads on light and dark pages, so it can sit inside a mailto link."""
-    w, h = round(text_w(email, 14, bold=True) + 76), 42
-    out = svg_open(w, h, email)
-    out.append("<defs>" + gradient("pill", ACCENT) + "</defs>")
+INSTAGRAM = ("#F56040", "#E1306C", "#C13584", "#833AB4", "#5851DB")  # Instagram's palette; white text stays at 4.5:1
+
+
+def pill_svg(label, icon, colors):
+    """A gradient capsule with a white glyph and label that reads on light and dark pages, so it can sit in a link.
+    A 4px margin on each side gives two pills an 8px gap."""
+    w, h = round(text_w(label, 14, bold=True) + 76), 42
+    out = svg_open(w + 8, h, label)
+    out.append("<defs>" + gradient("pill", colors) + "</defs>")
+    out.append('<g transform="translate(4,0)">')
     out.append(f'<rect width="{w}" height="{h}" rx="21" fill="url(#pill)"/>')
     out.append(f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="20.5" fill="none" stroke="#FFFFFF" stroke-opacity=".18"/>')
-    out.append(f'<g transform="translate(17,9)"><path d="{MAIL}" fill="#FFFFFF"/></g>')
+    out.append(f'<g transform="translate(17,9)"><path d="{MAIL}" fill="#FFFFFF"/></g>' if icon == "mail"
+               else glyph(icon, {}, "#FFFFFF", 17, 9, 24, 2.1))
     out.append(f'<text x="{49 + (w - 49 - 22) / 2:.1f}" y="26" text-anchor="middle" font-size="14" font-weight="700" '
-               f'fill="#FFFFFF">{esc(email)}</text>')
-    out.append("</svg>")
-    return "\n".join(out), w
+               f'fill="#FFFFFF">{esc(label)}</text>')
+    out.append("</g></svg>")
+    return "\n".join(out), w + 8
 
 
 # ---------------------------------------------------------------- README blocks
@@ -862,11 +961,17 @@ def activity_block(lang, s):
     return '<p align="center">\n' + trios + picture(f"contrib-{lang}-{{theme}}.svg", heat + note) + "\n</p>"
 
 
-def contact_block(lang, email, width):
-    alt = f"{TEXT[lang]['email']}: {email}"
-    return ('<p align="center">\n'
-            f'<a href="mailto:{esc(email)}"><img src="{RAW}contact.svg" alt="{esc(alt)}" width="{width}"></a>\n'
-            "</p>")
+def contact_block(lang, contact):
+    """Email and Instagram pills on one line, with no whitespace between the links (their margins make the gap)."""
+    (email, ew), (handle, iw) = contact["email"], contact["instagram"]
+    links = []
+    if email:
+        links.append(f'<a href="mailto:{esc(email)}"><img src="{RAW}contact.svg" '
+                     f'alt="{esc(TEXT[lang]["email"] + ": " + email)}" width="{ew}"></a>')
+    if handle:
+        links.append(f'<a href="https://www.instagram.com/{esc(handle)}/"><img src="{RAW}instagram.svg" '
+                     f'alt="{esc("Instagram: @" + handle)}" width="{iw}"></a>')
+    return '<p align="center">\n' + "".join(links) + "\n</p>" if links else ""
 
 
 def replace_block(text, name, content):
@@ -874,21 +979,21 @@ def replace_block(text, name, content):
                   lambda m: m.group(1) + (content + "\n" if content else "") + m.group(2), text, flags=re.S)
 
 
-def readme_email(root):
-    """The address the README shows now, so a run that can't read the profile still draws its pill."""
+def readme_contact(root, pattern):
+    """What the README's contact block shows now, so a run that can't read the profile still draws its pills."""
     block = re.search(r"<!-- contact:start -->(.*?)<!-- contact:end -->", (root / "README.md").read_text(encoding="utf-8"), re.S)
-    m = re.search(r'href="mailto:([^"]+)"', block.group(1)) if block else None
+    m = re.search(pattern, block.group(1)) if block else None
     return html.unescape(m.group(1)) if m else ""
 
 
-def sync_readme(root, s, email, width):
+def sync_readme(root, s, contact):
     changed = False
     for lang, name in (("en", "README.md"), ("ko", "README.ko.md")):
         path = root / name
         text = path.read_text(encoding="utf-8")
         new = replace_block(text, "stack", stack_block(lang))
         new = replace_block(new, "activity", activity_block(lang, s))
-        new = replace_block(new, "contact", contact_block(lang, email, width) if email else "")
+        new = replace_block(new, "contact", contact_block(lang, contact))
         if new != text:
             path.write_text(new, encoding="utf-8", newline="\n")
             changed = True
@@ -899,14 +1004,12 @@ def main():
     out = Path(sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "out")
     for sub in ("badges", "stack", "tiles"):
         (out / sub).mkdir(parents=True, exist_ok=True)
-    head, created, days = fetch()
+    public, days, restricted = fetch()
     today = dt.datetime.now(dt.timezone.utc).date()
-    current, longest = streaks(days)
-    s = dict(total=sum(days.values()), current=current, longest=longest, repos=head["repos"]["totalCount"],
-             public=head["publicRepos"]["totalCount"], contributed=head["contributedTo"]["totalCount"],
-             best=max(days.values(), default=0),
+    owner = owner_counts()
+    s = dict(total=sum(days.values()), longest=longest_streak(days), best=max(days.values(), default=0),
              active=sum(1 for d, c in days.items() if c and dt.date.fromisoformat(d) > today - dt.timedelta(days=365)),
-             owner=os.environ.get("OWNER_TOKEN", "").lower() == "true")
+             public=public, restricted=restricted, owner=owner is not None, **(owner or {}))
     slugs = sorted({i[1] for *_, items in STACK for i in items if i[1][0] not in "#@"})
     paths = {slug: icon_path(slug) for slug in slugs}
     assert len(STACK) % 2 == 0, "stack cards are drawn in pairs"
@@ -925,15 +1028,20 @@ def main():
             alt = item[4] if len(item) > 4 else item[0]
             svg, _w = badge_svg(item[0], item[1], item[2], paths, alt)
             (out / "badges" / f"{slug_id(item[0])}.svg").write_text(svg, encoding="utf-8")
-    found = public_email()  # None when the lookup fails, "" when the profile shows no public address
-    email = readme_email(Path(".")) if found is None else found
-    width = 0
-    if email:
-        svg, width = contact_svg(email)
-        (out / "contact.svg").write_text(svg, encoding="utf-8")
+    # None means the lookup failed: keep what the README shows. "" means the profile has none: drop it.
+    found = {"email": (public_email(), r'href="mailto:([^"]+)"', "contact.svg", "mail", ACCENT),
+             "instagram": (instagram_handle(), r'instagram\.com/([A-Za-z0-9._]+)/', "instagram.svg", "#instagram", INSTAGRAM)}
+    contact = {}
+    for key, (value, pattern, name, icon, colors) in found.items():
+        value = readme_contact(Path("."), pattern) if value is None else value
+        width = 0
+        if value:
+            svg, width = pill_svg(value if key == "email" else "@" + value, icon, colors)
+            (out / name).write_text(svg, encoding="utf-8")
+        contact[key] = (value, width)
     if "--sync-readme" in sys.argv:
-        sync_readme(Path("."), s, email, width)
-    print(json.dumps(s | {"email": email}))
+        sync_readme(Path("."), s, contact)
+    print(json.dumps(s | {k: v[0] for k, v in contact.items()}))
 
 
 if __name__ == "__main__":

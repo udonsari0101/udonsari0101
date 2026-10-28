@@ -5,7 +5,7 @@
      In <source srcset> URLs never use raw commas or spaces. When you add an entry to a drawer, update its count. -->
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-light.svg" alt="udonsari0101 · Interested in Cybersecurity, Software Engineering, Autonomous Systems, Computer Systems, Artificial Intelligence"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-light.svg" alt="udonsari0101 · Interested in Information Security, Software Engineering, Automation, Computer Systems, Artificial Intelligence"></picture>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@ AI development is a particular strength of mine, from LLM integration and fine-t
 
 <!-- contact:start -->
 <p align="center">
-<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="Email: yeappidw@unist.ac.kr" width="225"></a>
+<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="Email: yeappidw@unist.ac.kr" width="233"></a><a href="https://www.instagram.com/d0ng.k20/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/instagram.svg" alt="Instagram: @d0ng.k20" width="159"></a>
 </p>
 <!-- contact:end -->
 
@@ -89,7 +89,7 @@ AI development is a particular strength of mine, from LLM integration and fine-t
 
 <!-- activity:start -->
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-0.svg" alt="All-time contributions; Current streak; Longest streak (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-1.svg" alt="Public repos; Most contributions in one day; Active days in the last year (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-light.svg" alt="Contribution calendar for the last year (updated daily)"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-0.svg" alt="All-time contributions; Longest streak; Most contributions in one day (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-1.svg" alt="Public repos; Contributions to private repositories; Active days in the last year (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-light.svg" alt="Contribution calendar for the last year (updated daily)"></picture>
 </p>
 <!-- activity:end -->
 
@@ -113,7 +113,7 @@ My work so far includes full-stack web applications, Windows desktop software, n
 ·&nbsp;Simulation environment development using Gazebo&nbsp;and&nbsp;RViz<br>
 ·&nbsp;AI-based autonomous driving and vehicle control software</td>
 </tr>
-<tr><td colspan="2"><b>Cybersecurity</b></td></tr>
+<tr><td colspan="2"><b>Information Security</b></td></tr>
 <tr>
 <td valign="top"><samp>2026</samp></td>
 <td valign="top" width="1012"><b>Hacking Team Lead</b><br>
@@ -211,7 +211,7 @@ HACKSIUM 2025</td>
 
 <p></p>
 
-**Interests**&ensp;Cybersecurity · Software Engineering · Autonomous Systems · Computer Systems · Artificial Intelligence
+**Interests**&ensp;Information Security · Software Engineering · Automation · Computer Systems · Artificial Intelligence
 
 #### Software Development
 
@@ -226,7 +226,7 @@ HACKSIUM 2025</td>
 - Automated Testing, Debugging & Quality Assurance
 - Application Packaging, Deployment & Maintenance
 
-#### Cybersecurity
+#### Information Security
 
 - Web Application Security & Vulnerability Analysis
 - Reverse Engineering & Binary Analysis
