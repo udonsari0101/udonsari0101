@@ -17,7 +17,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 <tr><td colspan="2"><b>로보틱스·자율주행</b></td></tr>
 <tr>
 <td valign="top" nowrap><samp>2026–</samp><br>진행 중</td>
-<td valign="top" width="100%"><b>자율주행 개발자</b><br>
+<td valign="top" width="1012"><b>자율주행 개발자</b><br>
 유니주행차 · UNIST BTS(Brain to Society) 프로그램<br>
 ·&nbsp;ROS 2 기반 자율주행 소프트웨어 개발<br>
 ·&nbsp;Gazebo와 RViz를 활용한 시뮬레이션 환경 구축<br>
@@ -26,35 +26,35 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 <tr><td colspan="2"><b>사이버보안</b></td></tr>
 <tr>
 <td valign="top" nowrap><samp>2026</samp></td>
-<td valign="top" width="100%"><b>해킹팀 팀장</b><br>
+<td valign="top" width="1012"><b>해킹팀 팀장</b><br>
 HeXA · UNIST 정보보안 동아리<br>
 ·&nbsp;웹 보안, 리버스 엔지니어링, CTF 활동</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2026</samp></td>
-<td valign="top" width="100%"><b>CTF 문제 출제자</b><br>
+<td valign="top" width="1012"><b>CTF 문제 출제자</b><br>
 UNIST HeXA 최마진 3회<br>
 ·&nbsp;CTF 문제 개발</td>
 </tr>
 <tr><td colspan="2"><b>소프트웨어 개발</b></td></tr>
 <tr>
 <td valign="top" nowrap><samp>2025–</samp><br><samp>2026</samp></td>
-<td valign="top" width="100%"><b>백엔드 개발자</b><br>
+<td valign="top" width="1012"><b>백엔드 개발자</b><br>
 ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 ·&nbsp;팀 프로젝트에서 백엔드 개발 담당</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025</samp></td>
-<td valign="top" width="100%"><b>풀스택 개발자</b><br>
+<td valign="top" width="1012"><b>풀스택 개발자</b><br>
 UNIST 동아리연합회<br>
 ·&nbsp;내부 행사용 웹 애플리케이션 단독 개발</td>
 </tr>
 <tr><td colspan="2"><b>프리랜서 개발</b></td></tr>
 <tr>
 <td valign="top" nowrap><samp>2024–</samp><br>현재</td>
-<td valign="top" width="100%"><b>프리랜서 소프트웨어 개발자</b><br>
+<td valign="top" width="1012"><b>프리랜서 소프트웨어 개발자</b><br>
 ·&nbsp;풀스택 웹 애플리케이션<br>
 ·&nbsp;데스크톱 GUI 소프트웨어<br>
 ·&nbsp;맞춤형 자동화 도구<br>
@@ -70,43 +70,43 @@ UNIST 동아리연합회<br>
 <table>
 <tr>
 <td valign="top"><samp>2026</samp></td>
-<td valign="top" width="100%"><b>공동&nbsp;1위</b><br>
+<td valign="top" width="1012"><b>공동&nbsp;1위</b><br>
 <a href="https://forge.hspace.io/competitions/69d37428d0244d4ffd5e2295">HSPACE SPACE WAR @&nbsp;TAURUS&nbsp;(PWN)</a></td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>2026</samp></td>
-<td valign="top" width="100%"><b>공동&nbsp;2위</b><br>
+<td valign="top" width="1012"><b>공동&nbsp;2위</b><br>
 <a href="https://forge.hspace.io/competitions/6a9e82ab2d767f19df81691d">HSPACE SPACE WAR @&nbsp;VIRGO&nbsp;(WEB)</a></td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>2026</samp></td>
-<td valign="top" width="100%"><b>공동&nbsp;3위</b><br>
+<td valign="top" width="1012"><b>공동&nbsp;3위</b><br>
 <a href="https://forge.hspace.io/competitions/69b11731856a40e65849f147">HSPACE SPACE WAR @&nbsp;ARIES&nbsp;(AI)</a></td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>2026</samp></td>
-<td valign="top" width="100%"><b>3위</b><br>
+<td valign="top" width="1012"><b>3위</b><br>
 SECTOR CTF</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>2026</samp></td>
-<td valign="top" width="100%"><b>본선&nbsp;6위</b><br>
+<td valign="top" width="1012"><b>본선&nbsp;6위</b><br>
 HACKSIUM 2026</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>2025</samp></td>
-<td valign="top" width="100%"><b>최우수상</b><br>
+<td valign="top" width="1012"><b>최우수상</b><br>
 UNIST HeXA 최마진 2회</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>2025</samp></td>
-<td valign="top" width="100%"><b>본선&nbsp;진출</b><br>
+<td valign="top" width="1012"><b>본선&nbsp;진출</b><br>
 HACKSIUM 2025</td>
 </tr>
 </table>
@@ -114,23 +114,23 @@ HACKSIUM 2025</td>
 ## 기술 스택
 
 <table>
-<tr><td valign="top" nowrap>언어</td><td valign="top" width="100%">Python, JavaScript, TypeScript, Kotlin, SQL</td></tr>
+<tr><td valign="top" nowrap>언어</td><td valign="top" width="1012">Python, JavaScript, TypeScript, Kotlin, SQL</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>프론트엔드</td><td valign="top" width="100%">React, HTML, CSS</td></tr>
+<tr><td valign="top" nowrap>프론트엔드</td><td valign="top" width="1012">React, HTML, CSS</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>백엔드</td><td valign="top" width="100%">FastAPI, Flask, REST API</td></tr>
+<tr><td valign="top" nowrap>백엔드</td><td valign="top" width="1012">FastAPI, Flask, REST API</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>데이터베이스</td><td valign="top" width="100%">PostgreSQL, MySQL, SQLite, Firebase&nbsp;/&nbsp;Firestore</td></tr>
+<tr><td valign="top" nowrap>데이터베이스</td><td valign="top" width="1012">PostgreSQL, MySQL, SQLite, Firebase&nbsp;/&nbsp;Firestore</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>데스크톱</td><td valign="top" width="100%">PySide6 (Qt), Windows 애플리케이션 개발</td></tr>
+<tr><td valign="top" nowrap>데스크톱</td><td valign="top" width="1012">PySide6 (Qt), Windows 애플리케이션 개발</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>Android</td><td valign="top" width="100%">Kotlin, Jetpack Compose, Android SDK, Gradle</td></tr>
+<tr><td valign="top" nowrap>Android</td><td valign="top" width="1012">Kotlin, Jetpack Compose, Android SDK, Gradle</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>데브옵스·<br>클라우드</td><td valign="top" width="100%">Linux, Docker, Docker Compose, AWS, GCP, GitHub Actions</td></tr>
+<tr><td valign="top" nowrap>데브옵스·<br>클라우드</td><td valign="top" width="1012">Linux, Docker, Docker Compose, AWS, GCP, GitHub Actions</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>로보틱스</td><td valign="top" width="100%">ROS 2, Gazebo, RViz</td></tr>
+<tr><td valign="top" nowrap>로보틱스</td><td valign="top" width="1012">ROS 2, Gazebo, RViz</td></tr>
 <tr></tr>
-<tr><td valign="top" nowrap>AI</td><td valign="top" width="100%">생성형 AI, Diffusion 모델, LLM 연동·파인튜닝</td></tr>
+<tr><td valign="top" nowrap>AI</td><td valign="top" width="1012">생성형 AI, Diffusion 모델, LLM 연동·파인튜닝</td></tr>
 </table>
 
 ## 역량
@@ -174,5 +174,5 @@ HACKSIUM 2025</td>
 ## 학력
 
 <table>
-<tr><td valign="top" nowrap>UNIST</td><td valign="top" width="100%">울산과학기술원<br>전기전자공학과</td></tr>
+<tr><td valign="top" nowrap>UNIST</td><td valign="top" width="1012">울산과학기술원<br>전기전자공학과</td></tr>
 </table>
