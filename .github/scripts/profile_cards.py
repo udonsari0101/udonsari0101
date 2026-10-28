@@ -1,17 +1,17 @@
-"""Render the profile's visual cards and badges as SVG and keep README blocks in sync.
+"""Render the profile's visual cards as SVG and keep README blocks in sync.
 
     GH_TOKEN=... python .github/scripts/profile_cards.py OUT_DIR [--sync-readme]
 
 Every block is drawn on one 832px column so edges line up: the hero, the
 contribution calendar, eight stack cards drawn in pairs (416px images, 2 per row on
 desktop and 1 on phones, where the pair scales down and its type steps up), and six
-stat tiles drawn in threes (416px images, the same way). Images carry a 4px transparent margin,
-so placed side by side with no whitespace they get an exact 8px gutter. Also writes
-one capsule badge per linked technology (official-links drawer) and the contact pills
-(email and Instagram, from the public profile). GH_TOKEN (the default Actions token)
-reads the calendar and public numbers; OWNER_GH_TOKEN, the owner's token when the
-PROFILE_STATS_TOKEN secret exists, adds repository counts that include private ones.
---sync-readme rewrites the stack, activity, and contact blocks in both READMEs.
+stat tiles drawn in threes (416px images, the same way). Images carry a 4px
+transparent margin, so placed side by side with no whitespace they get an exact 8px
+gutter. Also writes the contact pills (email and Instagram, from the public profile).
+GH_TOKEN (the default Actions token) reads the calendar and public numbers;
+OWNER_GH_TOKEN, the owner's token when the PROFILE_STATS_TOKEN secret exists, adds
+repository counts that include private ones. --sync-readme rewrites the stack,
+activity, and contact blocks in both READMEs.
 """
 import datetime as dt
 import html
@@ -64,70 +64,68 @@ TEXT = {
                day="day", days="days", repos="", contribs="",
                heat="{n} contributions in the last year", less="Less", more="More",
                months=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-               weekdays={1: "Mon", 3: "Wed", 5: "Fri"}, email="Email",
-               links="Official links", links_note="{n}&nbsp;links"),
+               weekdays={1: "Mon", 3: "Wed", 5: "Fri"}, email="Email"),
     "ko": dict(focus="관심 분야", interests=["정보보안", "소프트웨어 공학", "자동화", "컴퓨터 시스템", "인공지능"],
                tiles=dict(total="누적 기여", longest="최장 연속 기여", best="하루 최다 기여", repos="저장소 · 비공개 {p}",
                           public_repos="공개 저장소", contributed="기여한 저장소", private="비공개 기여", active="최근 1년 활동일"),
                tile_alts=dict(repos="저장소(비공개 포함)", contributed="기여한 저장소(비공개 포함)", private="비공개 저장소 기여"),
                day="일", days="일", repos="개", contribs="회",
                heat="최근 1년간 {n}회 기여", less="적음", more="많음", months=[f"{m}월" for m in range(1, 13)],
-               weekdays={1: "월", 3: "수", 5: "금"}, email="이메일",
-               links="공식 링크", links_note="{n}개"),
+               weekdays={1: "월", 3: "수", 5: "금"}, email="이메일"),
 }
 
-# (EN title, KO title, group glyph, [(name, simple-icons slug | @logo | #glyph, brand hex, official link or None[, alt])])
+# (EN title, KO title, group glyph, [(name, simple-icons slug | @logo | #glyph, brand hex[, alt])])
 STACK = [
     ("Languages", "언어", "#code", [
-        ("Python", "python", "3776AB", "https://www.python.org"),
-        ("JavaScript", "javascript", "D4B000", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"),
-        ("TypeScript", "typescript", "3178C6", "https://www.typescriptlang.org"),
-        ("Kotlin", "kotlin", "7F52FF", "https://kotlinlang.org"),
-        ("SQL", "#table", "336791", None)]),
+        ("Python", "python", "3776AB"),
+        ("JavaScript", "javascript", "D4B000"),
+        ("TypeScript", "typescript", "3178C6"),
+        ("Kotlin", "kotlin", "7F52FF"),
+        ("SQL", "#table", "336791")]),
     ("Frontend · Backend", "프론트엔드·백엔드", "#layers", [
-        ("React", "react", "087EA4", "https://react.dev"),
-        ("HTML", "html5", "E34F26", "https://html.spec.whatwg.org"),
-        ("CSS", "css", "663399", "https://www.w3.org/Style/CSS/"),
-        ("FastAPI", "fastapi", "009688", "https://fastapi.tiangolo.com"),
-        ("Flask", "flask", "475569", "https://flask.palletsprojects.com"),
-        ("REST API", "openapiinitiative", "4D7F2A", None)]),
+        ("React", "react", "087EA4"),
+        ("HTML", "html5", "E34F26"),
+        ("CSS", "css", "663399"),
+        ("FastAPI", "fastapi", "009688"),
+        ("Flask", "flask", "475569"),
+        ("REST API", "openapiinitiative", "4D7F2A")]),
     ("Databases", "데이터베이스", "#database", [
-        ("PostgreSQL", "postgresql", "4169E1", "https://www.postgresql.org"),
-        ("MySQL", "mysql", "4479A1", "https://www.mysql.com"),
-        ("SQLite", "sqlite", "0F80CC", "https://www.sqlite.org"),
-        ("Firebase", "firebase", "F59E0B", "https://firebase.google.com"),
-        ("Firestore", "firebase", "EA580C", "https://firebase.google.com/docs/firestore")]),
+        ("PostgreSQL", "postgresql", "4169E1"),
+        ("MySQL", "mysql", "4479A1"),
+        ("SQLite", "sqlite", "0F80CC"),
+        ("Firebase", "firebase", "F59E0B"),
+        ("Firestore", "firebase", "EA580C")]),
     ("Desktop · Android", "데스크톱·Android", "#monitor", [
-        ("PySide6 (Qt)", "qt", "2E9E4F", "https://doc.qt.io/qtforpython-6/"),
-        ("Electron", "electron", "47848F", "https://www.electronjs.org", "Electron (Node.js)"),
-        ("Windows", "#window", "0078D4", "https://learn.microsoft.com/windows/apps/"),
-        ("Jetpack Compose", "jetpackcompose", "4285F4", "https://developer.android.com/compose"),
-        ("Android SDK", "android", "34A853", "https://developer.android.com")]),
+        ("PySide6 (Qt)", "qt", "2E9E4F"),
+        ("Electron", "electron", "47848F", "Electron (Node.js)"),
+        ("Windows", "#window", "0078D4"),
+        ("Jetpack Compose", "jetpackcompose", "4285F4"),
+        ("Android SDK", "android", "34A853")]),
     ("DevOps · Cloud", "데브옵스·클라우드", "#infinity", [
-        ("Linux", "linux", "C99700", "https://www.kernel.org"),
-        ("Docker", "docker", "2496ED", "https://www.docker.com"),
-        ("Docker Compose", "docker", "1D63ED", "https://docs.docker.com/compose/"),
-        ("AWS", "#cloud", "FF9900", "https://aws.amazon.com"),
-        ("GCP", "googlecloud", "4285F4", "https://cloud.google.com")]),
+        ("Linux", "linux", "C99700"),
+        ("Docker", "docker", "2496ED"),
+        ("Docker Compose", "docker", "1D63ED"),
+        ("AWS", "#cloud", "FF9900"),
+        ("GCP", "googlecloud", "4285F4")]),
     ("Robotics · AI", "로보틱스·AI", "#bot", [
-        ("ROS 2", "ros", "4A6CB3", "https://www.ros.org"),
-        ("Gazebo", "#cube", "D97706", "https://gazebosim.org"),
-        ("RViz", "#axes", "6366F1", "https://github.com/ros2/rviz"),
-        ("Generative AI", "#sparkle", "8B5CF6", None),
-        ("Diffusion Models", "#diffusion", "7C3AED", None),
-        ("LLM Integration & Fine-tuning", "#chat", "6D28D9", None)]),
+        ("ROS 2", "ros", "4A6CB3"),
+        ("Gazebo", "#cube", "D97706"),
+        ("RViz", "#axes", "6366F1"),
+        ("Generative AI", "#sparkle", "8B5CF6"),
+        ("Diffusion Models", "#diffusion", "7C3AED"),
+        ("LLM Integration & Fine-tuning", "#chat", "6D28D9")]),
     ("Security", "보안", "#shield", [
-        ("IDA Pro", "@ida", "64748B", "https://hex-rays.com/ida-pro"),
-        ("Ghidra", "@ghidra", "E22726", "https://ghidra-sre.org"),
-        ("JADX-GUI", "@jadx", "461BBC", "https://github.com/skylot/jadx"),
-        ("x64dbg", "#bug", "64748B", "https://x64dbg.com"),
-        ("Burp Suite", "burpsuite", "EA580C", "https://portswigger.net/burp"),
-        ("mitmproxy", "@mitmproxy", "3F3F46", "https://mitmproxy.org")]),
+        ("IDA Pro", "@ida", "64748B"),
+        ("Ghidra", "@ghidra", "E22726"),
+        ("JADX-GUI", "@jadx", "461BBC"),
+        ("x64dbg", "#bug", "64748B"),
+        ("Burp Suite", "burpsuite", "EA580C"),
+        ("mitmproxy", "@mitmproxy", "3F3F46")]),
     ("Tools", "도구", "#wrench", [
-        ("Gradle", "gradle", "1F8A99", "https://gradle.org"),
-        ("GitHub Actions", "githubactions", "2088FF", "https://github.com/features/actions"),
-        ("Notion", "notion", "3F3F46", "https://www.notion.so"),
-        ("Figma", "figma", "F24E1E", "https://www.figma.com")]),
+        ("Gradle", "gradle", "1F8A99"),
+        ("GitHub Actions", "githubactions", "2088FF"),
+        ("Notion", "notion", "3F3F46"),
+        ("Figma", "figma", "F24E1E")]),
 ]
 ICON_CROP = {"mysql": (13.8, 2.3, 10.4)}  # show only the dolphin of the MySQL wordmark
 # Logos simple-icons doesn't carry, traced to one colour from the images the owner picked
@@ -420,10 +418,6 @@ def text_w(s, size, bold=False):
     return sum(size * (adv[c] / 1000 if c in adv else 1.0 if ord(c) > 0x3000 else 0.6) for c in s)
 
 
-def slug_id(name):
-    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
-
-
 def svg_open(w, h, title, style=""):
     # Animations only ever start from a hidden state ("both" + from-keyframes), so the content is
     # visible in renderers that don't run them; prefers-reduced-motion switches them off.
@@ -686,7 +680,7 @@ def title_small(lang):
 
 def group_alt(lang, n):
     en, ko, _, items = STACK[n]
-    return f"{ko if lang == 'ko' else en}: " + ", ".join(i[4] if len(i) > 4 else i[0] for i in items)
+    return f"{ko if lang == 'ko' else en}: " + ", ".join(i[3] if len(i) > 3 else i[0] for i in items)
 
 
 def stack_card(lang, theme, n, paths, height, uid):
@@ -864,49 +858,7 @@ def contrib_svg(lang, theme, days, today):
     return "\n".join(out)
 
 
-# ---------------------------------------------------------------- badges (official-links drawer) + contact
-BADGE_H, BADGE_FS, ICON, PAD_Y = 25, 11.5, 14, 3
-
-
-def badge_colors(color):
-    """White type on the brand colour, deepened just enough for 4.5:1; dark type on brands too light for white."""
-    if contrast("#FFFFFF", color) < 3:
-        return color, "#1F2328"
-    while contrast("#FFFFFF", color) < 4.5:
-        color = mix(color, "#000000", .04)
-    return color, "#FFFFFF"
-
-
-def badge_svg(name, icon, color, paths, alt):
-    """A capsule badge: brand colour, a soft top gloss, a white (or dark on light brands) glyph and name."""
-    color, ink = badge_colors("#" + color)
-    dark_ink = ink != "#FFFFFF"
-    tw = text_w(name, BADGE_FS, bold=True) * 1.03  # a little slack for wider system fonts; the name is centred
-    w = round(10 + ICON + 6 + tw + 11)
-    h = BADGE_H
-    out = svg_open(w, h + 2 * PAD_Y, alt)
-    out.append("<defs>"
-               '<linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">'
-               '<stop offset="0" stop-color="#FFFFFF" stop-opacity=".3"/>'
-               '<stop offset=".3" stop-color="#FFFFFF" stop-opacity="0"/>'
-               '<stop offset=".5" stop-color="#000000" stop-opacity="0"/>'
-               '<stop offset="1" stop-color="#000000" stop-opacity=".14"/></linearGradient></defs>')
-    out.append(f'<g transform="translate(0,{PAD_Y})">')
-    out.append(f'<rect width="{w}" height="{h}" rx="{h / 2}" fill="{color}"/>')
-    out.append(f'<rect width="{w}" height="{h}" rx="{h / 2}" fill="url(#gloss)"/>')
-    out.append(f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="{(h - 1) / 2}" fill="none" '
-               f'stroke="#FFFFFF" stroke-opacity=".28"/>')
-    out.append(glyph(icon, paths, ink, 10, (h - ICON) / 2, ICON, 2.1))
-    ty, tx = h / 2 + BADGE_FS * 0.36, 10 + ICON + 6 + tw / 2
-    if not dark_ink:
-        out.append(f'<text x="{tx:.1f}" y="{ty + 1:.1f}" text-anchor="middle" font-size="{BADGE_FS}" font-weight="700" '
-                   f'fill="#000000" fill-opacity=".22">{esc(name)}</text>')
-    out.append(f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="middle" font-size="{BADGE_FS}" font-weight="700" '
-               f'fill="{ink}">{esc(name)}</text>')
-    out.append("</g></svg>")
-    return "\n".join(out), w
-
-
+# ---------------------------------------------------------------- contact pills
 INSTAGRAM = ("#F56040", "#E1306C", "#C13584", "#833AB4", "#5851DB")  # Instagram's palette; white text stays at 4.5:1
 
 
@@ -935,19 +887,9 @@ def picture(path, alt):
 
 
 def stack_block(lang):
-    x = TEXT[lang]
     cards = [picture(f"stack/{lang}-{{theme}}-{p}.svg", "; ".join(group_alt(lang, n) for n in (2 * p, 2 * p + 1)))
              for p in range(len(STACK) // 2)]
-    linked = sum(1 for *_, items in STACK for i in items if i[3])
-    rows = []
-    for en, ko, _, items in STACK:  # the drawer lists only what has an official page; the cards show the rest
-        badges = [f'<a href="{esc(i[3])}"><img src="{RAW}badges/{slug_id(i[0])}.svg" alt="{esc(i[4] if len(i) > 4 else i[0])}"></a>'
-                  for i in items if i[3]]
-        if badges:
-            rows.append(f"<b>{esc(ko if lang == 'ko' else en)}</b><br>\n" + "\n".join(badges))
-    drawer = (f"<details>\n<summary><b>{esc(x['links'])}</b> ·&nbsp;{x['links_note'].format(n=linked)}</summary>\n\n"
-              "<p></p>\n\n<p>\n" + "\n<br><br>\n".join(rows) + "\n</p>\n\n</details>")
-    return '<p align="center">\n' + "".join(cards) + "\n</p>\n\n" + drawer
+    return '<p align="center">\n' + "".join(cards) + "\n</p>"
 
 
 def activity_block(lang, s):
@@ -1002,7 +944,7 @@ def sync_readme(root, s, contact):
 
 def main():
     out = Path(sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "out")
-    for sub in ("badges", "stack", "tiles"):
+    for sub in ("stack", "tiles"):
         (out / sub).mkdir(parents=True, exist_ok=True)
     public, days, restricted = fetch()
     today = dt.datetime.now(dt.timezone.utc).date()
@@ -1023,11 +965,6 @@ def main():
             assert len(rows) == 6, "tiles are drawn in threes"
             for k in range(2):
                 (out / "tiles" / f"{lang}-{theme}-{k}.svg").write_text(tile_trio_svg(theme, rows, k), encoding="utf-8")
-    for *_, items in STACK:
-        for item in filter(lambda i: i[3], items):  # the drawer lists only technologies with an official page
-            alt = item[4] if len(item) > 4 else item[0]
-            svg, _w = badge_svg(item[0], item[1], item[2], paths, alt)
-            (out / "badges" / f"{slug_id(item[0])}.svg").write_text(svg, encoding="utf-8")
     # None means the lookup failed: keep what the README shows. "" means the profile has none: drop it.
     found = {"email": (public_email(), r'href="mailto:([^"]+)"', "contact.svg", "mail", ACCENT),
              "instagram": (instagram_handle(), r'instagram\.com/([A-Za-z0-9._]+)/', "instagram.svg", "#instagram", INSTAGRAM)}
