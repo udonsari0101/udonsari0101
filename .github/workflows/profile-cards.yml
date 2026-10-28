@@ -2,7 +2,7 @@ name: Profile cards
 
 # Renders the banner, tech stack, activity, and contact cards shown in README.md /
 # README.ko.md, publishes them to the profile-cards branch (one commit, replaced on
-# every run), and keeps the README contact block in sync with the profile email.
+# every run), and keeps the README stack and contact blocks in sync.
 on:
   schedule:
     - cron: "17 15 * * *"  # every day at 00:17 KST
@@ -42,12 +42,12 @@ jobs:
           git commit -q -m "Update profile cards"
           git push -q -f "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" profile-cards
 
-      - name: Commit the contact email if it changed
+      - name: Commit README blocks if they changed
         run: |
           if [ -n "$(git status --porcelain README.md README.ko.md)" ]; then
             git config user.name "udonsari0101"
             git config user.email "yeappidw@gmail.com"
             git add README.md README.ko.md
-            git commit -q -m "Update contact email from the GitHub profile"
+            git commit -q -m "Sync README stack and contact blocks"
             git push -q origin HEAD:main
           fi

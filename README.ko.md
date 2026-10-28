@@ -18,16 +18,73 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 
 <!-- contact:start -->
 <p align="center">
-<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="이메일: yeappidw@unist.ac.kr" width="212"></a>
+<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="이메일: yeappidw@unist.ac.kr" width="214"></a>
 </p>
 <!-- contact:end -->
 
-<p align="center">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack-ko-dark.svg">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack-ko-light.svg" alt="기술 스택 — 언어: Python, JavaScript, TypeScript, Kotlin, SQL; 프론트엔드·백엔드: React, HTML, CSS, FastAPI, Flask, REST API; 데이터베이스: PostgreSQL, MySQL, SQLite, Firebase, Firestore; 데스크톱·Android: PySide6 (Qt), Electron (Node.js), Windows, Jetpack Compose, Android SDK, Gradle; 데브옵스·클라우드: Linux, Docker, Docker Compose, AWS, GCP, GitHub Actions; 로보틱스: ROS 2, Gazebo, RViz; AI: Generative AI, Diffusion Models, LLM Integration & Fine-tuning; 보안 도구: IDA Pro, Ghidra, JADX-GUI, x64dbg, Burp Suite, mitmproxy; 도구: Notion, Figma" width="100%">
-</picture>
+<!-- stack:start -->
+<p>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-0.svg" alt="언어">&nbsp;
+<a href="https://www.python.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/python.svg" alt="Python"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/javascript.svg" alt="JavaScript"></a>
+<a href="https://www.typescriptlang.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/typescript.svg" alt="TypeScript"></a>
+<a href="https://kotlinlang.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/kotlin.svg" alt="Kotlin"></a>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/sql.svg" alt="SQL">
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-1.svg" alt="프론트엔드·백엔드">&nbsp;
+<a href="https://react.dev"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/react.svg" alt="React"></a>
+<a href="https://html.spec.whatwg.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/html.svg" alt="HTML"></a>
+<a href="https://www.w3.org/Style/CSS/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/css.svg" alt="CSS"></a>
+<a href="https://fastapi.tiangolo.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/fastapi.svg" alt="FastAPI"></a>
+<a href="https://flask.palletsprojects.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/flask.svg" alt="Flask"></a>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/rest-api.svg" alt="REST API">
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-2.svg" alt="데이터베이스">&nbsp;
+<a href="https://www.postgresql.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/postgresql.svg" alt="PostgreSQL"></a>
+<a href="https://www.mysql.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/mysql.svg" alt="MySQL"></a>
+<a href="https://www.sqlite.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/sqlite.svg" alt="SQLite"></a>
+<a href="https://firebase.google.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/firebase.svg" alt="Firebase"></a>
+<a href="https://firebase.google.com/docs/firestore"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/firestore.svg" alt="Firestore"></a>
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-3.svg" alt="데스크톱·Android">&nbsp;
+<a href="https://doc.qt.io/qtforpython-6/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/pyside6-qt.svg" alt="PySide6 (Qt)"></a>
+<a href="https://www.electronjs.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/electron.svg" alt="Electron (Node.js)"></a>
+<a href="https://learn.microsoft.com/windows/apps/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/windows.svg" alt="Windows"></a>
+<a href="https://developer.android.com/compose"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/jetpack-compose.svg" alt="Jetpack Compose"></a>
+<a href="https://developer.android.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/android-sdk.svg" alt="Android SDK"></a>
+<a href="https://gradle.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gradle.svg" alt="Gradle"></a>
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-4.svg" alt="데브옵스·클라우드">&nbsp;
+<a href="https://www.kernel.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/linux.svg" alt="Linux"></a>
+<a href="https://www.docker.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/docker.svg" alt="Docker"></a>
+<a href="https://docs.docker.com/compose/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/docker-compose.svg" alt="Docker Compose"></a>
+<a href="https://aws.amazon.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/aws.svg" alt="AWS"></a>
+<a href="https://cloud.google.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gcp.svg" alt="GCP"></a>
+<a href="https://github.com/features/actions"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/github-actions.svg" alt="GitHub Actions"></a>
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-5.svg" alt="로보틱스">&nbsp;
+<a href="https://www.ros.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/ros-2.svg" alt="ROS 2"></a>
+<a href="https://gazebosim.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gazebo.svg" alt="Gazebo"></a>
+<a href="https://github.com/ros2/rviz"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/rviz.svg" alt="RViz"></a>
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-6.svg" alt="AI">&nbsp;
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/generative-ai.svg" alt="Generative AI">
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/diffusion-models.svg" alt="Diffusion Models">
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/llm-integration-fine-tuning.svg" alt="LLM Integration &amp; Fine-tuning">
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-7.svg" alt="보안 도구">&nbsp;
+<a href="https://hex-rays.com/ida-pro"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/ida-pro.svg" alt="IDA Pro"></a>
+<a href="https://ghidra-sre.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/ghidra.svg" alt="Ghidra"></a>
+<a href="https://github.com/skylot/jadx"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/jadx-gui.svg" alt="JADX-GUI"></a>
+<a href="https://x64dbg.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/x64dbg.svg" alt="x64dbg"></a>
+<a href="https://portswigger.net/burp"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/burp-suite.svg" alt="Burp Suite"></a>
+<a href="https://mitmproxy.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/mitmproxy.svg" alt="mitmproxy"></a>
+<br>
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/labels/ko-8.svg" alt="도구">&nbsp;
+<a href="https://www.notion.so"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/notion.svg" alt="Notion"></a>
+<a href="https://www.figma.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/figma.svg" alt="Figma"></a>
 </p>
+<!-- stack:end -->
 
 <p align="center">
 <picture>
