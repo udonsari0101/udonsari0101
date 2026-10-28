@@ -1,122 +1,100 @@
 <p align="right"><b>English</b> · <a href="README.ko.md">한국어</a></p>
 
-<!-- Banner and typing line come from hosted SVG services; the activity cards and tech-stack badges are
-     drawn daily by .github/workflows/profile-cards.yml into the profile-cards branch.
-     The stack and contact blocks between their markers are generated; edit STACK in the script instead.
-     In <source srcset> URLs never use raw commas or spaces: write %2C and %20 (or +).
-     When you add an entry below, update the count in its <summary> too. -->
+<!-- Every image is drawn by .github/scripts/profile_cards.py and published daily to the profile-cards branch.
+     The stack, activity, and contact blocks between their markers are generated; edit the script instead.
+     In <source srcset> URLs never use raw commas or spaces. When you add an entry to a drawer, update its count. -->
 
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=rounded&height=110&color=0:4F46E5,100:0E7490&text=udonsari0101&fontSize=66&fontColor=FFFFFF&fontAlignY=52&animation=fadeIn" alt="udonsari0101" width="100%">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-light.svg" alt="udonsari0101 · Interested in Cybersecurity, Software Engineering, Autonomous Systems, Computer Systems, Artificial Intelligence"></picture>
 </p>
 
 <p align="center">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=600&size=22&duration=2200&pause=1800&color=A5B4FC&center=true&vCenter=true&width=460&height=36&lines=Cybersecurity;Software%20Engineering;Autonomous%20Systems;Computer%20Systems;Artificial%20Intelligence">
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=600&size=22&duration=2200&pause=1800&color=4F46E5&center=true&vCenter=true&width=460&height=36&lines=Cybersecurity;Software%20Engineering;Autonomous%20Systems;Computer%20Systems;Artificial%20Intelligence" alt="Interests: Cybersecurity, Software Engineering, Autonomous Systems, Computer Systems, Artificial Intelligence" width="460">
-</picture>
-</p>
-
-<p align="center">
-I'm an undergraduate student in the Department of Electrical Engineering at UNIST.<br>
-AI development is a particular strength of mine, from LLM integration and fine-tuning to generative AI and diffusion models.
+I'm an undergraduate student in the Department of Electrical Engineering at&nbsp;UNIST.<br>
+AI development is a particular strength of mine, from LLM integration and fine-tuning to generative AI and diffusion&nbsp;models.
 </p>
 
 <!-- contact:start -->
 <p align="center">
-<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="Email: yeappidw@unist.ac.kr" width="214"></a>
+<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="Email: yeappidw@unist.ac.kr" width="225"></a>
 </p>
 <!-- contact:end -->
 
-### Tech Stack
-
 <!-- stack:start -->
-<table>
-<tr><td valign="top" width="170">Languages</td><td valign="top" width="1012">
+<p align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-0.svg" alt="Languages: Python, JavaScript, TypeScript, Kotlin, SQL; Frontend · Backend: React, HTML, CSS, FastAPI, Flask, REST API"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-1.svg" alt="Databases: PostgreSQL, MySQL, SQLite, Firebase, Firestore; Desktop · Android: PySide6 (Qt), Electron (Node.js), Windows, Jetpack Compose, Android SDK"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-2.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-2.svg" alt="DevOps · Cloud: Linux, Docker, Docker Compose, AWS, GCP; Robotics · AI: ROS 2, Gazebo, RViz, Generative AI, Diffusion Models, LLM Integration &amp; Fine-tuning"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-3.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-3.svg" alt="Security: IDA Pro, Ghidra, JADX-GUI, x64dbg, Burp Suite, mitmproxy; Tools: Gradle, GitHub Actions, Notion, Figma"></picture>
+</p>
+
+<details>
+<summary><b>Official links</b> ·&nbsp;37&nbsp;links</summary>
+
+<p></p>
+
+<p>
+<b>Languages</b><br>
 <a href="https://www.python.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/python.svg" alt="Python"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/javascript.svg" alt="JavaScript"></a>
 <a href="https://www.typescriptlang.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/typescript.svg" alt="TypeScript"></a>
 <a href="https://kotlinlang.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/kotlin.svg" alt="Kotlin"></a>
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/sql.svg" alt="SQL">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">Frontend · Backend</td><td valign="top" width="1012">
+<br><br>
+<b>Frontend · Backend</b><br>
 <a href="https://react.dev"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/react.svg" alt="React"></a>
 <a href="https://html.spec.whatwg.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/html.svg" alt="HTML"></a>
 <a href="https://www.w3.org/Style/CSS/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/css.svg" alt="CSS"></a>
 <a href="https://fastapi.tiangolo.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/fastapi.svg" alt="FastAPI"></a>
 <a href="https://flask.palletsprojects.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/flask.svg" alt="Flask"></a>
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/rest-api.svg" alt="REST API">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">Databases</td><td valign="top" width="1012">
+<br><br>
+<b>Databases</b><br>
 <a href="https://www.postgresql.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/postgresql.svg" alt="PostgreSQL"></a>
 <a href="https://www.mysql.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/mysql.svg" alt="MySQL"></a>
 <a href="https://www.sqlite.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/sqlite.svg" alt="SQLite"></a>
 <a href="https://firebase.google.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/firebase.svg" alt="Firebase"></a>
 <a href="https://firebase.google.com/docs/firestore"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/firestore.svg" alt="Firestore"></a>
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">Desktop · Android</td><td valign="top" width="1012">
+<br><br>
+<b>Desktop · Android</b><br>
 <a href="https://doc.qt.io/qtforpython-6/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/pyside6-qt.svg" alt="PySide6 (Qt)"></a>
 <a href="https://www.electronjs.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/electron.svg" alt="Electron (Node.js)"></a>
 <a href="https://learn.microsoft.com/windows/apps/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/windows.svg" alt="Windows"></a>
 <a href="https://developer.android.com/compose"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/jetpack-compose.svg" alt="Jetpack Compose"></a>
 <a href="https://developer.android.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/android-sdk.svg" alt="Android SDK"></a>
-<a href="https://gradle.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gradle.svg" alt="Gradle"></a>
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">DevOps · Cloud</td><td valign="top" width="1012">
+<br><br>
+<b>DevOps · Cloud</b><br>
 <a href="https://www.kernel.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/linux.svg" alt="Linux"></a>
 <a href="https://www.docker.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/docker.svg" alt="Docker"></a>
 <a href="https://docs.docker.com/compose/"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/docker-compose.svg" alt="Docker Compose"></a>
 <a href="https://aws.amazon.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/aws.svg" alt="AWS"></a>
 <a href="https://cloud.google.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gcp.svg" alt="GCP"></a>
-<a href="https://github.com/features/actions"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/github-actions.svg" alt="GitHub Actions"></a>
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">Robotics</td><td valign="top" width="1012">
+<br><br>
+<b>Robotics · AI</b><br>
 <a href="https://www.ros.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/ros-2.svg" alt="ROS 2"></a>
 <a href="https://gazebosim.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gazebo.svg" alt="Gazebo"></a>
 <a href="https://github.com/ros2/rviz"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/rviz.svg" alt="RViz"></a>
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">AI</td><td valign="top" width="1012">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/generative-ai.svg" alt="Generative AI">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/diffusion-models.svg" alt="Diffusion Models">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/llm-integration-fine-tuning.svg" alt="LLM Integration &amp; Fine-tuning">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">Security Tools</td><td valign="top" width="1012">
+<br><br>
+<b>Security</b><br>
 <a href="https://hex-rays.com/ida-pro"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/ida-pro.svg" alt="IDA Pro"></a>
 <a href="https://ghidra-sre.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/ghidra.svg" alt="Ghidra"></a>
 <a href="https://github.com/skylot/jadx"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/jadx-gui.svg" alt="JADX-GUI"></a>
 <a href="https://x64dbg.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/x64dbg.svg" alt="x64dbg"></a>
 <a href="https://portswigger.net/burp"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/burp-suite.svg" alt="Burp Suite"></a>
 <a href="https://mitmproxy.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/mitmproxy.svg" alt="mitmproxy"></a>
-</td></tr>
-<tr></tr>
-<tr><td valign="top" width="170">Tools</td><td valign="top" width="1012">
+<br><br>
+<b>Tools</b><br>
+<a href="https://gradle.org"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/gradle.svg" alt="Gradle"></a>
+<a href="https://github.com/features/actions"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/github-actions.svg" alt="GitHub Actions"></a>
 <a href="https://www.notion.so"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/notion.svg" alt="Notion"></a>
 <a href="https://www.figma.com"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/badges/figma.svg" alt="Figma"></a>
-</td></tr>
-</table>
-<!-- stack:end -->
-
-<p align="center">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-dark.svg">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-light.svg" alt="Contribution calendar for the last year, updated daily" width="100%">
-</picture>
-<br>
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stats-en-dark.svg">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stats-en-light.svg" alt="GitHub activity, updated daily: contributions, streaks, repositories, and active days" width="440">
-</picture>
 </p>
 
+</details>
+<!-- stack:end -->
+
+<!-- activity:start -->
+<p align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-0.svg" alt="All-time contributions; Current streak; Longest streak (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-1.svg" alt="Public repos; Most contributions in one day; Active days in the last year (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-light.svg" alt="Contribution calendar for the last year (updated daily)"></picture>
+</p>
+<!-- activity:end -->
+
 <details>
-<summary><b>Experience &amp; Activities</b> · 6&nbsp;roles&nbsp;since&nbsp;2024</summary>
+<summary><b>Experience &amp; Activities</b> ·&nbsp;6&nbsp;roles&nbsp;since&nbsp;2024</summary>
 
 <p></p>
 
@@ -178,7 +156,7 @@ UNIST Club Union<br>
 </details>
 
 <details>
-<summary><b>Awards &amp; Competitions</b> · 7&nbsp;results&nbsp;since&nbsp;2025</summary>
+<summary><b>Awards &amp; Competitions</b> ·&nbsp;7&nbsp;results&nbsp;since&nbsp;2025</summary>
 
 <p></p>
 
@@ -229,7 +207,7 @@ HACKSIUM 2025</td>
 </details>
 
 <details>
-<summary><b>Interests &amp; Skills</b> · 3&nbsp;skill&nbsp;areas</summary>
+<summary><b>Interests &amp; Skills</b> ·&nbsp;3&nbsp;skill&nbsp;areas</summary>
 
 <p></p>
 
@@ -274,7 +252,7 @@ HACKSIUM 2025</td>
 </details>
 
 <details>
-<summary><b>Education</b> · UNIST</summary>
+<summary><b>Education</b> ·&nbsp;UNIST</summary>
 
 <p></p>
 

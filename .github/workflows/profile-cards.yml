@@ -1,8 +1,8 @@
 name: Profile cards
 
-# Renders the banner, tech stack, activity, and contact cards shown in README.md /
+# Renders the hero, tech stack, activity, and contact cards shown in README.md /
 # README.ko.md, publishes them to the profile-cards branch (one commit, replaced on
-# every run), and keeps the README stack and contact blocks in sync.
+# every run), and keeps the README stack, activity, and contact blocks in sync.
 on:
   schedule:
     - cron: "17 15 * * *"  # every day at 00:17 KST
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Render cards and sync the contact email
+      - name: Render cards and sync the README blocks
         env:
           # The owner's token counts private repositories; without the secret the
           # default token is used and the cards show public numbers only.
@@ -48,6 +48,7 @@ jobs:
             git config user.name "udonsari0101"
             git config user.email "yeappidw@gmail.com"
             git add README.md README.ko.md
-            git commit -q -m "Sync README stack and contact blocks"
+            git commit -q -m "Sync README blocks"
+            git pull -q --rebase origin main  # main may have moved while the job ran
             git push -q origin HEAD:main
           fi
