@@ -1,17 +1,13 @@
 <p align="right"><a href="https://github.com/udonsari0101">English</a> · <b>한국어</b></p>
 
-<!-- 이미지는 외부 SVG 서비스에서 불러옵니다(레포에는 이미지 파일이 없습니다).
-     <source srcset> URL에는 쉼표와 공백을 쓰지 말고 %2C, %20(또는 +)로 쓰세요. GitHub가 그 문자로 URL을 나눕니다.
+<!-- 카드는 .github/workflows/profile-cards.yml이 매일 profile-cards 브랜치에 새로 그립니다.
+     contact 표시 사이의 블록은 GitHub 프로필의 공개 이메일로 자동 갱신됩니다.
      세부 항목을 추가하면 <summary>의 건수도 함께 고치세요. -->
 
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=rounded&height=136&color=0:4F46E5,100:0E7490&text=udonsari0101&fontSize=66&fontColor=FFFFFF&fontAlignY=38&desc=UNIST%20%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90%EA%B3%B5%ED%95%99%EA%B3%BC&descSize=32&descAlignY=74&animation=fadeIn" alt="udonsari0101 · UNIST 전기전자공학과" width="100%">
-</p>
-
-<p align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?font=Noto+Sans+KR&weight=600&size=22&duration=2200&pause=1800&color=A5B4FC&center=true&vCenter=true&width=460&height=36&lines=%EC%82%AC%EC%9D%B4%EB%B2%84%EB%B3%B4%EC%95%88;%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B3%B5%ED%95%99;%EC%9E%90%EC%9C%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C;%EC%BB%B4%ED%93%A8%ED%84%B0%20%EC%8B%9C%EC%8A%A4%ED%85%9C;%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5">
-<img src="https://readme-typing-svg.demolab.com/?font=Noto+Sans+KR&weight=600&size=22&duration=2200&pause=1800&color=4F46E5&center=true&vCenter=true&width=460&height=36&lines=%EC%82%AC%EC%9D%B4%EB%B2%84%EB%B3%B4%EC%95%88;%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B3%B5%ED%95%99;%EC%9E%90%EC%9C%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C;%EC%BB%B4%ED%93%A8%ED%84%B0%20%EC%8B%9C%EC%8A%A4%ED%85%9C;%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5" alt="관심 분야: 사이버보안, 소프트웨어 공학, 자율 시스템, 컴퓨터 시스템, 인공지능" width="460">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/banner-ko-dark.svg">
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/banner-ko-light.svg" alt="udonsari0101 · 사이버보안, 소프트웨어 공학, 자율 시스템, 컴퓨터 시스템, 인공지능" width="100%">
 </picture>
 </p>
 
@@ -20,88 +16,23 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 특히 AI 개발에 강점이 있으며, LLM 연동·파인튜닝부터 생성형 AI와 Diffusion 모델까지 다룹니다.
 </p>
 
-### 기술 스택
-
-<table>
-<tr><td valign="top" nowrap>언어</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
-<img src="https://img.shields.io/badge/SQL-475569?style=flat-square" alt="SQL">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>프론트엔드·백엔드</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/React-087EA4?style=flat-square&logo=react&logoColor=white" alt="React">
-<img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML">
-<img src="https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white" alt="CSS">
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
-<img src="https://img.shields.io/badge/Flask-475569?style=flat-square&logo=flask&logoColor=white" alt="Flask">
-<img src="https://img.shields.io/badge/REST%20API-4D7F2A?style=flat-square&logo=openapiinitiative&logoColor=white" alt="REST API">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>데이터베이스</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL">
-<img src="https://img.shields.io/badge/SQLite-0B5E86?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase">
-<img src="https://img.shields.io/badge/Firestore-B45309?style=flat-square&logo=firebase&logoColor=white" alt="Firestore">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>데스크톱·Android</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/PySide6%20%28Qt%29-217A35?style=flat-square&logo=qt&logoColor=white" alt="PySide6 (Qt)">
-<img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" alt="Electron (Node.js)">
-<img src="https://img.shields.io/badge/Windows-0078D4?style=flat-square" alt="Windows 애플리케이션 개발">
-<img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
-<img src="https://img.shields.io/badge/Android%20SDK-34A853?style=flat-square&logo=android&logoColor=white" alt="Android SDK">
-<img src="https://img.shields.io/badge/Gradle-0F6674?style=flat-square&logo=gradle&logoColor=white" alt="Gradle">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>데브옵스·클라우드</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
-<img src="https://img.shields.io/badge/Docker%20Compose-1D63ED?style=flat-square&logo=docker&logoColor=white" alt="Docker Compose">
-<img src="https://img.shields.io/badge/AWS-475569?style=flat-square" alt="AWS">
-<img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white" alt="GCP">
-<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>로보틱스</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/ROS%202-34508A?style=flat-square&logo=ros&logoColor=white" alt="ROS 2">
-<img src="https://img.shields.io/badge/Gazebo-B85409?style=flat-square" alt="Gazebo">
-<img src="https://img.shields.io/badge/RViz-34508A?style=flat-square" alt="RViz">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>AI</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/Generative%20AI-6D28D9?style=flat-square" alt="Generative AI">
-<img src="https://img.shields.io/badge/Diffusion%20Models-6D28D9?style=flat-square" alt="Diffusion Models">
-<img src="https://img.shields.io/badge/LLM%20Integration%20%26%20Fine--tuning-6D28D9?style=flat-square" alt="LLM Integration & Fine-tuning">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>보안 도구</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/IDA%20Pro-475569?style=flat-square" alt="IDA Pro">
-<img src="https://img.shields.io/badge/Ghidra-475569?style=flat-square" alt="Ghidra">
-<img src="https://img.shields.io/badge/JADX--GUI-475569?style=flat-square" alt="JADX-GUI">
-<img src="https://img.shields.io/badge/x64dbg-475569?style=flat-square" alt="x64dbg">
-<img src="https://img.shields.io/badge/Burp%20Suite-C73E12?style=flat-square&logo=burpsuite&logoColor=white" alt="Burp Suite">
-<img src="https://img.shields.io/badge/mitmproxy-475569?style=flat-square" alt="mitmproxy">
-</td></tr>
-<tr></tr>
-<tr><td valign="top" nowrap>도구</td><td valign="top" width="1012">
-<img src="https://img.shields.io/badge/Notion-475569?style=flat-square&logo=notion&logoColor=white" alt="Notion">
-<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma">
-</td></tr>
-</table>
+<!-- contact:start -->
+<p align="center">
+<a href="mailto:yeappidw@unist.ac.kr"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contact.svg" alt="이메일: yeappidw@unist.ac.kr" width="212"></a>
+</p>
+<!-- contact:end -->
 
 <p align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-stats/contrib-ko-dark.svg">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-stats/contrib-ko-light.svg" alt="최근 1년 기여 달력(매일 갱신)" width="100%">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack-ko-dark.svg">
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack-ko-light.svg" alt="기술 스택 — 언어: Python, JavaScript, TypeScript, Kotlin, SQL; 프론트엔드·백엔드: React, HTML, CSS, FastAPI, Flask, REST API; 데이터베이스: PostgreSQL, MySQL, SQLite, Firebase, Firestore; 데스크톱·Android: PySide6 (Qt), Electron (Node.js), Windows, Jetpack Compose, Android SDK, Gradle; 데브옵스·클라우드: Linux, Docker, Docker Compose, AWS, GCP, GitHub Actions; 로보틱스: ROS 2, Gazebo, RViz; AI: Generative AI, Diffusion Models, LLM Integration & Fine-tuning; 보안 도구: IDA Pro, Ghidra, JADX-GUI, x64dbg, Burp Suite, mitmproxy; 도구: Notion, Figma" width="100%">
 </picture>
-<br>
+</p>
+
+<p align="center">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-stats/stats-ko-dark.svg">
-<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-stats/stats-ko-light.svg" alt="GitHub 활동(매일 갱신): 총 기여, 현재·최장 연속 기여, 레포지토리, 기여한 레포, 최근 1년 활동한 날" width="440">
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/activity-ko-dark.svg">
+<img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/activity-ko-light.svg" alt="GitHub 활동(매일 갱신): 총 기여, 현재·최장 연속 기여, 레포지토리, 기여한 레포, 활동한 날, 최근 1년 기여 달력" width="100%">
 </picture>
 </p>
 
