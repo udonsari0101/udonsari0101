@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="416" height="104" viewBox="0 0 416 104" role="img">
+<title>공개 저장소: 5 개; 비공개 기여: 3,309 회; 최근 1년 활동일: 115 일</title>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI Variable Text','Segoe UI','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Helvetica,Arial,sans-serif}.d{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI Variable Display','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif}.in{animation:in .7s ease-out both}@keyframes in{from{opacity:0}}.up{animation:up .7s cubic-bezier(.2,.8,.2,1) both}@keyframes up{from{opacity:0;transform:translateY(6px)}}@media (max-width:400px){.un{font-size:13px}.lb0{font-size:14px}.lb1{font-size:14px}.lb2{font-size:14px}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<g transform="translate(4,1)">
+<defs><linearGradient id="cg0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.045"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/></linearGradient><clipPath id="cc0"><rect width="131" height="101" rx="18"/></clipPath><radialGradient id="glow0" cx="0" cy="0" r="1"><stop offset="0" stop-color="#437CF5" stop-opacity="0.26"/><stop offset="1" stop-color="#437CF5" stop-opacity="0"/></radialGradient></defs>
+<rect width="131" height="101" rx="18" fill="url(#cg0)"/>
+<rect width="131" height="101" fill="url(#glow0)" clip-path="url(#cc0)"/>
+<rect x=".5" y=".5" width="130" height="100" rx="17.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"/>
+<defs><linearGradient id="num0" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#C7D2FE"/><stop offset="1.00" stop-color="#FFFFFF"/></linearGradient></defs>
+<g transform="translate(13.0,13.0) scale(0.6667)"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z" fill="none" stroke="#5F90F6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3" fill="none" stroke="#5F90F6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7h6" fill="none" stroke="#5F90F6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="up d" x="13" y="64" font-size="25" font-weight="800" letter-spacing="-.5" fill="url(#num0)">5<tspan class="un" font-size="11.5" font-weight="600" fill="#A0A8B2"> 개</tspan></text>
+<text class="lb0" x="13" y="85" font-size="10.5" fill="#A0A8B2">공개 저장소</text>
+</g>
+<g transform="translate(143,1)">
+<defs><linearGradient id="cg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.045"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/></linearGradient><clipPath id="cc1"><rect width="130" height="101" rx="18"/></clipPath><radialGradient id="glow1" cx="0" cy="0" r="1"><stop offset="0" stop-color="#2697E8" stop-opacity="0.26"/><stop offset="1" stop-color="#2697E8" stop-opacity="0"/></radialGradient></defs>
+<rect width="130" height="101" rx="18" fill="url(#cg1)"/>
+<rect width="130" height="101" fill="url(#glow1)" clip-path="url(#cc1)"/>
+<rect x=".5" y=".5" width="129" height="100" rx="17.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"/>
+<defs><linearGradient id="num1" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#C7D2FE"/><stop offset="1.00" stop-color="#FFFFFF"/></linearGradient></defs>
+<g transform="translate(13.0,13.0) scale(0.6667)"><path d="M6.5 10.5h11a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-6.5a2 2 0 0 1 2-2z" fill="none" stroke="#2697E8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" fill="none" stroke="#2697E8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.5v2.5" fill="none" stroke="#2697E8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="up d" x="13" y="64" font-size="25" font-weight="800" letter-spacing="-.5" fill="url(#num1)">3,309<tspan class="un" font-size="11.5" font-weight="600" fill="#A0A8B2"> 회</tspan></text>
+<text class="lb1" x="13" y="85" font-size="10.5" fill="#A0A8B2">비공개 기여</text>
+</g>
+<g transform="translate(281,1)">
+<defs><linearGradient id="cg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.045"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/></linearGradient><clipPath id="cc2"><rect width="131" height="101" rx="18"/></clipPath><radialGradient id="glow2" cx="0" cy="0" r="1"><stop offset="0" stop-color="#06B6D4" stop-opacity="0.26"/><stop offset="1" stop-color="#06B6D4" stop-opacity="0"/></radialGradient></defs>
+<rect width="131" height="101" rx="18" fill="url(#cg2)"/>
+<rect width="131" height="101" fill="url(#glow2)" clip-path="url(#cc2)"/>
+<rect x=".5" y=".5" width="130" height="100" rx="17.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09"/>
+<defs><linearGradient id="num2" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#C7D2FE"/><stop offset="1.00" stop-color="#FFFFFF"/></linearGradient></defs>
+<g transform="translate(13.0,13.0) scale(0.6667)"><path d="M5 5h14a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 19 20H5a1.5 1.5 0 0 1-1.5-1.5v-12A1.5 1.5 0 0 1 5 5z" fill="none" stroke="#06B6D4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 10h17" fill="none" stroke="#06B6D4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 3v4" fill="none" stroke="#06B6D4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3v4" fill="none" stroke="#06B6D4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 14h2" fill="none" stroke="#06B6D4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 14h2" fill="none" stroke="#06B6D4" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="up d" x="13" y="64" font-size="25" font-weight="800" letter-spacing="-.5" fill="url(#num2)">115<tspan class="un" font-size="11.5" font-weight="600" fill="#A0A8B2"> 일</tspan></text>
+<text class="lb2" x="13" y="85" font-size="10.5" fill="#A0A8B2">최근 1년 활동일</text>
+</g>
+</svg>
