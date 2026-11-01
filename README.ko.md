@@ -44,7 +44,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 <tr></tr>
 <tr><td colspan="2"><b>로보틱스·자율주행</b></td></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</td>
+<td valign="top" nowrap><samp>2026</samp></td>
 <td valign="top" width="1012"><b>자율주행 개발자</b><br>
 유니주행차 · UNIST BTS(Brain to Society) 프로그램<br>
 ·&nbsp;ROS 2 기반 자율주행 소프트웨어 개발<br>
