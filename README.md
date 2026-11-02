@@ -46,7 +46,7 @@ My work so far includes full-stack web applications, Windows desktop software, n
 <tr>
 <td valign="top"><samp>2026</samp></td>
 <td valign="top" width="1012"><b>Autonomous Driving Developer</b><br>
-유니주행차 · UNIST BTS (Brain t Society) Program<br>
+유니주행차 · UNIST BTS (Brain to Society) Program<br>
 ·&nbsp;ROS 2-based autonomous driving software development<br>
 ·&nbsp;Simulation environment development using Gazebo&nbsp;and&nbsp;RViz<br>
 ·&nbsp;AI-based autonomous driving and vehicle control software</td>
