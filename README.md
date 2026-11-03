@@ -1,4 +1,4 @@
-<p align="right"><b>English</b> · <a href="README.ko.md">한어</a></p>
+<p align="right"><b>English</b> · <a href="README.ko.md">한국어</a></p>
 
 <!-- Every image is drawn by .github/scripts/profile_cards.py and published daily to the profile-cards branch.
      The stack, activity, and contact blocks between their markers are generated; edit the script instead.
