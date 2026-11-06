@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="832" height="180" viewBox="0 0 832 180" role="img">
+<title>udonsari0101 · Interested in Information Security, Software Engineering, Automation, Computer Systems, Artificial Intelligence</title>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI Variable Text','Segoe UI','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',Helvetica,Arial,sans-serif}.d{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI Variable Display','Segoe UI','Noto Sans KR','Malgun Gothic',sans-serif}.in{animation:in .7s ease-out both}@keyframes in{from{opacity:0}}.up{animation:up .7s cubic-bezier(.2,.8,.2,1) both}@keyframes up{from{opacity:0;transform:translateY(6px)}}.r{opacity:0;animation:rot 14.0s infinite both}.r0{opacity:1}@keyframes rot{0%{opacity:0;transform:translateY(6px)}2.8%{opacity:1;transform:none}17.2%{opacity:1;transform:none}20.0%{opacity:0;transform:translateY(-6px)}100%{opacity:0}}.pulse{animation:pulse 3.2s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}.txt{transform-origin:44px 112px}.st{display:none}@media (prefers-reduced-motion:reduce){.mv{display:none}.st{display:inline}}@media (max-width:520px){.orb{display:none}.txt{transform:scale(1.75)}}@media (max-width:416px){.frame{transform-origin:416px 90px;transform:scale(0.9903)}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<defs><radialGradient id="g0" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#6366F1" stop-opacity="0.2"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient><radialGradient id="g1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#06B6D4" stop-opacity="0.16"/><stop offset="1" stop-color="#06B6D4" stop-opacity="0"/></radialGradient><radialGradient id="g2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#A855F7" stop-opacity="0.14"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient><linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop offset="0.00" stop-color="#111827"/><stop offset="1.00" stop-color="#4F46E5"/></linearGradient><linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0.00" stop-color="#4F46E5"/><stop offset="0.50" stop-color="#7C3AED"/><stop offset="1.00" stop-color="#0E7490"/></linearGradient><radialGradient id="fade" cx=".38" cy=".5" r=".75"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><mask id="gm"><rect width="832" height="180" fill="url(#fade)"/></mask><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#0F172A" stroke-opacity="0.05"/></pattern><radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/><stop offset=".25" stop-color="#7C3AED" stop-opacity=".7"/><stop offset="1" stop-color="#4F46E5" stop-opacity="0"/></radialGradient><clipPath id="hc"><rect x="4" width="824" height="180" rx="24"/></clipPath></defs>
+<g class="frame"><g clip-path="url(#hc)">
+<rect x="4" width="824" height="180" fill="#FBFBFE"/>
+<circle cx="150" cy="-10" r="300" fill="url(#g0)"/>
+<circle cx="780" cy="220" r="280" fill="url(#g1)"/>
+<circle cx="560" cy="40" r="220" fill="url(#g2)"/>
+<rect width="832" height="180" fill="url(#grid)" mask="url(#gm)"/>
+<g class="orb"><g transform="translate(676,90) rotate(-16)">
+<ellipse rx="112" ry="42.6" fill="none" stroke="url(#acc)" stroke-opacity="0.3" stroke-width="1.4"/>
+<circle class="mv" r="3.4" fill="#4F46E5"><animateMotion dur="26s" repeatCount="indefinite" path="M112 0A112 42.6 0 1 1 -112 0A112 42.6 0 1 1 112 0"/></circle>
+<circle class="st" cx="85.8" cy="27.4" r="3.4" fill="#4F46E5"/>
+<ellipse rx="78" ry="29.6" fill="none" stroke="url(#acc)" stroke-opacity="0.38" stroke-width="1.4"/>
+<circle class="mv" r="3.0" fill="#4F46E5"><animateMotion dur="18s" repeatCount="indefinite" path="M78 0A78 29.6 0 1 0 -78 0A78 29.6 0 1 0 78 0"/></circle>
+<circle class="st" cx="-70.7" cy="-12.5" r="3.0" fill="#4F46E5"/>
+<ellipse rx="46" ry="17.5" fill="none" stroke="url(#acc)" stroke-opacity="0.5" stroke-width="1.4"/>
+<circle class="mv" r="2.6" fill="#4F46E5"><animateMotion dur="12s" repeatCount="indefinite" path="M46 0A46 17.5 0 1 1 -46 0A46 17.5 0 1 1 46 0"/></circle>
+<circle class="st" cx="23.0" cy="-15.1" r="2.6" fill="#4F46E5"/>
+</g>
+<circle class="pulse" cx="676" cy="90" r="28" fill="url(#core)"/></g>
+</g>
+<rect x="4.5" y=".5" width="823" height="179" rx="23.5" fill="none" stroke="#E4E7EC" stroke-opacity="1"/>
+<g class="txt">
+<text class="up d" x="42" y="98" font-size="36" font-weight="700" letter-spacing="-1" fill="url(#ink)">udonsari0101</text>
+<text class="in" x="44" y="132" font-size="16" fill="#4B5563">Interested in</text>
+<text class="r r0" style="animation-delay:0.0s" x="44" y="132" font-size="16"><tspan fill-opacity="0">Interested in</tspan><tspan dx="8" font-weight="600" fill="#4F46E5">Information Security</tspan></text>
+<text class="r r1" style="animation-delay:2.8s" x="44" y="132" font-size="16"><tspan fill-opacity="0">Interested in</tspan><tspan dx="8" font-weight="600" fill="#4F46E5">Software Engineering</tspan></text>
+<text class="r r2" style="animation-delay:5.6s" x="44" y="132" font-size="16"><tspan fill-opacity="0">Interested in</tspan><tspan dx="8" font-weight="600" fill="#4F46E5">Automation</tspan></text>
+<text class="r r3" style="animation-delay:8.4s" x="44" y="132" font-size="16"><tspan fill-opacity="0">Interested in</tspan><tspan dx="8" font-weight="600" fill="#4F46E5">Computer Systems</tspan></text>
+<text class="r r4" style="animation-delay:11.2s" x="44" y="132" font-size="16"><tspan fill-opacity="0">Interested in</tspan><tspan dx="8" font-weight="600" fill="#4F46E5">Artificial Intelligence</tspan></text>
+</g></g></svg>
