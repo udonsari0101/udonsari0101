@@ -64,6 +64,15 @@ HeXA · UNIST Information Security Club<br>
 </tr>
 <tr></tr>
 <tr>
+<td valign="top"><samp>2025.09–</samp><br><samp>2025.11</samp></td>
+<td valign="top" width="1012"><b>Mobile Application Security Assessment</b><br>
+<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST Campus Dining App<br>
+·&nbsp;Assessed the security of a production mobile app used by the UNIST community<br>
+·&nbsp;Identified and demonstrated a vulnerability enabling unauthorized administrator-level access<br>
+·&nbsp;Google Play lists 1,000+ downloads (as of 2026)</td>
+</tr>
+<tr></tr>
+<tr>
 <td valign="top"><samp>2025.07–2025.12</samp></td>
 <td valign="top" width="1012"><b>Full-stack Developer</b><br>
 UNIST Club Union<br>
@@ -76,15 +85,6 @@ UNIST Club Union<br>
 ClubU · UNIST Club Union Official Website<br>
 ·&nbsp;Database schema design and REST API development<br>
 ·&nbsp;AWS infrastructure, Docker-based deployment, and CI/CD automation</td>
-</tr>
-<tr></tr>
-<tr>
-<td valign="top"><samp>2025</samp></td>
-<td valign="top" width="1012"><b>Mobile Application Security Assessment</b><br>
-<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST Campus Dining App<br>
-·&nbsp;Assessed the security of a production mobile app used by the UNIST community<br>
-·&nbsp;Identified and demonstrated a vulnerability enabling unauthorized administrator-level access<br>
-·&nbsp;Google Play lists 1,000+ downloads (as of 2026)</td>
 </tr>
 <tr></tr>
 <tr>
