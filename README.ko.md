@@ -71,14 +71,14 @@ UNIST 정보보안 동아리 HeXA<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025.07–2025.12</samp></td>
+<td valign="top" nowrap><samp>2025.07–</samp><br><samp>2025.12</samp></td>
 <td valign="top" width="1012"><b>풀스택 개발자</b><br>
 UNIST 동아리연합회<br>
 ·&nbsp;내부 활동용 웹 애플리케이션 단독 개발</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025.05–2026.02</samp></td>
+<td valign="top" nowrap><samp>2025.05–</samp><br><samp>2026.02</samp></td>
 <td valign="top" width="1012"><b>백엔드 개발자</b><br>
 ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 ·&nbsp;데이터베이스 스키마 설계 및 REST API 개발<br>
@@ -196,27 +196,27 @@ UNIST HeXA 최마진 2회<br>
 
 <table>
 <tr>
-<td valign="top" nowrap><samp>2025 1학기–</samp></td>
+<td valign="top" nowrap><samp>2025&nbsp;1학기–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
 UNIST 종합컴퓨팅 동아리<br>
 ·&nbsp;2025년 1학기부터 부원으로 활동, 2026년 1월부터 해킹팀 팀장</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025 1학기–</samp><br><samp>2026 2학기</samp></td>
+<td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2026&nbsp;겨울학기</samp></td>
 <td valign="top" width="1012"><b>UNIST 동아리연합회 (Club Union)</b><br>
 소통 및 협력부<br>
 ·&nbsp;2025년 2학기 차장</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025 1학기–</samp><br><samp>2025 2학기</samp></td>
+<td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2025&nbsp;겨울학기</samp></td>
 <td valign="top" width="1012"><b>9oormthon UNIV</b><br>
 교외 대학생 IT 연합동아리 · 부원</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025 1학기</samp></td>
+<td valign="top" nowrap><samp>2025&nbsp;1학기</samp></td>
 <td valign="top" width="1012"><b>피노키오 (Pinocchio)</b><br>
 UNIST 로봇동아리 · 부원</td>
 </tr>
@@ -275,7 +275,7 @@ UNIST 로봇동아리 · 부원</td>
 <p></p>
 
 <table>
-<tr><td valign="top" nowrap>UNIST<br><samp>2025–</samp></td><td valign="top" width="1012">UNIST(울산과학기술원)<br>전기전자공학과</td></tr>
+<tr><td valign="top" nowrap><samp>2025.03–</samp></td><td valign="top" width="1012">UNIST(울산과학기술원)<br>전기전자공학과</td></tr>
 </table>
 
 </details>
