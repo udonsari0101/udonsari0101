@@ -32,7 +32,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 <!-- activity:end -->
 
 <details>
-<summary><b>경험 및 활동</b> ·&nbsp;2024년부터&nbsp;6건</summary>
+<summary><b>경험 및 활동</b> ·&nbsp;2024년부터&nbsp;7건</summary>
 
 <p></p>
 
@@ -65,6 +65,15 @@ UNIST 정보보안 동아리 HeXA<br>
 UNIST HeXA 최마진 3회<br>
 ·&nbsp;CTF 문제 개발</td>
 </tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025</samp></td>
+<td valign="top" width="1012"><b>모바일 앱 보안 취약점 분석</b><br>
+<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST 교내 식단 정보 앱<br>
+·&nbsp;UNIST 구성원이 사용하는 실제 운영 모바일 앱 보안 점검<br>
+·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
+·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
+</tr>
 <tr><td colspan="2"><b>소프트웨어 개발</b></td></tr>
 <tr>
 <td valign="top" nowrap><samp>2025–</samp><br><samp>2026</samp></td>
@@ -94,51 +103,65 @@ UNIST 동아리연합회<br>
 </details>
 
 <details>
-<summary><b>수상 및 대회</b> ·&nbsp;2025년부터&nbsp;7건</summary>
+<summary><b>수상 및 대회</b> ·&nbsp;2025년부터&nbsp;8건</summary>
 
 <p></p>
 
 <table>
 <tr>
-<td valign="top"><samp>2026</samp></td>
-<td valign="top" width="1012"><b>공동&nbsp;1위</b><br>
-HSPACE SPACE WAR @&nbsp;TAURUS&nbsp;(PWN)</td>
+<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" width="1012"><b>본선 진출</b><br>
+2026 UHCON<br>
+·&nbsp;팀: HeXA · 2026.11.07</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
-<td valign="top" width="1012"><b>공동&nbsp;2위</b><br>
-HSPACE SPACE WAR @&nbsp;VIRGO&nbsp;(WEB)</td>
+<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" width="1012"><b>공동 2위</b><br>
+<a href="https://forge.hspace.io/writeups/competitions/6a9e82ab2d767f19df81691d">HSPACE SPACE WAR @ VIRGO (WEB)</a><br>
+·&nbsp;팀: 우동사리 · 2026.09.13</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
-<td valign="top" width="1012"><b>공동&nbsp;3위</b><br>
-HSPACE SPACE WAR @&nbsp;ARIES&nbsp;(AI)</td>
+<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" width="1012"><b>본선 진출</b><br>
+2026 HACKSIUM<br>
+·&nbsp;팀: HeXA · 2026.09.11–09.12</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026</samp></td>
 <td valign="top" width="1012"><b>3위</b><br>
-SECTOR CTF</td>
+SECTOR CTF<br>
+·&nbsp;팀: HeXA · 2026.07.14</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
-<td valign="top" width="1012"><b>본선&nbsp;6위</b><br>
-HACKSIUM 2026</td>
+<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" width="1012"><b>공동 1위</b><br>
+<a href="https://forge.hspace.io/writeups/competitions/69d37428d0244d4ffd5e2295">HSPACE SPACE WAR @ TAURUS (PWN)</a><br>
+·&nbsp;팀: 우동사리 · 2026.04.26</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025</samp></td>
+<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" width="1012"><b>공동 3위</b><br>
+<a href="https://forge.hspace.io/writeups/competitions/69b11731856a40e65849f147">HSPACE SPACE WAR @ ARIES (AI)</a><br>
+·&nbsp;팀: 우동사리 · 2026.03.29</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025</samp></td>
+<td valign="top" width="1012"><b>본선 진출</b><br>
+2025 HACKSIUM<br>
+·&nbsp;팀: UniKo · 2025.07.15–07.17</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025</samp></td>
 <td valign="top" width="1012"><b>최우수상</b><br>
-UNIST HeXA 최마진 2회</td>
-</tr>
-<tr></tr>
-<tr>
-<td valign="top"><samp>2025</samp></td>
-<td valign="top" width="1012"><b>본선&nbsp;진출</b><br>
-HACKSIUM 2025</td>
+UNIST HeXA 최마진 2회<br>
+·&nbsp;팀: 우동사리 · 2025.06.01</td>
 </tr>
 </table>
 
