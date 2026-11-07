@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-I'm an undergraduate student in the Department of Electrical Engineering at&nbsp;UNIST.<br>
-I actively use AI in software development.
+I'm an undergraduate student studying Electrical Engineering at UNIST (Ulsan National Institute of Science and Technology).<br>
+I'm interested in software development and information security, and I work on projects across different fields. I actively use AI in my development workflow.
 </p>
 
 <!-- contact:start -->
