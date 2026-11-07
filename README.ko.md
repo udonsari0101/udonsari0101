@@ -41,6 +41,13 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 <!-- Ordered by start date (newest first). Entries with unknown months follow dated entries within the same year. -->
 <table>
 <tr>
+<td valign="top" nowrap><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
+<td valign="top" width="1012"><b>CTF 대회 STAFF (예정)</b><br>
+2026 IST-TECH IT ARENA<br>
+·&nbsp;CTF 대회 운영 지원 예정</td>
+</tr>
+<tr></tr>
+<tr>
 <td valign="top" nowrap><samp>2026.05.22</samp></td>
 <td valign="top" width="1012"><b>CTF 문제 출제 및 대회 운영</b><br>
 UNIST HeXA 최마진 3회<br>
@@ -64,19 +71,10 @@ UNIST 정보보안 동아리 HeXA<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025.09–</samp><br><samp>2025.11</samp></td>
-<td valign="top" width="1012"><b>모바일 앱 보안 취약점 분석</b><br>
-<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST 교내 식단 정보 앱<br>
-·&nbsp;UNIST 구성원이 사용하는 실제 운영 모바일 앱 보안 점검<br>
-·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
-·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
-</tr>
-<tr></tr>
-<tr>
 <td valign="top" nowrap><samp>2025.07–2025.12</samp></td>
 <td valign="top" width="1012"><b>풀스택 개발자</b><br>
 UNIST 동아리연합회<br>
-·&nbsp;내부 행사용 웹 애플리케이션 단독 개발</td>
+·&nbsp;내부 활동용 웹 애플리케이션 단독 개발</td>
 </tr>
 <tr></tr>
 <tr>
@@ -95,6 +93,32 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 ·&nbsp;맞춤형 자동화 도구<br>
 ·&nbsp;프론트엔드, 백엔드, API, 데이터베이스 개발<br>
 ·&nbsp;클라이언트 요구사항에 맞춘 소프트웨어 설계, 구현, 테스트, 납품</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary><b>보안 프로젝트</b> ·&nbsp;2025년부터&nbsp;2건</summary>
+
+<p></p>
+
+<table>
+<tr>
+<td valign="top" nowrap><samp>2026.09–</samp><br><samp>2026.11</samp></td>
+<td valign="top" width="1012"><b>IoT 보안 취약점 분석 및 개선</b><br>
+·&nbsp;IoT 기기 펌웨어 덤프·추출 및 리버스 엔지니어링<br>
+·&nbsp;Android 앱 리버스 엔지니어링 및 웹 보안 취약점 분석<br>
+·&nbsp;발견된 취약점 보완을 위한 신규 시스템 설계 및 구축</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025.09–</samp><br><samp>2025.11</samp></td>
+<td valign="top" width="1012"><b>모바일 앱 보안 취약점 분석</b><br>
+<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST 교내 식단 정보 앱<br>
+·&nbsp;UNIST 구성원이 사용하는 실제 운영 모바일 앱 보안 점검<br>
+·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
+·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
 </tr>
 </table>
 
@@ -166,6 +190,41 @@ UNIST HeXA 최마진 2회<br>
 </details>
 
 <details>
+<summary><b>동아리·자치기구 활동</b> ·&nbsp;2025년부터&nbsp;4건</summary>
+
+<p></p>
+
+<table>
+<tr>
+<td valign="top" nowrap><samp>2025 1학기–</samp></td>
+<td valign="top" width="1012"><b>HeXA</b><br>
+UNIST 종합컴퓨팅 동아리<br>
+·&nbsp;2025년 1학기부터 회원 활동, 2026년 1월부터 해킹팀 팀장</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025 1학기–</samp><br><samp>2026 2학기</samp></td>
+<td valign="top" width="1012"><b>UNIST 동아리연합회 (Club Union)</b><br>
+소통 및 협력부<br>
+·&nbsp;2025년 2학기 차장</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025 1학기–</samp><br><samp>2025 2학기</samp></td>
+<td valign="top" width="1012"><b>9oormthon UNIV</b><br>
+교외 대학생 IT 연합동아리 · 회원</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2025 1학기</samp></td>
+<td valign="top" width="1012"><b>피노키오 (Pinocchio)</b><br>
+UNIST 로봇동아리 · 회원</td>
+</tr>
+</table>
+
+</details>
+
+<details>
 <summary><b>관심 분야·역량</b> ·&nbsp;역량&nbsp;3개&nbsp;영역</summary>
 
 <p></p>
@@ -216,7 +275,7 @@ UNIST HeXA 최마진 2회<br>
 <p></p>
 
 <table>
-<tr><td valign="top" nowrap>UNIST<br><samp>2025–</samp></td><td valign="top" width="1012">울산과학기술원<br>전기전자공학과</td></tr>
+<tr><td valign="top" nowrap>UNIST<br><samp>2025–</samp></td><td valign="top" width="1012">UNIST(울산과학기술원)<br>전기전자공학과</td></tr>
 </table>
 
 </details>
