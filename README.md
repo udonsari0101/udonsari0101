@@ -42,9 +42,9 @@ My work so far includes full-stack web applications, Windows desktop software, n
 <table>
 <tr>
 <td valign="top"><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
-<td valign="top" width="1012"><b>CTF Competition Staff (Scheduled)</b><br>
+<td valign="top" width="1012"><b>CTF Competition Staff</b><br>
 2026 IST-TECH IT ARENA<br>
-·&nbsp;Scheduled to support CTF competition operations</td>
+·&nbsp;CTF competition operations and on-site support</td>
 </tr>
 <tr></tr>
 <tr>
@@ -199,7 +199,7 @@ UNIST HeXA 최마진 2회<br>
 <td valign="top"><samp>Spring 2025–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
 UNIST Computing Club<br>
-·&nbsp;Member since Spring 2025; Hacking Team Lead since January 2026</td>
+·&nbsp;Club member since Spring 2025; Hacking Team Lead since January 2026</td>
 </tr>
 <tr></tr>
 <tr>
@@ -212,13 +212,13 @@ Communications &amp; Cooperation Department<br>
 <tr>
 <td valign="top"><samp>Spring 2025–</samp><br><samp>Fall 2025</samp></td>
 <td valign="top" width="1012"><b>9oormthon UNIV</b><br>
-Inter-university IT Community · Member</td>
+Inter-university IT Community · Club member</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top"><samp>Spring 2025</samp></td>
 <td valign="top" width="1012"><b>Pinocchio</b><br>
-UNIST Robotics Club · Member</td>
+UNIST Robotics Club · Club member</td>
 </tr>
 </table>
 
