@@ -48,19 +48,19 @@ UNIST HeXA 최마진 3회<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026.01–현재</samp></td>
-<td valign="top" width="1012"><b>해킹팀 팀장</b><br>
-UNIST 정보보안 동아리 HeXA<br>
-·&nbsp;웹 보안, 리버스 엔지니어링, CTF 활동</td>
-</tr>
-<tr></tr>
-<tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.04–</samp><br><samp>2026.12</samp></td>
 <td valign="top" width="1012"><b>자율주행 개발자</b><br>
 유니주행차 · UNIST BTS(Brain to Society) 프로그램<br>
 ·&nbsp;ROS 2 기반 자율주행 소프트웨어 개발<br>
 ·&nbsp;Gazebo와 RViz를 활용한 시뮬레이션 환경 구축<br>
 ·&nbsp;AI 기반 자율주행 및 차량 제어 소프트웨어 개발</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2026.01~</samp></td>
+<td valign="top" width="1012"><b>해킹팀 팀장</b><br>
+UNIST 정보보안 동아리 HeXA<br>
+·&nbsp;웹 보안, 리버스 엔지니어링, CTF 활동</td>
 </tr>
 <tr></tr>
 <tr>
@@ -88,7 +88,7 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2024–현재</samp></td>
+<td valign="top" nowrap><samp>2024~</samp></td>
 <td valign="top" width="1012"><b>프리랜서 소프트웨어 개발자</b><br>
 ·&nbsp;풀스택 웹 애플리케이션<br>
 ·&nbsp;데스크톱 GUI 소프트웨어<br>
@@ -216,7 +216,7 @@ UNIST HeXA 최마진 2회<br>
 <p></p>
 
 <table>
-<tr><td valign="top" nowrap>UNIST<br><samp>2025–현재</samp></td><td valign="top" width="1012">울산과학기술원<br>전기전자공학과</td></tr>
+<tr><td valign="top" nowrap>UNIST<br><samp>2025~</samp></td><td valign="top" width="1012">울산과학기술원<br>전기전자공학과</td></tr>
 </table>
 
 </details>
