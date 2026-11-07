@@ -38,11 +38,22 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 
 지금까지 풀스택 웹 애플리케이션, Windows 데스크톱 소프트웨어, 네이티브 Android 애플리케이션, 자동화 도구를 개발하고 인프라를 구축했으며, 독자적으로 보안 분석도 해 왔습니다.
 
-<!-- 분야 행은 회색 짝수 행, 기록 행은 흰색 홀수 행에 놓입니다. 최신 기록이 위로 갑니다.
-     기록 두 개가 이어지면 사이에 빈 <tr></tr>을 넣고, 표는 빈 행으로 끝내지 않습니다. -->
+<!-- Ordered by start date (newest first). Entries with unknown months follow dated entries within the same year. -->
 <table>
+<tr>
+<td valign="top" nowrap><samp>2026.05.22</samp></td>
+<td valign="top" width="1012"><b>CTF 문제 출제 및 대회 운영</b><br>
+UNIST HeXA 최마진 3회<br>
+·&nbsp;CTF 문제 출제 및 대회 운영</td>
+</tr>
 <tr></tr>
-<tr><td colspan="2"><b>로보틱스·자율주행</b></td></tr>
+<tr>
+<td valign="top" nowrap><samp>2026.01–현재</samp></td>
+<td valign="top" width="1012"><b>해킹팀 팀장</b><br>
+UNIST 정보보안 동아리 HeXA<br>
+·&nbsp;웹 보안, 리버스 엔지니어링, CTF 활동</td>
+</tr>
+<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2026</samp></td>
 <td valign="top" width="1012"><b>자율주행 개발자</b><br>
@@ -51,19 +62,20 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 ·&nbsp;Gazebo와 RViz를 활용한 시뮬레이션 환경 구축<br>
 ·&nbsp;AI 기반 자율주행 및 차량 제어 소프트웨어 개발</td>
 </tr>
-<tr><td colspan="2"><b>정보보안</b></td></tr>
+<tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
-<td valign="top" width="1012"><b>해킹팀 팀장</b><br>
-UNIST 정보보안 동아리 HeXA<br>
-·&nbsp;웹 보안, 리버스 엔지니어링, CTF 활동</td>
+<td valign="top" nowrap><samp>2025.07–2025.12</samp></td>
+<td valign="top" width="1012"><b>풀스택 개발자</b><br>
+UNIST 동아리연합회<br>
+·&nbsp;내부 행사용 웹 애플리케이션 단독 개발</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
-<td valign="top" width="1012"><b>CTF 문제 출제자</b><br>
-UNIST HeXA 최마진 3회<br>
-·&nbsp;CTF 문제 개발</td>
+<td valign="top" nowrap><samp>2025.05–2026.02</samp></td>
+<td valign="top" width="1012"><b>백엔드 개발자</b><br>
+ClubU · UNIST 동아리연합회 공식 웹사이트<br>
+·&nbsp;데이터베이스 스키마 설계 및 REST API 개발<br>
+·&nbsp;AWS 인프라, Docker 기반 배포 및 CI/CD 자동화</td>
 </tr>
 <tr></tr>
 <tr>
@@ -74,23 +86,9 @@ UNIST HeXA 최마진 3회<br>
 ·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
 ·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
 </tr>
-<tr><td colspan="2"><b>소프트웨어 개발</b></td></tr>
-<tr>
-<td valign="top" nowrap><samp>2025–</samp><br><samp>2026</samp></td>
-<td valign="top" width="1012"><b>백엔드 개발자</b><br>
-ClubU · UNIST 동아리연합회 공식 웹사이트<br>
-·&nbsp;팀 프로젝트에서 백엔드 개발 담당</td>
-</tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025</samp></td>
-<td valign="top" width="1012"><b>풀스택 개발자</b><br>
-UNIST 동아리연합회<br>
-·&nbsp;내부 행사용 웹 애플리케이션 단독 개발</td>
-</tr>
-<tr><td colspan="2"><b>프리랜서 개발</b></td></tr>
-<tr>
-<td valign="top" nowrap><samp>2024–</samp><br>현재</td>
+<td valign="top" nowrap><samp>2024–현재</samp></td>
 <td valign="top" width="1012"><b>프리랜서 소프트웨어 개발자</b><br>
 ·&nbsp;풀스택 웹 애플리케이션<br>
 ·&nbsp;데스크톱 GUI 소프트웨어<br>
@@ -109,59 +107,59 @@ UNIST 동아리연합회<br>
 
 <table>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.11.07</samp></td>
 <td valign="top" width="1012"><b>본선 진출</b><br>
 2026 UHCON<br>
-·&nbsp;팀: HeXA · 2026.11.07</td>
+·&nbsp;팀: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.09.13</samp></td>
 <td valign="top" width="1012"><b>공동 2위</b><br>
-<a href="https://forge.hspace.io/writeups/competitions/6a9e82ab2d767f19df81691d">HSPACE SPACE WAR @ VIRGO (WEB)</a><br>
-·&nbsp;팀: 우동사리 · 2026.09.13</td>
+HSPACE SPACE WAR @ VIRGO (WEB)<br>
+·&nbsp;팀: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.09.11–09.12</samp></td>
 <td valign="top" width="1012"><b>본선 진출</b><br>
 2026 HACKSIUM<br>
-·&nbsp;팀: HeXA · 2026.09.11–09.12</td>
+·&nbsp;팀: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.07.14</samp></td>
 <td valign="top" width="1012"><b>3위</b><br>
 SECTOR CTF<br>
-·&nbsp;팀: HeXA · 2026.07.14</td>
+·&nbsp;팀: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.04.26</samp></td>
 <td valign="top" width="1012"><b>공동 1위</b><br>
-<a href="https://forge.hspace.io/writeups/competitions/69d37428d0244d4ffd5e2295">HSPACE SPACE WAR @ TAURUS (PWN)</a><br>
-·&nbsp;팀: 우동사리 · 2026.04.26</td>
+HSPACE SPACE WAR @ TAURUS (PWN)<br>
+·&nbsp;팀: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2026</samp></td>
+<td valign="top" nowrap><samp>2026.03.29</samp></td>
 <td valign="top" width="1012"><b>공동 3위</b><br>
-<a href="https://forge.hspace.io/writeups/competitions/69b11731856a40e65849f147">HSPACE SPACE WAR @ ARIES (AI)</a><br>
-·&nbsp;팀: 우동사리 · 2026.03.29</td>
+HSPACE SPACE WAR @ ARIES (AI)<br>
+·&nbsp;팀: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025</samp></td>
+<td valign="top" nowrap><samp>2025.07.15–07.17</samp></td>
 <td valign="top" width="1012"><b>본선 진출</b><br>
 2025 HACKSIUM<br>
-·&nbsp;팀: UniKo · 2025.07.15–07.17</td>
+·&nbsp;팀: UniKo</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top" nowrap><samp>2025</samp></td>
+<td valign="top" nowrap><samp>2025.06.01</samp></td>
 <td valign="top" width="1012"><b>최우수상</b><br>
 UNIST HeXA 최마진 2회<br>
-·&nbsp;팀: 우동사리 · 2025.06.01</td>
+·&nbsp;팀: 우동사리</td>
 </tr>
 </table>
 
