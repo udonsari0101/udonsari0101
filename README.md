@@ -41,21 +41,21 @@ My work so far includes full-stack web applications, Windows desktop software, n
 <!-- Ordered by start date (newest first). Entries with unknown months follow dated entries within the same year. -->
 <table>
 <tr>
-<td valign="top"><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
+<td valign="top" nowrap><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
 <td valign="top" width="1012"><b>CTF Competition Staff</b><br>
 2026 IST-TECH IT ARENA<br>
 ·&nbsp;CTF competition operations and on-site support</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.05.22</samp></td>
+<td valign="top" nowrap><samp>2026.05.22</samp></td>
 <td valign="top" width="1012"><b>CTF Challenge Author &amp; Organizer</b><br>
 UNIST HeXA 최마진 3회<br>
 ·&nbsp;CTF challenge development and event operations</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.04–</samp><br><samp>2026.12</samp></td>
+<td valign="top" nowrap><samp>2026.04–</samp><br><samp>2026.12</samp></td>
 <td valign="top" width="1012"><b>Autonomous Driving Developer</b><br>
 유니주행차 · UNIST BTS (Brain to Society) Program<br>
 ·&nbsp;ROS 2-based autonomous driving software development<br>
@@ -64,21 +64,21 @@ UNIST HeXA 최마진 3회<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.01–</samp></td>
+<td valign="top" nowrap><samp>2026.01–</samp></td>
 <td valign="top" width="1012"><b>Hacking Team Lead</b><br>
 HeXA · UNIST Information Security Club<br>
 ·&nbsp;Web security, reverse engineering, and CTF activities</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025.07–2025.12</samp></td>
+<td valign="top" nowrap><samp>2025.07–</samp><br><samp>2025.12</samp></td>
 <td valign="top" width="1012"><b>Full-stack Developer</b><br>
 UNIST Club Union<br>
 ·&nbsp;Independently developed a web application for internal organizational activities</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025.05–2026.02</samp></td>
+<td valign="top" nowrap><samp>2025.05–</samp><br><samp>2026.02</samp></td>
 <td valign="top" width="1012"><b>Backend Developer</b><br>
 ClubU · UNIST Club Union Official Website<br>
 ·&nbsp;Database schema design and REST API development<br>
@@ -86,7 +86,7 @@ ClubU · UNIST Club Union Official Website<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2024–</samp></td>
+<td valign="top" nowrap><samp>2024–</samp></td>
 <td valign="top" width="1012"><b>Freelance Software Developer</b><br>
 ·&nbsp;Full-stack web applications<br>
 ·&nbsp;Desktop GUI software<br>
@@ -105,7 +105,7 @@ ClubU · UNIST Club Union Official Website<br>
 
 <table>
 <tr>
-<td valign="top"><samp>2026.09–</samp><br><samp>2026.11</samp></td>
+<td valign="top" nowrap><samp>2026.09–</samp><br><samp>2026.11</samp></td>
 <td valign="top" width="1012"><b>IoT Security Assessment &amp; Remediation</b><br>
 ·&nbsp;Firmware dumping, extraction, and reverse engineering<br>
 ·&nbsp;Android application reverse engineering and web vulnerability assessment<br>
@@ -113,7 +113,7 @@ ClubU · UNIST Club Union Official Website<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025.09–</samp><br><samp>2025.11</samp></td>
+<td valign="top" nowrap><samp>2025.09–</samp><br><samp>2025.11</samp></td>
 <td valign="top" width="1012"><b>Mobile Application Security Assessment</b><br>
 <a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST Campus Dining App<br>
 ·&nbsp;Assessed the security of a production mobile app used by the UNIST community<br>
@@ -131,56 +131,56 @@ ClubU · UNIST Club Union Official Website<br>
 
 <table>
 <tr>
-<td valign="top"><samp>2026.11.07</samp></td>
+<td valign="top" nowrap><samp>2026.11.07</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
 2026 UHCON<br>
 ·&nbsp;Team: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.09.13</samp></td>
+<td valign="top" nowrap><samp>2026.09.13</samp></td>
 <td valign="top" width="1012"><b>Tied 2nd Place</b><br>
 HSPACE SPACE WAR @ VIRGO (WEB)<br>
 ·&nbsp;Team: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.09.11–09.12</samp></td>
+<td valign="top" nowrap><samp>2026.09.11–09.12</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
 2026 HACKSIUM<br>
 ·&nbsp;Team: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.07.14</samp></td>
+<td valign="top" nowrap><samp>2026.07.14</samp></td>
 <td valign="top" width="1012"><b>3rd Place</b><br>
 SECTOR CTF<br>
 ·&nbsp;Team: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.04.26</samp></td>
+<td valign="top" nowrap><samp>2026.04.26</samp></td>
 <td valign="top" width="1012"><b>Tied 1st Place</b><br>
 HSPACE SPACE WAR @ TAURUS (PWN)<br>
 ·&nbsp;Team: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.03.29</samp></td>
+<td valign="top" nowrap><samp>2026.03.29</samp></td>
 <td valign="top" width="1012"><b>Tied 3rd Place</b><br>
 HSPACE SPACE WAR @ ARIES (AI)<br>
 ·&nbsp;Team: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025.07.15–07.17</samp></td>
+<td valign="top" nowrap><samp>2025.07.15–07.17</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
 2025 HACKSIUM<br>
 ·&nbsp;Team: UniKo</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025.06.01</samp></td>
+<td valign="top" nowrap><samp>2025.06.01</samp></td>
 <td valign="top" width="1012"><b>Excellence Award (최우수상)</b><br>
 UNIST HeXA 최마진 2회<br>
 ·&nbsp;Team: 우동사리</td>
@@ -196,27 +196,27 @@ UNIST HeXA 최마진 2회<br>
 
 <table>
 <tr>
-<td valign="top"><samp>Spring 2025–</samp></td>
+<td valign="top" nowrap><samp>Spring&nbsp;2025–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
 UNIST Computing Club<br>
 ·&nbsp;Club member since Spring 2025; Hacking Team Lead since January 2026</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>Spring 2025–</samp><br><samp>Fall 2026</samp></td>
+<td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2026</samp></td>
 <td valign="top" width="1012"><b>UNIST Club Union</b><br>
 Communications &amp; Cooperation Department<br>
 ·&nbsp;Deputy Head of Department in Fall 2025</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>Spring 2025–</samp><br><samp>Fall 2025</samp></td>
+<td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2025</samp></td>
 <td valign="top" width="1012"><b>9oormthon UNIV</b><br>
 Inter-university IT Community · Club member</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>Spring 2025</samp></td>
+<td valign="top" nowrap><samp>Spring&nbsp;2025</samp></td>
 <td valign="top" width="1012"><b>Pinocchio</b><br>
 UNIST Robotics Club · Club member</td>
 </tr>
@@ -275,7 +275,7 @@ UNIST Robotics Club · Club member</td>
 <p></p>
 
 <table>
-<tr><td valign="top">UNIST<br><samp>2025–</samp></td><td valign="top" width="1012">UNIST(Ulsan National Institute of Science and Technology)<br>Department of Electrical Engineering</td></tr>
+<tr><td valign="top" nowrap><samp>2025.03–</samp></td><td valign="top" width="1012">UNIST(Ulsan National Institute of Science and Technology)<br>Department of Electrical Engineering</td></tr>
 </table>
 
 </details>
