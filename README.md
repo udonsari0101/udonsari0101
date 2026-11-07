@@ -10,7 +10,7 @@
 
 <p align="center">
 I'm an undergraduate student in the Department of Electrical Engineering at&nbsp;UNIST.<br>
-AI development is a particular strength of mine, from LLM integration and fine-tuning to generative AI and diffusion&nbsp;models.
+I actively use AI in software development.
 </p>
 
 <!-- contact:start -->
@@ -195,7 +195,7 @@ HACKSIUM 2025</td>
 <p></p>
 
 <table>
-<tr><td valign="top">UNIST</td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Department of Electrical Engineering</td></tr>
+<tr><td valign="top">UNIST<br><samp>2025–Present</samp></td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Department of Electrical Engineering</td></tr>
 </table>
 
 </details>
