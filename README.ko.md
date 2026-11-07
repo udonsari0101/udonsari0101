@@ -64,6 +64,15 @@ UNIST 정보보안 동아리 HeXA<br>
 </tr>
 <tr></tr>
 <tr>
+<td valign="top" nowrap><samp>2025.09–</samp><br><samp>2025.11</samp></td>
+<td valign="top" width="1012"><b>모바일 앱 보안 취약점 분석</b><br>
+<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST 교내 식단 정보 앱<br>
+·&nbsp;UNIST 구성원이 사용하는 실제 운영 모바일 앱 보안 점검<br>
+·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
+·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
+</tr>
+<tr></tr>
+<tr>
 <td valign="top" nowrap><samp>2025.07–2025.12</samp></td>
 <td valign="top" width="1012"><b>풀스택 개발자</b><br>
 UNIST 동아리연합회<br>
@@ -76,15 +85,6 @@ UNIST 동아리연합회<br>
 ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 ·&nbsp;데이터베이스 스키마 설계 및 REST API 개발<br>
 ·&nbsp;AWS 인프라, Docker 기반 배포 및 CI/CD 자동화</td>
-</tr>
-<tr></tr>
-<tr>
-<td valign="top" nowrap><samp>2025</samp></td>
-<td valign="top" width="1012"><b>모바일 앱 보안 취약점 분석</b><br>
-<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST 교내 식단 정보 앱<br>
-·&nbsp;UNIST 구성원이 사용하는 실제 운영 모바일 앱 보안 점검<br>
-·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
-·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
 </tr>
 <tr></tr>
 <tr>
