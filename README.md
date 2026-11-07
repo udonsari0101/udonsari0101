@@ -38,11 +38,22 @@ I actively use AI in software development.
 
 My work so far includes full-stack web applications, Windows desktop software, native Android applications, automation tools, infrastructure, and independent security analysis.
 
-<!-- Field bands sit on grey even rows, records on white odd rows. Newest first.
-     Two records in a row need an empty <tr></tr> between them; never end with one. -->
+<!-- Ordered by start date (newest first). Entries with unknown months follow dated entries within the same year. -->
 <table>
+<tr>
+<td valign="top"><samp>2026.05.22</samp></td>
+<td valign="top" width="1012"><b>CTF Challenge Author &amp; Organizer</b><br>
+UNIST HeXA 최마진 3회<br>
+·&nbsp;CTF challenge development and event operations</td>
+</tr>
 <tr></tr>
-<tr><td colspan="2"><b>Robotics & Autonomous Driving</b></td></tr>
+<tr>
+<td valign="top"><samp>2026.01–Present</samp></td>
+<td valign="top" width="1012"><b>Hacking Team Lead</b><br>
+HeXA · UNIST Information Security Club<br>
+·&nbsp;Web security, reverse engineering, and CTF activities</td>
+</tr>
+<tr></tr>
 <tr>
 <td valign="top"><samp>2026</samp></td>
 <td valign="top" width="1012"><b>Autonomous Driving Developer</b><br>
@@ -51,19 +62,20 @@ My work so far includes full-stack web applications, Windows desktop software, n
 ·&nbsp;Simulation environment development using Gazebo&nbsp;and&nbsp;RViz<br>
 ·&nbsp;AI-based autonomous driving and vehicle control software</td>
 </tr>
-<tr><td colspan="2"><b>Information Security</b></td></tr>
+<tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
-<td valign="top" width="1012"><b>Hacking Team Lead</b><br>
-HeXA · UNIST Information Security Club<br>
-·&nbsp;Web security, reverse engineering, and CTF activities</td>
+<td valign="top"><samp>2025.07–2025.12</samp></td>
+<td valign="top" width="1012"><b>Full-stack Developer</b><br>
+UNIST Club Union<br>
+·&nbsp;Independently developed an internal event web application</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
-<td valign="top" width="1012"><b>CTF Challenge Author</b><br>
-UNIST HeXA 최마진 3회<br>
-·&nbsp;CTF challenge development</td>
+<td valign="top"><samp>2025.05–2026.02</samp></td>
+<td valign="top" width="1012"><b>Backend Developer</b><br>
+ClubU · UNIST Club Union Official Website<br>
+·&nbsp;Database schema design and REST API development<br>
+·&nbsp;AWS infrastructure, Docker-based deployment, and CI/CD automation</td>
 </tr>
 <tr></tr>
 <tr>
@@ -74,23 +86,9 @@ UNIST HeXA 최마진 3회<br>
 ·&nbsp;Identified and demonstrated a vulnerability enabling unauthorized administrator-level access<br>
 ·&nbsp;Google Play lists 1,000+ downloads (as of 2026)</td>
 </tr>
-<tr><td colspan="2"><b>Software Development</b></td></tr>
-<tr>
-<td valign="top"><samp>2025–</samp><br><samp>2026</samp></td>
-<td valign="top" width="1012"><b>Backend Developer</b><br>
-ClubU · UNIST Club Union Official Website<br>
-·&nbsp;Backend development as part of a team project</td>
-</tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025</samp></td>
-<td valign="top" width="1012"><b>Full-stack Developer</b><br>
-UNIST Club Union<br>
-·&nbsp;Independently developed an internal event web application</td>
-</tr>
-<tr><td colspan="2"><b>Freelance Development</b></td></tr>
-<tr>
-<td valign="top"><samp>2024–</samp><br>Present</td>
+<td valign="top"><samp>2024–Present</samp></td>
 <td valign="top" width="1012"><b>Freelance Software Developer</b><br>
 ·&nbsp;Full-stack web applications<br>
 ·&nbsp;Desktop GUI software<br>
@@ -109,59 +107,59 @@ UNIST Club Union<br>
 
 <table>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.11.07</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
 2026 UHCON<br>
-·&nbsp;Team: HeXA · November 7, 2026</td>
+·&nbsp;Team: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.09.13</samp></td>
 <td valign="top" width="1012"><b>Tied 2nd Place</b><br>
-<a href="https://forge.hspace.io/writeups/competitions/6a9e82ab2d767f19df81691d">HSPACE SPACE WAR @ VIRGO (WEB)</a><br>
-·&nbsp;Team: 우동사리 · September 13, 2026</td>
+HSPACE SPACE WAR @ VIRGO (WEB)<br>
+·&nbsp;Team: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.09.11–09.12</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
 2026 HACKSIUM<br>
-·&nbsp;Team: HeXA · September 11–12, 2026</td>
+·&nbsp;Team: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.07.14</samp></td>
 <td valign="top" width="1012"><b>3rd Place</b><br>
 SECTOR CTF<br>
-·&nbsp;Team: HeXA · July 14, 2026</td>
+·&nbsp;Team: HeXA</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.04.26</samp></td>
 <td valign="top" width="1012"><b>Tied 1st Place</b><br>
-<a href="https://forge.hspace.io/writeups/competitions/69d37428d0244d4ffd5e2295">HSPACE SPACE WAR @ TAURUS (PWN)</a><br>
-·&nbsp;Team: 우동사리 · April 26, 2026</td>
+HSPACE SPACE WAR @ TAURUS (PWN)<br>
+·&nbsp;Team: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.03.29</samp></td>
 <td valign="top" width="1012"><b>Tied 3rd Place</b><br>
-<a href="https://forge.hspace.io/writeups/competitions/69b11731856a40e65849f147">HSPACE SPACE WAR @ ARIES (AI)</a><br>
-·&nbsp;Team: 우동사리 · March 29, 2026</td>
+HSPACE SPACE WAR @ ARIES (AI)<br>
+·&nbsp;Team: 우동사리</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025</samp></td>
+<td valign="top"><samp>2025.07.15–07.17</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
 2025 HACKSIUM<br>
-·&nbsp;Team: UniKo · July 15–17, 2025</td>
+·&nbsp;Team: UniKo</td>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025</samp></td>
+<td valign="top"><samp>2025.06.01</samp></td>
 <td valign="top" width="1012"><b>Excellence Award (최우수상)</b><br>
 UNIST HeXA 최마진 2회<br>
-·&nbsp;Team: 우동사리 · June 1, 2025</td>
+·&nbsp;Team: 우동사리</td>
 </tr>
 </table>
 
