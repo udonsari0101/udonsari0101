@@ -48,19 +48,19 @@ UNIST HeXA 최마진 3회<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2026.01–Present</samp></td>
-<td valign="top" width="1012"><b>Hacking Team Lead</b><br>
-HeXA · UNIST Information Security Club<br>
-·&nbsp;Web security, reverse engineering, and CTF activities</td>
-</tr>
-<tr></tr>
-<tr>
-<td valign="top"><samp>2026</samp></td>
+<td valign="top"><samp>2026.04–</samp><br><samp>2026.12</samp></td>
 <td valign="top" width="1012"><b>Autonomous Driving Developer</b><br>
 유니주행차 · UNIST BTS (Brain to Society) Program<br>
 ·&nbsp;ROS 2-based autonomous driving software development<br>
 ·&nbsp;Simulation environment development using Gazebo&nbsp;and&nbsp;RViz<br>
 ·&nbsp;AI-based autonomous driving and vehicle control software</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top"><samp>2026.01~</samp></td>
+<td valign="top" width="1012"><b>Hacking Team Lead</b><br>
+HeXA · UNIST Information Security Club<br>
+·&nbsp;Web security, reverse engineering, and CTF activities</td>
 </tr>
 <tr></tr>
 <tr>
@@ -88,7 +88,7 @@ ClubU · UNIST Club Union Official Website<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2024–Present</samp></td>
+<td valign="top"><samp>2024~</samp></td>
 <td valign="top" width="1012"><b>Freelance Software Developer</b><br>
 ·&nbsp;Full-stack web applications<br>
 ·&nbsp;Desktop GUI software<br>
@@ -216,7 +216,7 @@ UNIST HeXA 최마진 2회<br>
 <p></p>
 
 <table>
-<tr><td valign="top">UNIST<br><samp>2025–Present</samp></td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Department of Electrical Engineering</td></tr>
+<tr><td valign="top">UNIST<br><samp>2025~</samp></td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Department of Electrical Engineering</td></tr>
 </table>
 
 </details>
