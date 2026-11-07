@@ -10,7 +10,7 @@
 
 <p align="center">
 UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입니다.<br>
-특히 AI 개발에 강점이 있으며, LLM 연동·파인튜닝부터 생성형 AI와 Diffusion 모델까지 다룹니다.
+개발에 AI를 적극 활용하고 있습니다.
 </p>
 
 <!-- contact:start -->
@@ -195,7 +195,7 @@ HACKSIUM 2025</td>
 <p></p>
 
 <table>
-<tr><td valign="top" nowrap>UNIST</td><td valign="top" width="1012">울산과학기술원<br>전기전자공학과</td></tr>
+<tr><td valign="top" nowrap>UNIST<br><samp>2025–현재</samp></td><td valign="top" width="1012">울산과학기술원<br>전기전자공학과</td></tr>
 </table>
 
 </details>
