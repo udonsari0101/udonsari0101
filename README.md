@@ -41,6 +41,13 @@ My work so far includes full-stack web applications, Windows desktop software, n
 <!-- Ordered by start date (newest first). Entries with unknown months follow dated entries within the same year. -->
 <table>
 <tr>
+<td valign="top"><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
+<td valign="top" width="1012"><b>CTF Competition Staff (Scheduled)</b><br>
+2026 IST-TECH IT ARENA<br>
+·&nbsp;Scheduled to support CTF competition operations</td>
+</tr>
+<tr></tr>
+<tr>
 <td valign="top"><samp>2026.05.22</samp></td>
 <td valign="top" width="1012"><b>CTF Challenge Author &amp; Organizer</b><br>
 UNIST HeXA 최마진 3회<br>
@@ -64,19 +71,10 @@ HeXA · UNIST Information Security Club<br>
 </tr>
 <tr></tr>
 <tr>
-<td valign="top"><samp>2025.09–</samp><br><samp>2025.11</samp></td>
-<td valign="top" width="1012"><b>Mobile Application Security Assessment</b><br>
-<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST Campus Dining App<br>
-·&nbsp;Assessed the security of a production mobile app used by the UNIST community<br>
-·&nbsp;Identified and demonstrated a vulnerability enabling unauthorized administrator-level access<br>
-·&nbsp;Google Play lists 1,000+ downloads (as of 2026)</td>
-</tr>
-<tr></tr>
-<tr>
 <td valign="top"><samp>2025.07–2025.12</samp></td>
 <td valign="top" width="1012"><b>Full-stack Developer</b><br>
 UNIST Club Union<br>
-·&nbsp;Independently developed an internal event web application</td>
+·&nbsp;Independently developed a web application for internal organizational activities</td>
 </tr>
 <tr></tr>
 <tr>
@@ -95,6 +93,32 @@ ClubU · UNIST Club Union Official Website<br>
 ·&nbsp;Custom automation tools<br>
 ·&nbsp;Frontend, backend, API, and database development<br>
 ·&nbsp;Software design, implementation, testing, and delivery based on client requirements</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary><b>Security Projects</b> ·&nbsp;2&nbsp;projects&nbsp;since&nbsp;2025</summary>
+
+<p></p>
+
+<table>
+<tr>
+<td valign="top"><samp>2026.09–</samp><br><samp>2026.11</samp></td>
+<td valign="top" width="1012"><b>IoT Security Assessment &amp; Remediation</b><br>
+·&nbsp;Firmware dumping, extraction, and reverse engineering<br>
+·&nbsp;Android application reverse engineering and web vulnerability assessment<br>
+·&nbsp;Design and implementation of a new system to address identified security weaknesses</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top"><samp>2025.09–</samp><br><samp>2025.11</samp></td>
+<td valign="top" width="1012"><b>Mobile Application Security Assessment</b><br>
+<a href="https://play.google.com/store/apps/details?id=com.wjddnwls7879.unistbab">밥먹어U</a> · UNIST Campus Dining App<br>
+·&nbsp;Assessed the security of a production mobile app used by the UNIST community<br>
+·&nbsp;Identified and demonstrated a vulnerability enabling unauthorized administrator-level access<br>
+·&nbsp;Google Play lists 1,000+ downloads (as of 2026)</td>
 </tr>
 </table>
 
@@ -166,6 +190,41 @@ UNIST HeXA 최마진 2회<br>
 </details>
 
 <details>
+<summary><b>Organizations &amp; Memberships</b> ·&nbsp;4&nbsp;organizations&nbsp;since&nbsp;2025</summary>
+
+<p></p>
+
+<table>
+<tr>
+<td valign="top"><samp>Spring 2025–</samp></td>
+<td valign="top" width="1012"><b>HeXA</b><br>
+UNIST Computing Club<br>
+·&nbsp;Member since Spring 2025; Hacking Team Lead since January 2026</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top"><samp>Spring 2025–</samp><br><samp>Fall 2026</samp></td>
+<td valign="top" width="1012"><b>UNIST Club Union</b><br>
+Communications &amp; Cooperation Department<br>
+·&nbsp;Deputy Head of Department in Fall 2025</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top"><samp>Spring 2025–</samp><br><samp>Fall 2025</samp></td>
+<td valign="top" width="1012"><b>9oormthon UNIV</b><br>
+Inter-university IT Community · Member</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top"><samp>Spring 2025</samp></td>
+<td valign="top" width="1012"><b>Pinocchio</b><br>
+UNIST Robotics Club · Member</td>
+</tr>
+</table>
+
+</details>
+
+<details>
 <summary><b>Interests &amp; Skills</b> ·&nbsp;3&nbsp;skill&nbsp;areas</summary>
 
 <p></p>
@@ -216,7 +275,7 @@ UNIST HeXA 최마진 2회<br>
 <p></p>
 
 <table>
-<tr><td valign="top">UNIST<br><samp>2025–</samp></td><td valign="top" width="1012">Ulsan National Institute of Science and Technology<br>Department of Electrical Engineering</td></tr>
+<tr><td valign="top">UNIST<br><samp>2025–</samp></td><td valign="top" width="1012">UNIST(Ulsan National Institute of Science and Technology)<br>Department of Electrical Engineering</td></tr>
 </table>
 
 </details>
