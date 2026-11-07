@@ -42,9 +42,9 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중인 학부생입
 <table>
 <tr>
 <td valign="top" nowrap><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
-<td valign="top" width="1012"><b>CTF 대회 STAFF (예정)</b><br>
+<td valign="top" width="1012"><b>CTF 대회 STAFF</b><br>
 2026 IST-TECH IT ARENA<br>
-·&nbsp;CTF 대회 운영 지원 예정</td>
+·&nbsp;CTF 대회 운영 및 현장 지원</td>
 </tr>
 <tr></tr>
 <tr>
@@ -199,7 +199,7 @@ UNIST HeXA 최마진 2회<br>
 <td valign="top" nowrap><samp>2025 1학기–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
 UNIST 종합컴퓨팅 동아리<br>
-·&nbsp;2025년 1학기부터 회원 활동, 2026년 1월부터 해킹팀 팀장</td>
+·&nbsp;2025년 1학기부터 부원으로 활동, 2026년 1월부터 해킹팀 팀장</td>
 </tr>
 <tr></tr>
 <tr>
@@ -212,13 +212,13 @@ UNIST 종합컴퓨팅 동아리<br>
 <tr>
 <td valign="top" nowrap><samp>2025 1학기–</samp><br><samp>2025 2학기</samp></td>
 <td valign="top" width="1012"><b>9oormthon UNIV</b><br>
-교외 대학생 IT 연합동아리 · 회원</td>
+교외 대학생 IT 연합동아리 · 부원</td>
 </tr>
 <tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025 1학기</samp></td>
 <td valign="top" width="1012"><b>피노키오 (Pinocchio)</b><br>
-UNIST 로봇동아리 · 회원</td>
+UNIST 로봇동아리 · 부원</td>
 </tr>
 </table>
 
