@@ -199,7 +199,7 @@ UNIST HeXA 최마진 2회<br>
 <td valign="top" nowrap><samp>2026.03–</samp></td>
 <td valign="top" width="1012"><b>전기전자공학과 학사국</b><br>
 UNIST 전기전자공학과<br>
-·&nbsp;2026년 3월부터 활동</td>
+·&nbsp;2026년 3월부터 국원으로 활동</td>
 </tr>
 <tr></tr>
 <tr>
