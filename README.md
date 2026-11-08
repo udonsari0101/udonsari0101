@@ -199,7 +199,7 @@ UNIST HeXA 최마진 2회<br>
 <td valign="top" nowrap><samp>2026.03–</samp></td>
 <td valign="top" width="1012"><b>Academic Affairs Bureau</b><br>
 UNIST Department of Electrical Engineering<br>
-·&nbsp;Active since March 2026</td>
+·&nbsp;Bureau member since March 2026</td>
 </tr>
 <tr></tr>
 <tr>
