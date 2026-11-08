@@ -217,7 +217,7 @@ UNIST 종합컴퓨팅 동아리<br>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2026&nbsp;겨울학기</samp></td>
 <td valign="top" width="1012"><b>UNIST 동아리연합회 (Club Union)</b><br>
 소통 및 협력부<br>
-·&nbsp;부원; 2025년 2학기 차장</td>
+·&nbsp;부원; 2025년 여름학기–2학기 차장</td>
 </tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2025&nbsp;겨울학기</samp></td>
