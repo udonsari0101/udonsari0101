@@ -197,9 +197,9 @@ UNIST HeXA 최마진 2회<br>
 <table>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2026–</samp></td>
-<td valign="top" width="1012"><b>Academic Affairs Bureau</b><br>
-UNIST Department of Electrical Engineering<br>
-·&nbsp;Bureau member since Spring 2026</td>
+<td valign="top" width="1012"><b>UNIST Electrical Engineering Student Council</b><br>
+Bureau of Academic Affairs<br>
+·&nbsp;Member since Spring 2026</td>
 </tr>
 <tr></tr>
 <tr>
