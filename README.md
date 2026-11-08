@@ -66,7 +66,7 @@ UNIST HeXA 최마진 3회<br>
 <tr>
 <td valign="top" nowrap><samp>2026.01–</samp></td>
 <td valign="top" width="1012"><b>Hacking Team Lead</b><br>
-HeXA · UNIST Information Security Club<br>
+HeXA · UNIST Comprehensive Computing Club<br>
 ·&nbsp;Web security, reverse engineering, and CTF activities</td>
 </tr>
 <tr></tr>
@@ -198,7 +198,7 @@ UNIST HeXA 최마진 2회<br>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
-UNIST Computing Club<br>
+UNIST Comprehensive Computing Club<br>
 ·&nbsp;Club member since Spring 2025; Hacking Team Lead since January 2026</td>
 </tr>
 <tr></tr>
