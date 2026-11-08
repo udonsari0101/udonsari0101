@@ -199,40 +199,37 @@ UNIST HeXA 최마진 2회<br>
 <td valign="top" nowrap><samp>Spring&nbsp;2026–</samp></td>
 <td valign="top" width="1012"><b>UNIST Electrical Engineering Student Council</b><br>
 Bureau of Academic Affairs<br>
-·&nbsp;Member since Spring 2026</td>
+·&nbsp;Member</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2026–</samp></td>
 <td valign="top" width="1012"><b>AFEE</b><br>
-Advanced and Fundamental of Electrical Engineering<br>
-·&nbsp;Member of UNIST Electrical Engineering's representative academic society since Spring 2026</td>
+Advanced and Fundamental of Electrical Engineering · UNIST Electrical Engineering's representative academic society<br>
+·&nbsp;Member</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
 UNIST Comprehensive Computing Club<br>
-·&nbsp;Club member since Spring 2025; Hacking Team Lead since January 2026</td>
+·&nbsp;Member; Hacking Team Lead since January 2026</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2026</samp></td>
 <td valign="top" width="1012"><b>UNIST Club Union</b><br>
 Communications &amp; Cooperation Department<br>
-·&nbsp;Deputy Head of Department in Fall 2025</td>
+·&nbsp;Member; Deputy Head of Department in Fall 2025</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2025</samp></td>
 <td valign="top" width="1012"><b>9oormthon UNIV</b><br>
-Inter-university IT Community · Club member</td>
+Inter-university IT Community<br>
+·&nbsp;Member</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025</samp></td>
 <td valign="top" width="1012"><b>Pinocchio</b><br>
-UNIST Robotics Club · Club member</td>
+UNIST Robotics Club<br>
+·&nbsp;Member</td>
 </tr>
 </table>
 
