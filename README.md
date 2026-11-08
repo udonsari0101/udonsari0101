@@ -190,11 +190,25 @@ UNIST HeXA 최마진 2회<br>
 </details>
 
 <details>
-<summary><b>Organizations &amp; Memberships</b> ·&nbsp;4&nbsp;organizations&nbsp;since&nbsp;2025</summary>
+<summary><b>Organizations &amp; Memberships</b> ·&nbsp;6&nbsp;organizations&nbsp;since&nbsp;2025</summary>
 
 <p></p>
 
 <table>
+<tr>
+<td valign="top" nowrap><samp>2026.03–</samp></td>
+<td valign="top" width="1012"><b>Academic Affairs Bureau</b><br>
+UNIST Department of Electrical Engineering<br>
+·&nbsp;Active since March 2026</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2026.03–</samp></td>
+<td valign="top" width="1012"><b>AFEE</b><br>
+Advanced and Fundamental of Electrical Engineering<br>
+·&nbsp;Member of UNIST Electrical Engineering's representative academic society since March 2026</td>
+</tr>
+<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
