@@ -198,41 +198,38 @@ UNIST HeXA 최마진 2회<br>
 <tr>
 <td valign="top" nowrap><samp>2026&nbsp;1학기–</samp></td>
 <td valign="top" width="1012"><b>전기전자공학과 학사국</b><br>
-UNIST 전기전자공학과<br>
-·&nbsp;2026년 1학기부터 국원으로 활동</td>
+UNIST 전기전자공학과 학생회<br>
+·&nbsp;국원</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2026&nbsp;1학기–</samp></td>
 <td valign="top" width="1012"><b>AFEE</b><br>
-Advanced and Fundamental of Electrical Engineering<br>
-·&nbsp;UNIST 전기전자공학과 대표 학회 · 2026년 1학기부터 회원으로 활동</td>
+Advanced and Fundamental of Electrical Engineering · UNIST 전기전자공학과 대표 학회<br>
+·&nbsp;회원</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
 UNIST 종합컴퓨팅 동아리<br>
-·&nbsp;2025년 1학기부터 부원으로 활동, 2026년 1월부터 해킹팀 팀장</td>
+·&nbsp;부원; 2026년 1월부터 해킹팀 팀장</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2026&nbsp;겨울학기</samp></td>
 <td valign="top" width="1012"><b>UNIST 동아리연합회 (Club Union)</b><br>
 소통 및 협력부<br>
-·&nbsp;2025년 2학기 차장</td>
+·&nbsp;부원; 2025년 2학기 차장</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2025&nbsp;겨울학기</samp></td>
 <td valign="top" width="1012"><b>9oormthon UNIV</b><br>
-교외 대학생 IT 연합동아리 · 부원</td>
+교외 대학생 IT 연합동아리<br>
+·&nbsp;부원</td>
 </tr>
-<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기</samp></td>
 <td valign="top" width="1012"><b>피노키오 (Pinocchio)</b><br>
-UNIST 로봇동아리 · 부원</td>
+UNIST 로봇동아리<br>
+·&nbsp;부원</td>
 </tr>
 </table>
 
