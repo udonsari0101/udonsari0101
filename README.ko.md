@@ -66,7 +66,7 @@ UNIST HeXA 최마진 3회<br>
 <tr>
 <td valign="top" nowrap><samp>2026.01–</samp></td>
 <td valign="top" width="1012"><b>해킹팀 팀장</b><br>
-UNIST 정보보안 동아리 HeXA<br>
+UNIST 종합컴퓨팅 동아리 HeXA<br>
 ·&nbsp;웹 보안, 리버스 엔지니어링, CTF 활동</td>
 </tr>
 <tr></tr>
