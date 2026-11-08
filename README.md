@@ -217,7 +217,7 @@ UNIST Comprehensive Computing Club<br>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2026</samp></td>
 <td valign="top" width="1012"><b>UNIST Club Union</b><br>
 Communications &amp; Cooperation Department<br>
-·&nbsp;Member; Deputy Head of Department in Fall 2025</td>
+·&nbsp;Member; Deputy Head of Department from Summer to Fall 2025</td>
 </tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2025</samp></td>
