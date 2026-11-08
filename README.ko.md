@@ -190,11 +190,25 @@ UNIST HeXA 최마진 2회<br>
 </details>
 
 <details>
-<summary><b>동아리·자치기구 활동</b> ·&nbsp;2025년부터&nbsp;4건</summary>
+<summary><b>동아리·자치기구 활동</b> ·&nbsp;2025년부터&nbsp;6건</summary>
 
 <p></p>
 
 <table>
+<tr>
+<td valign="top" nowrap><samp>2026.03–</samp></td>
+<td valign="top" width="1012"><b>전기전자공학과 학사국</b><br>
+UNIST 전기전자공학과<br>
+·&nbsp;2026년 3월부터 활동</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2026.03–</samp></td>
+<td valign="top" width="1012"><b>AFEE</b><br>
+Advanced and Fundamental of Electrical Engineering<br>
+·&nbsp;UNIST 전기전자공학과 대표 학회 · 2026년 3월부터 회원으로 활동</td>
+</tr>
+<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp></td>
 <td valign="top" width="1012"><b>HeXA</b><br>
