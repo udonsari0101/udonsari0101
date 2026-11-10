@@ -232,7 +232,7 @@ UNIST 종합컴퓨팅 동아리<br>
 ·&nbsp;부원</td>
 </tr>
 <tr>
-<td valign="top" nowrap><samp>2025&nbsp;1학기</samp></td>
+<td valign="top" nowrap><samp>2025&nbsp;1학기–</samp><br><samp>2025&nbsp;겨울학기</samp></td>
 <td valign="top" width="1012"><b>피노키오 (Pinocchio)</b><br>
 UNIST 로봇동아리<br>
 ·&nbsp;부원</td>
