@@ -99,7 +99,7 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 </details>
 
 <details>
-<summary><b>보안 프로젝트</b> ·&nbsp;2024년부터&nbsp;3건</summary>
+<summary><b>보안 프로젝트</b> ·&nbsp;2024년부터&nbsp;4건</summary>
 
 <p></p>
 
@@ -128,6 +128,15 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 ·&nbsp;MIFARE Classic 1K 및 NTAG213 태그 특성과 UID 형식 분석<br>
 ·&nbsp;Android NFC 에뮬레이션 및 RFID 리더기 호환성 실험<br>
 ·&nbsp;UID 기반 인증 방식의 보안상 한계 조사</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2024.02–</samp><br><samp>2026.07</samp></td>
+<td valign="top" width="1012"><b>DRM 분석 및 복호화 도구 개발</b><br>
+개인 프로젝트<br>
+·&nbsp;DRM 보호 구조 및 복호화 과정 리버스 엔지니어링<br>
+·&nbsp;암호화 관련 요소와 라이브러리 동작 분석<br>
+·&nbsp;분석 결과를 바탕으로 자체 복호화 도구 개발</td>
 </tr>
 </table>
 
