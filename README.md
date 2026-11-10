@@ -5,12 +5,12 @@
      In <source srcset> URLs never use raw commas or spaces. When you add an entry to a drawer, update its count. -->
 
 <p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-light.svg" alt="udonsari0101 · Interested in Information Security, Software Engineering, Automation, Computer Systems, Artificial Intelligence"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/hero-en-light.svg" alt="udonsari0101 · Interested in Cybersecurity, Software Engineering, Automation, Computer Systems, Artificial Intelligence"></picture>
 </p>
 
 <p align="center">
 I'm an undergraduate student studying Electrical Engineering at UNIST (Ulsan National Institute of Science and Technology).<br>
-I'm interested in software development and information security, and I work on projects across different fields. I actively use AI in my development workflow.
+I'm interested in software development and cybersecurity, and I work on projects across different fields. I actively use AI in my development workflow.
 </p>
 
 <!-- contact:start -->
