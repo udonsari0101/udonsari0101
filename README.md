@@ -211,7 +211,7 @@ Advanced and Fundamental of Electrical Engineering · UNIST Electrical Engineeri
 <td valign="top" nowrap><samp>Fall&nbsp;2025–</samp></td>
 <td valign="top" width="1012"><b>JJeomNet</b><br>
 Nonprofit project community<br>
-·&nbsp;Core since September 2025</td>
+·&nbsp;Core</td>
 </tr>
 <tr>
 <td valign="top" nowrap><samp>Spring&nbsp;2025–</samp></td>
