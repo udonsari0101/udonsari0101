@@ -51,7 +51,7 @@ THEMES = {
                  hero="#090C13", glow=(("#4F46E5", .42), ("#0891B2", .30), ("#7C3AED", .30)), grid=("#FFFFFF", .045)),
 }
 TEXT = {
-    "en": dict(focus="Interested in", interests=["Information Security", "Software Engineering", "Automation",
+    "en": dict(focus="Interested in", interests=["Cybersecurity", "Software Engineering", "Automation",
                                                   "Computer Systems", "Artificial Intelligence"],
                tiles=dict(total="All-time total", longest="Longest streak", best="Most in one day",
                           repos="Repos · {p} private", public_repos="Public repos", contributed="Contributed to",
