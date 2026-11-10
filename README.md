@@ -99,7 +99,7 @@ ClubU · UNIST Club Union Official Website<br>
 </details>
 
 <details>
-<summary><b>Security Projects</b> ·&nbsp;3&nbsp;projects&nbsp;since&nbsp;2024</summary>
+<summary><b>Security Projects</b> ·&nbsp;4&nbsp;projects&nbsp;since&nbsp;2024</summary>
 
 <p></p>
 
@@ -128,6 +128,15 @@ Independent Research<br>
 ·&nbsp;Studied MIFARE Classic 1K and NTAG213 tag characteristics, including UID formats<br>
 ·&nbsp;Tested Android NFC emulation and RFID reader compatibility<br>
 ·&nbsp;Examined security limitations of identifier-based authentication</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2024.02–</samp><br><samp>2026.07</samp></td>
+<td valign="top" width="1012"><b>DRM Analysis &amp; Decryption Tool Development</b><br>
+Independent Project<br>
+·&nbsp;Reverse-engineered DRM protection mechanisms and decryption workflows<br>
+·&nbsp;Analyzed cryptographic components and library behavior<br>
+·&nbsp;Developed custom decryption tools based on the analysis</td>
 </tr>
 </table>
 
