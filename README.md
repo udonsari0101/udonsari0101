@@ -99,7 +99,7 @@ ClubU · UNIST Club Union Official Website<br>
 </details>
 
 <details>
-<summary><b>Security Projects</b> ·&nbsp;2&nbsp;projects&nbsp;since&nbsp;2025</summary>
+<summary><b>Security Projects</b> ·&nbsp;3&nbsp;projects&nbsp;since&nbsp;2024</summary>
 
 <p></p>
 
@@ -119,6 +119,15 @@ ClubU · UNIST Club Union Official Website<br>
 ·&nbsp;Assessed the security of a production mobile app used by the UNIST community<br>
 ·&nbsp;Identified and demonstrated a vulnerability enabling unauthorized administrator-level access<br>
 ·&nbsp;Google Play lists 1,000+ downloads (as of 2026)</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2024.04–</samp><br><samp>2025.05</samp></td>
+<td valign="top" width="1012"><b>RFID/NFC Access Control Research</b><br>
+Independent Research<br>
+·&nbsp;Studied MIFARE Classic 1K and NTAG213 tag characteristics, including UID formats<br>
+·&nbsp;Tested Android NFC emulation and RFID reader compatibility<br>
+·&nbsp;Examined security limitations of identifier-based authentication</td>
 </tr>
 </table>
 
