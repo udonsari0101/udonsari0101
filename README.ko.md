@@ -99,7 +99,7 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 </details>
 
 <details>
-<summary><b>보안 프로젝트</b> ·&nbsp;2025년부터&nbsp;2건</summary>
+<summary><b>보안 프로젝트</b> ·&nbsp;2024년부터&nbsp;3건</summary>
 
 <p></p>
 
@@ -119,6 +119,15 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 ·&nbsp;UNIST 구성원이 사용하는 실제 운영 모바일 앱 보안 점검<br>
 ·&nbsp;관리자 권한을 탈취할 수 있는 취약점 발견 및 재현<br>
 ·&nbsp;Google Play 누적 다운로드 1,000회 이상(2026년 기준)</td>
+</tr>
+<tr></tr>
+<tr>
+<td valign="top" nowrap><samp>2024.04–</samp><br><samp>2025.05</samp></td>
+<td valign="top" width="1012"><b>RFID/NFC 출입통제 기술 연구</b><br>
+개인 연구<br>
+·&nbsp;MIFARE Classic 1K 및 NTAG213 태그 특성과 UID 형식 분석<br>
+·&nbsp;Android NFC 에뮬레이션 및 RFID 리더기 호환성 실험<br>
+·&nbsp;UID 기반 인증 방식의 보안상 한계 조사</td>
 </tr>
 </table>
 
