@@ -208,10 +208,10 @@ Advanced and Fundamental of Electrical Engineering · UNIST 전기전자공학�
 ·&nbsp;회원</td>
 </tr>
 <tr>
-<td valign="top" nowrap><samp>2025.09–</samp></td>
+<td valign="top" nowrap><samp>2025&nbsp;2학기–</samp></td>
 <td valign="top" width="1012"><b>쩜넷 (JJeomNet)</b><br>
 비영리 프로젝트 커뮤니티<br>
-·&nbsp;Core</td>
+·&nbsp;2025년 9월부터 Core</td>
 </tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp></td>
