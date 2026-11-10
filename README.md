@@ -260,47 +260,48 @@ UNIST Robotics Club<br>
 </details>
 
 <details>
-<summary><b>Interests &amp; Skills</b> ·&nbsp;3&nbsp;skill&nbsp;areas</summary>
+<summary><b>Interests &amp; Skills</b> ·&nbsp;5&nbsp;skill&nbsp;areas</summary>
 
 <p></p>
 
-**Interests**&ensp;Information Security · Software Engineering · Automation · Computer Systems · Artificial Intelligence
-
-#### Software Development
+#### Software Engineering
 
 - Full-stack Web Development
-- Native Android Application Development
-- Windows Desktop GUI Development
-- Software Architecture & System Design
-- REST API Design, Integration & Documentation
-- Database Design & Schema Modeling
-- GUI Development & UI/UX Implementation
-- Automation Tools & Custom Software Development
-- Automated Testing, Debugging & Quality Assurance
-- Application Packaging, Deployment & Maintenance
+- Mobile Application Development
+- Desktop Application Development
+- Backend Engineering
+- Database Design
+- Software Architecture
 
-#### Information Security
+#### Cybersecurity
 
-- Web Application Security & Vulnerability Analysis
-- Reverse Engineering & Binary Analysis
-- Android Application Security
-- Authentication, Authorization & Access Control
-- Business Logic Security
-- Network Traffic & Protocol Analysis
-- Security Automation
-- CTF Challenge Development
+- Web Hacking
+- Vulnerability Research
+- Reverse Engineering
+- Application Security
+- System Security
 
-**Security tools**
+#### Systems & DevOps
 
-- Reverse Engineering: IDA Pro, Ghidra, JADX-GUI, x64dbg
-- Web & Network Security: Burp Suite, mitmproxy
+- Linux
+- Cloud Infrastructure
+- Containerization
+- Self-hosting
+- CI/CD
 
-#### Infrastructure & Systems
+#### Automation
 
-- Linux Server Administration
-- Docker-based Application Deployment
-- Cloud Infrastructure & Self-hosting
-- CI/CD & Development Automation
+- Automation Tool Development
+- Workflow Automation
+- Apple Shortcuts
+
+#### Artificial Intelligence
+
+- AI-assisted Software Development
+- Generative AI
+- Multimodal AI Workflows
+- Local LLM Deployment
+- LLM Integration
 
 </details>
 
