@@ -770,16 +770,17 @@ def tiles(s, lang):
     x = TEXT[lang]
     m, alts = x["tiles"], x.get("tile_alts", {})
     unit = lambda n: x["day"] if n == 1 else x["days"]
+    # Order related metrics together: contribution volume, activity consistency, then repositories.
     rows = [("total", "#pulse", f"{s['total']:,}", x["contribs"], m["total"], "total"),
-            ("longest", "#trophy", str(s["longest"]), unit(s["longest"]), m["longest"], "longest"),
-            ("best", "#bolt", f"{s['best']:,}", x["contribs"], m["best"], "best")]
+            ("best", "#bolt", f"{s['best']:,}", x["contribs"], m["best"], "best"),
+            ("active", "#calendar", str(s["active"]), unit(s["active"]), m["active"], "active"),
+            ("longest", "#trophy", str(s["longest"]), unit(s["longest"]), m["longest"], "longest")]
     if s["owner"]:  # the owner's token sees private repositories
         rows += [("repos", "#repo", str(s["repos"]), x["repos"], m["repos"].format(p=s["private"]), "repos"),
                  ("contributed", "#branch", str(s["contributed"]), x["repos"], m["contributed"], "contributed")]
-    else:  # the default token sees public repositories only, but the profile shares private contribution counts
-        rows += [("repos", "#repo", str(s["public"]), x["repos"], m["public_repos"], "public_repos"),
-                 ("contributed", "#lock", f"{s['restricted']:,}", x["contribs"], m["private"], "private")]
-    rows.append(("active", "#calendar", str(s["active"]), unit(s["active"]), m["active"], "active"))
+    else:  # with a public token, show private contributions beside other contribution metrics
+        rows.insert(2, ("contributed", "#lock", f"{s['restricted']:,}", x["contribs"], m["private"], "private"))
+        rows.append(("repos", "#repo", str(s["public"]), x["repos"], m["public_repos"], "public_repos"))
     return [(key, g, value, u, label, alts.get(name, label), ramp(i / (len(rows) - 1)))
             for i, (key, g, value, u, label, name) in enumerate(rows)]
 
