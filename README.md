@@ -232,7 +232,7 @@ Inter-university IT Community<br>
 ·&nbsp;Member</td>
 </tr>
 <tr>
-<td valign="top" nowrap><samp>Spring&nbsp;2025</samp></td>
+<td valign="top" nowrap><samp>Spring&nbsp;2025–</samp><br><samp>Winter&nbsp;2025</samp></td>
 <td valign="top" width="1012"><b>Pinocchio</b><br>
 UNIST Robotics Club<br>
 ·&nbsp;Member</td>
