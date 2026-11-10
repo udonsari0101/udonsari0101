@@ -190,7 +190,7 @@ UNIST HeXA 최마진 2회<br>
 </details>
 
 <details>
-<summary><b>동아리·자치기구 활동</b> ·&nbsp;2025년부터&nbsp;6건</summary>
+<summary><b>동아리·자치기구 활동</b> ·&nbsp;2025년부터&nbsp;7건</summary>
 
 <p></p>
 
@@ -206,6 +206,12 @@ UNIST 전기전자공학과 학생회<br>
 <td valign="top" width="1012"><b>AFEE</b><br>
 Advanced and Fundamental of Electrical Engineering · UNIST 전기전자공학과 대표 학회<br>
 ·&nbsp;회원</td>
+</tr>
+<tr>
+<td valign="top" nowrap><samp>2025.09–</samp></td>
+<td valign="top" width="1012"><b>쩜넷 (JJeomNet)</b><br>
+비영리 프로젝트 커뮤니티<br>
+·&nbsp;Core</td>
 </tr>
 <tr>
 <td valign="top" nowrap><samp>2025&nbsp;1학기–</samp></td>
