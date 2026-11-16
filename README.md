@@ -43,7 +43,7 @@ My work so far includes full-stack web applications, Windows desktop software, n
 <tr>
 <td valign="top" nowrap><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
 <td valign="top" width="1012"><b>CTF Competition Staff</b><br>
-2026 IST-TECH IT ARENA<br>
+2026 IST-TECH IT ARENA in POSTECH<br>
 ·&nbsp;CTF competition operations and on-site support</td>
 </tr>
 <tr></tr>
