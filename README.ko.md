@@ -43,7 +43,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중입니다.<br>
 <tr>
 <td valign="top" nowrap><samp>2026.11.14–</samp><br><samp>2026.11.15</samp></td>
 <td valign="top" width="1012"><b>CTF 대회 STAFF</b><br>
-2026 IST-TECH IT ARENA<br>
+2026 IST-TECH IT ARENA in POSTECH<br>
 ·&nbsp;CTF 대회 운영 및 현장 지원</td>
 </tr>
 <tr></tr>
