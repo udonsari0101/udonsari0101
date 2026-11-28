@@ -19,17 +19,24 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중입니다.<br>
 </p>
 <!-- contact:end -->
 
+<!-- activity:start -->
+<p align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-0.svg" alt="누적 기여; 하루 최다 기여; 비공개 저장소 기여 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-1.svg" alt="최근 1년 활동일; 최장 연속 기여; 공개 저장소 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-light.svg" alt="최근 1년 기여 달력 (매일 갱신)"></picture>
+</p>
+<!-- activity:end -->
+
+<details>
+<summary><b>기술 스택</b> ·&nbsp;8개&nbsp;영역</summary>
+
+<p></p>
+
 <!-- stack:start -->
 <p align="center">
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-light-0.svg" alt="언어: Python, JavaScript, TypeScript, Kotlin, SQL; 프론트엔드·백엔드: React, HTML, CSS, FastAPI, Flask, REST API"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-light-1.svg" alt="데이터베이스: PostgreSQL, MySQL, SQLite, Firebase, Firestore; 데스크톱·Android: PySide6 (Qt), Electron (Node.js), Windows, Jetpack Compose, Android SDK"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-dark-2.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-light-2.svg" alt="데브옵스·클라우드: Linux, Docker, Docker Compose, AWS, GCP; 로보틱스·AI: ROS 2, Gazebo, RViz, Generative AI, Diffusion Models, LLM Integration &amp; Fine-tuning"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-dark-3.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/ko-light-3.svg" alt="보안: IDA Pro, Ghidra, JADX-GUI, x64dbg, Burp Suite, mitmproxy; 도구: Gradle, GitHub Actions, Notion, Figma"></picture>
 </p>
 <!-- stack:end -->
 
-<!-- activity:start -->
-<p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-0.svg" alt="누적 기여; 하루 최다 기여; 비공개 저장소 기여 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/ko-light-1.svg" alt="최근 1년 활동일; 최장 연속 기여; 공개 저장소 (매일 갱신)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-ko-light.svg" alt="최근 1년 기여 달력 (매일 갱신)"></picture>
-</p>
-<!-- activity:end -->
+</details>
 
 <details>
 <summary><b>경험 및 활동</b> ·&nbsp;2024년부터&nbsp;7건</summary>
