@@ -26,7 +26,7 @@ I'm interested in software development and cybersecurity, and I work on projects
 <!-- activity:end -->
 
 <details>
-<summary align="center"><kbd>&nbsp;&nbsp;<b>View Tech Stack</b>&nbsp;&nbsp;</kbd></summary>
+<summary align="center">View Tech Stack</summary>
 
 <p></p>
 
