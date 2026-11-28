@@ -26,7 +26,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중입니다.<br>
 <!-- activity:end -->
 
 <details>
-<summary align="center"><kbd>&nbsp;&nbsp;<b>기술 스택 보기</b>&nbsp;&nbsp;</kbd></summary>
+<summary align="center">기술 스택 보기</summary>
 
 <p></p>
 
