@@ -19,17 +19,24 @@ I'm interested in software development and cybersecurity, and I work on projects
 </p>
 <!-- contact:end -->
 
+<!-- activity:start -->
+<p align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-0.svg" alt="All-time contributions; Most contributions in one day; Contributions to private repositories (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-1.svg" alt="Active days in the last year; Longest streak; Public repos (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-light.svg" alt="Contribution calendar for the last year (updated daily)"></picture>
+</p>
+<!-- activity:end -->
+
+<details>
+<summary><b>Tech Stack</b> ·&nbsp;8&nbsp;categories</summary>
+
+<p></p>
+
 <!-- stack:start -->
 <p align="center">
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-0.svg" alt="Languages: Python, JavaScript, TypeScript, Kotlin, SQL; Frontend · Backend: React, HTML, CSS, FastAPI, Flask, REST API"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-1.svg" alt="Databases: PostgreSQL, MySQL, SQLite, Firebase, Firestore; Desktop · Android: PySide6 (Qt), Electron (Node.js), Windows, Jetpack Compose, Android SDK"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-2.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-2.svg" alt="DevOps · Cloud: Linux, Docker, Docker Compose, AWS, GCP; Robotics · AI: ROS 2, Gazebo, RViz, Generative AI, Diffusion Models, LLM Integration &amp; Fine-tuning"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-dark-3.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/stack/en-light-3.svg" alt="Security: IDA Pro, Ghidra, JADX-GUI, x64dbg, Burp Suite, mitmproxy; Tools: Gradle, GitHub Actions, Notion, Figma"></picture>
 </p>
 <!-- stack:end -->
 
-<!-- activity:start -->
-<p align="center">
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-0.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-0.svg" alt="All-time contributions; Most contributions in one day; Contributions to private repositories (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-dark-1.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/tiles/en-light-1.svg" alt="Active days in the last year; Longest streak; Public repos (updated daily)"></picture><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-dark.svg"><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/profile-cards/contrib-en-light.svg" alt="Contribution calendar for the last year (updated daily)"></picture>
-</p>
-<!-- activity:end -->
+</details>
 
 <details>
 <summary><b>Experience &amp; Activities</b> ·&nbsp;7&nbsp;roles&nbsp;since&nbsp;2024</summary>
