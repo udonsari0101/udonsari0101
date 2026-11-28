@@ -26,7 +26,7 @@ I'm interested in software development and cybersecurity, and I work on projects
 <!-- activity:end -->
 
 <details>
-<summary align="center"><picture><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/main/.github/assets/tech-stack-en.svg" alt="View Tech Stack" width="146" height="28" align="middle"></picture></summary>
+<summary><b>Tech Stack</b> ·&nbsp;8&nbsp;categories</summary>
 
 <p></p>
 
