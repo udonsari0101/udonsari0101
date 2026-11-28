@@ -143,11 +143,18 @@ ClubU · UNIST 동아리연합회 공식 웹사이트<br>
 </details>
 
 <details>
-<summary><b>수상 및 대회</b> ·&nbsp;2025년부터&nbsp;8건</summary>
+<summary><b>수상 및 대회</b> ·&nbsp;2025년부터&nbsp;9건</summary>
 
 <p></p>
 
 <table>
+<tr>
+<td valign="top" nowrap><samp>2026.11.27</samp></td>
+<td valign="top" width="1012"><b>최우수상 · 2위</b><br>
+BIPA Security Challenge<br>
+·&nbsp;팀: HeXA</td>
+</tr>
+<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2026.11.07</samp></td>
 <td valign="top" width="1012"><b>본선 진출</b><br>
@@ -199,7 +206,7 @@ HSPACE SPACE WAR @ ARIES (AI)<br>
 <tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025.06.01</samp></td>
-<td valign="top" width="1012"><b>최우수상</b><br>
+<td valign="top" width="1012"><b>최우수상 · CTF 분야 1위 · 전체 분야 통합 1위</b><br>
 UNIST HeXA 최마진 2회<br>
 ·&nbsp;팀: 우동사리</td>
 </tr>
