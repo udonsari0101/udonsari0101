@@ -143,11 +143,18 @@ Independent Project<br>
 </details>
 
 <details>
-<summary><b>Awards &amp; Competitions</b> ·&nbsp;8&nbsp;results&nbsp;since&nbsp;2025</summary>
+<summary><b>Awards &amp; Competitions</b> ·&nbsp;9&nbsp;results&nbsp;since&nbsp;2025</summary>
 
 <p></p>
 
 <table>
+<tr>
+<td valign="top" nowrap><samp>2026.11.27</samp></td>
+<td valign="top" width="1012"><b>Excellence Award (최우수상) · 2nd Place</b><br>
+BIPA Security Challenge<br>
+·&nbsp;Team: HeXA</td>
+</tr>
+<tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2026.11.07</samp></td>
 <td valign="top" width="1012"><b>Finalist</b><br>
@@ -199,7 +206,7 @@ HSPACE SPACE WAR @ ARIES (AI)<br>
 <tr></tr>
 <tr>
 <td valign="top" nowrap><samp>2025.06.01</samp></td>
-<td valign="top" width="1012"><b>Excellence Award (최우수상)</b><br>
+<td valign="top" width="1012"><b>Excellence Award (최우수상) · 1st Place in CTF · 1st Place Overall</b><br>
 UNIST HeXA 최마진 2회<br>
 ·&nbsp;Team: 우동사리</td>
 </tr>
