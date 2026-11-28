@@ -26,7 +26,7 @@ UNIST(울산과학기술원) 전기전자공학과에 재학 중입니다.<br>
 <!-- activity:end -->
 
 <details>
-<summary align="center"><picture><img src="https://raw.githubusercontent.com/udonsari0101/udonsari0101/main/.github/assets/tech-stack-ko.svg" alt="기술 스택 보기" width="136" height="28" align="middle"></picture></summary>
+<summary><b>기술 스택</b> ·&nbsp;8개&nbsp;영역</summary>
 
 <p></p>
 
